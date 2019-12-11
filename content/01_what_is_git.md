@@ -1,6 +1,6 @@
 ---
 layout: default
-title: What is Git?
+title: Concepts and tools
 parent: Lesson plan
 nav_order: 1
 ---
