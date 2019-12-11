@@ -5,7 +5,7 @@ parent: Lesson plan
 nav_order: 2
 ---
 
-### Using Git
+## Using Git
 
 One of the main barriers to getting started with git is the language. Although some of the language used in git is 
 fairly self-explanatory, other terms are not so clear. The best way to get to learn the language - which consists of a 
