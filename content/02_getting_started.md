@@ -7,22 +7,20 @@ nav_order: 2
 
 ## Using Git
 
-One of the main barriers to getting started with git is the language. Although some of the language used in git is 
-fairly self-explanatory, other terms are not so clear. The best way to get to learn the language - which consists of a 
-number of verbs such as `add`, `commit` and `push` (preceded by the word 'git') - is by using it, which is what we will be doing during this 
-lesson. These commands will be explained as we proceed from setting up a new version-controlled project to publishing 
-our own website.
+One of the challenges of learning Git is becoming familiar with its terminology and command structure. Git commands consist of verbs such as `add`, `commit`, and `push` preceded by the word `git`.  These base commands are often followed by arguments that provide more information about how and where Git should act.
 
+The best way to learn a langauge is through practice.  In this workshop we will use Git to setup a new version-controlled project.
 
 ### Creating a repository
 
-A Git **repository** is a data structure used to track changes to a set of project files over time. Repositories are 
-stored within the same directory as these project files, in a hidden directory called `.git`. We can create a new git 
-repository either by using [GitHub's web interface](https://github.com/new), or via the command line. Let's use the command line to create a git 
-repository for the experiments that we're going to do today.
+You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory called `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
+
+You can create an online repository using [GitHub's web interface](https://github.com/new), or on your own computer using the command line. 
+
+Let's use the command line to create a Git repository.
 
 First, we will create a new directory for our project and enter that directory.
-<!explain commands as we go along>
+
 
 ~~~
 $ mkdir hello-world
