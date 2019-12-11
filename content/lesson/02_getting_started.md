@@ -35,11 +35,11 @@ which is simply short for *initialise*.
 ~~~
 $ git init
 ~~~
-{: .bash}
+
 ~~~
 Initialized empty Git repository in <your file path>/hello-world/.git/
 ~~~
-{: .output}
+
 
 
 The `hello-world` directory is now a git repository. 
@@ -59,13 +59,13 @@ We can run the `git status` command to display the current state of a project. L
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 ~~~
 On branch master
 No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ~~~
-{: .output}
+
 
 The output tells us that we are on the master branch (more on this later) and that we have nothing to commit (no 
 unsaved changes).
@@ -82,7 +82,7 @@ Let's create a new file using the `touch` command, which is a quick way to creat
 ~~~
 $ touch index.md
 ~~~
-{: .bash}
+
 
 The `.md` extension above signifies that we have chosen to use the Markdown format, a lightweight markup language with plain text formatting syntax. We will explore Markdown a bit later.
 
@@ -91,7 +91,7 @@ Let's check the status of our project again.
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 ~~~
 On branch master
 No commits yet
@@ -102,7 +102,7 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
-{: .output}
+
 
 This status is telling us that git has noticed a new file in our directory that we are not yet tracking. With colourised 
 output, the filename will appear in red. To change this, and to tell Git we want to track any changes we make to 
@@ -111,14 +111,14 @@ index.md, we use `git add`.
 ~~~
 $ git add index.md
 ~~~
-{: .bash}
+
 
 This adds our Markdown file to the **staging area** (the area where git checks for file changes). To confirm this we want to use `git status` again.
 
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 ~~~
 On branch master
 
@@ -129,7 +129,7 @@ Changes to be committed:
 
     new file:   index.md
 ~~~
-{: .output}
+
 
 If we are using colourised output, we will see that the filename has changed colour (from red to green). Git also tells us that there
 is a new file to be committed but, before we do that, let's add some text to the file.
@@ -141,7 +141,7 @@ has spotted the changes.
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 ~~~
 On branch master
 
@@ -158,7 +158,7 @@ Changes not staged for commit:
 
 	modified:   index.md
 ~~~
-{: .output}
+
 
 This lets us know that git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add 
 the new version of the file to the staging area.
@@ -166,7 +166,7 @@ the new version of the file to the staging area.
 ~~~
 $ git add index.md
 ~~~
-{: .bash}
+
 
 Now we are ready to  **commit** our first changes. 
 Commit is similar to 'saving' a file to Git. 
@@ -177,13 +177,13 @@ and this information will remain visible to us later.
 ~~~
 $ git commit -m 'Add index.md'
 ~~~
-{: .bash}
+
 ~~~
 [master (root-commit) e9e8fd3] Add index.md
  1 file changed, 1 insertion(+)
  create mode 100644 index.md
 ~~~
-{: .output}
+
 
 We can see that one file has changed and that we made one insertion, which was a line with the text '#Hello, world!'. 
 We can
@@ -215,7 +215,7 @@ along with metadata about who made the commit and at what time.
 > than you would like!
 {: .callout}
 
-![The Git Staging Area](../fig/git-staging-area.svg)
+![The Git Staging Area](../figures/git-staging-area.svg)
 
 At the moment, our changes are only recorded locally, on our computer. If we wanted to 
 work collaboratively with someone else they would have no way of seeing what we've done.
