@@ -26,7 +26,7 @@ $ mkdir hello-world
 $ cd hello-world
 ~~~
 
-If you're not sure you're in the right place use the command `pwd` (print working directory) to display the complete path of your current directory.
+If you're not sure you're in the right place use the command "pwd" (print working directory) to display the complete path of your current directory.
 {: .info}
 
 We will now create a Git repository to track changes to our project.  Use the git **init** command, 
@@ -45,8 +45,8 @@ Initialized empty Git repository in <your file path>/hello-world/.git/
 
 Your `hello-world` directory is now a git repository. 
 
-If you run the `ls` command to list the contents of the `hello-world` 
-directory your repository may seem empty.  But running `ls -a` will include hidden files in the list, revealing the new hidden directory named `.git`.
+If you run the "ls" command to list the contents of the "hello-world" 
+directory your repository may seem empty.  But running "ls -a" instead will include hidden files in the list, revealing the new hidden directory named ".git".
 {: .info}
 
 
