@@ -3,6 +3,7 @@ layout: default
 nav_order: 1
 title: Lesson plan
 has_children: true
+permalink: /content/lesson
 ---
 #### What We Will Try to Do
 
