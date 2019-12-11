@@ -31,3 +31,15 @@ $ git config --global core.editor "notepad"
 
 Do not blah blah blah...
 {: .warn }
+
+
+Bunch of stuff, including
+- unordered list
+- and things
+{: .prereq }
+
+Another test 
+{: .info }
+
+And a last one 
+{: .danger }
