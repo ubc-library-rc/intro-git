@@ -24,5 +24,5 @@ This is your session. If you have a question or feel we are going too fast, plea
 
 _Actual schedule may vary depending on group needs_
 
-Please create a GitHub account and install Bash and Git before the workshop. See[Setup](../setup.md) for instructions.
+Please create a GitHub account and install Bash and Git before the workshop. See [Setup](../setup.md) for instructions.
 {: .prereq}
