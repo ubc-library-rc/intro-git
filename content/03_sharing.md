@@ -56,6 +56,8 @@ Or you can choose to type them out to get them into your fingers.
 I will do that. So we start with the command to link our local repository
 to the GitHub repository:
 
+Input
+{: .label .label-green }
 ~~~
 $ git remote add origin https://github.com/some-librarian/hello-world.git
 ~~~
@@ -71,10 +73,14 @@ where `some-librarian` should be replaced with your own username.
 
 We can check that it is set up correctly with the command:
 
+Input
+{: .label .label-green }
 ~~~
 $ git remote -v
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 origin  https://github.com/<your_github_username>/hello-world (fetch)
 origin  https://github.com/<your_github_username>/hello-world (push)
@@ -88,10 +94,14 @@ synchronized their content, so the remote repository is still empty. To fix that
 will have to "push" our local changes to the GitHub repository. We do this using the
 `git push` command:
 
+Input
+{: .label .label-green }
 ~~~
 $ git push -u origin master
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 226 bytes | 0 bytes/s, done.
