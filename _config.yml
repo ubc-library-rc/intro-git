@@ -2,3 +2,8 @@ title: "Introduction to Git and GitHub"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "nil"
 search_enabled: false
+aux_links:
+  "UBC Library Research Commons Workshops":
+    - "https://researchcommons.library.ubc.ca/workshops/"
+heading_anchors: false
+footer_content: "Copyright, acknowledgement, license, etc."
