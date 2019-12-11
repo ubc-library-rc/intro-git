@@ -30,7 +30,7 @@ We want to link them together to synchronize them and share our project with the
 To do this, we need the GitHub repository URL, which should look something like this
 (with "some-librarian" replaced with your username):
 
-![The repository URL on GitHub](../fig/repository-url.png)
+![The repository URL on GitHub](../figures/repository-url.png)
 
 If the URL starts with `git@` rather than `https://`, please click the "HTTPS" button to change it.
 
@@ -49,7 +49,7 @@ If the URL starts with `git@` rather than `https://`, please click the "HTTPS" b
 Notice that GitHub is actually helpful enough to provide instructions for us
 so we don't have to remember these commands:
 
-![GitHub instructions](../fig/github-instructions.png)
+![GitHub instructions](../figures/github-instructions.png)
 
 You can therefore choose to copy these and paste them on the command line.
 Or you can choose to type them out to get them into your fingers.
@@ -200,7 +200,7 @@ Now, let's have a look at the repository at GitHub again
 (that is, `https://github.com/some-librarian/hello-world` with `some-librarian` replaced with your username).
 We see that the `index.md` file is there, but there is only one commit:
 
-![Only one commit on GitHub](../fig/github-one-commit.png)
+![Only one commit on GitHub](../figures/github-one-commit.png)
 
 And if you click on `index.md` you will see that it contains the "Hello, world!" header,
 but not the new line we just added.
