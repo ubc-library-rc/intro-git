@@ -4,7 +4,7 @@ title: Additional resources
 nav_order: 10
 ---
 
-## Basic reference
+## Basic command reference
 
 ### Navigating the shell
 
@@ -46,8 +46,6 @@ nav_order: 10
 
 ### Git commands
 
-Git cheat sheets:
-
 * [GitHub git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 * [Tower client git cheat sheet](https://www.git-tower.com/blog/git-cheat-sheet/)
 
@@ -79,7 +77,7 @@ Git cheat sheets:
 : add a remote repository named 'origin', to upload changes to or download changes from
 
 
-## Further reading
+## Other resources
 
 * The GitHub [help pages](https://help.github.com/) are a good place to start
 * GitHub has '[activities](https://guides.github.com/activities/hello-world/)' which aim to explain how git works
