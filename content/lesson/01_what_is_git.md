@@ -9,7 +9,7 @@ nav_order: 1
 
 Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments.  
 
-It takes some discipline to learn and make use of version control software like Git, but there are many benefits:
+It takes some discipline to learn and make use of version control but there are many benefits:
 
 * **Collaboration** - Version control helps teams work collaboratively on same set of documents without interfering with each other.
 * **Versioning** - It provides a thorough log of changes to tracked files without creating multiple copies, making it easier to identify the most current version.
