@@ -27,3 +27,7 @@ For example:
 ~~~
 $ git config --global core.editor "notepad"
 ~~~
+
+
+Do not blah blah blah...
+{: .warn }
