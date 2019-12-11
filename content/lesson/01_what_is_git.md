@@ -7,7 +7,7 @@ nav_order: 1
 
 ## What is Version Control
 
-Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development and are increasingly used for collaboration and sharing in research and academic environments.  Version control systems work best with plain text files but can be used ot track versions of any type of file. It takes some discipline to learn and make use of version control software like Git, but there are many benefits:
+Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments.  It takes some discipline to learn and make use of version control software like Git, but there are many benefits:
 
 * **Collaboration** - Version control helps teams work collaboratively on same set of documents without interfering with each other.
 * **Versioning** - It provides a thorough log of changes to tracked files without creating multiple copies, making it easier to identify the most current version.
@@ -17,37 +17,16 @@ Version control software tracks the changes made to a group of files.  Version c
 
 ## What are Git and GitHub?
 
-We often hear the terms **_Git_** and **_GitHub_** used interchangeably but they are slightly different things.
+We often hear the terms **_Git_** and **_GitHub_** used interchangeably but it's important to understand their differences.
 
-**_Git_** is one of the most widely used version control systems in the world. It is a free, open source tool that can be installed on your local machine to track changes made to selected files (referred to as a "git repository" or "repo"). Git was originally developed to help teams of software developers collaborate, but it can be used for managing revisions to any file type on a computer system, including text documents.
+**_Git_** is one of the most widely used version control systems in the world. It is a free, open source tool that can be installed on your local computer to track changes made to a set of files (referred to as a "git repository" or "repo"). Git can be used independently to organize one's own work, but it's even more powerful when used with teams. Git ensures that everyone's contributions are tracked and merged effectively, and it keeps copies of all previous versions in case you need to "roll back" to an earlier state. Git is most frequently used from the command line interface, or terminal.
 
-Rather than emailing documents with tracked changes and some comments and renaming different versions of files (example.txt, exampleV2.txt, exampleV3.text) to differentiate them, we can use Git to save (or in Git parlance, "commit") all that information with the document itself. This makes it easy to get an overview of all changes made to a file over time by looking at a log of all the changes that have been made. And all earlier versions of each file still remain in their original form: they are not overwritten, should we ever wish to "roll back" to them. 
-
- Once installed, interaction with Git is done through the Command Prompt in Windows, or the Terminal on Mac/Linux. Since Word documents contain special formatting, Git unfortunately cannot version control those, nor can it version control PDFs, though both file types can be stored in Git repositories.   
-
-*How can understanding Git help with work in libraries?*
-* Enables you to contribute to, collaborate on, and support digital research projects 
-* Enables you to control changes to your files over time without keeping multiple copies of those files
-
-**_GitHub_** on the other hand is a popular website for hosting and sharing Git repositories remotely. It offers a web interface and provides functionality and a mixture of both free and paid services for working with such repositories. The majority of the content that GitHub hosts is open source software, though increasingly it is being used for other projects such as open access journals (e.g. [Journal of Open Source Software](https://joss.theoj.org/)), blogs, and constantly updated text books. 
-
-*How can GitHub help with work in libraries?* 
-* A place to discover and reuse ("fork") a huge amount of openly licensed digital projects and open source software
-* A new and alternative means for publishing content online. Any GitHub repository can have its own project website, blog and wiki using GitHub Pages.  
+Git was designed for _text_ files that can be opened in a text editor (as opposed to _binary_ file formats like .pdf and .docx).  A Git repository can preserve files of any type, but only text files will benefit from all Git's features.  
+{: .info}
 
 
-### Uses in a Library Context
+**_GitHub_** is a popular website for hosting and sharing Git repositories. It offers a web interface and provides functionality and a mixture of both free and paid services for working with such repositories. Most content hosted and developed on GitHub is open source software, but the platform is used for a wide variety of projects.  GitHub provides the online infrastructure that makes it easier for teams to collaborate using Git, and to share their work with others (any GitHub repository can have its own project website, blog, and wiki using [GitHub Pages](https://pages.github.com/).)
 
-Consider these common library world scenarios: 
+## Why use version control?
 
-#### Scenario 1: Local library looking to start a crowdsourcing project
-
-A local librarian is looking to put thousands of historical photographs of the area online so that the community can help identify the people and places they depict. She combs the web for examples of existing crowdsourcing projects, and even though they all appear unique to each institution, she notices quite a few seem to have almost the exact same functionality and structure. Rather than build a whole new version from scratch herself, she wishes there was a way to just copy the code of an existing one, and modify it to reflect her project. She notices the [GitHub icon](https://github.com/logos) at the bottom of one of the projects she likes, but clicking on the link just brings her to a confusing directory of files and oddly labeled buttons such as "Fork".  
-
-GitHub hosts many open-licensed projects and allows any user to fork any public project. By clicking the "fork" button, any GitHub user can almost instantaneously create their own version of an existing project. That "forked" project can be used as the basis for a new project, or can be used to work out new features that can be merged back into the original. (From: [GitHub for Academics](https://hybridpedagogy.org/push-pull-fork-github-for-academics/) )
-
-#### Scenario 2: Multiple people editing metadata for a collection
-
-A metadata specialist has exported a spreadsheet from a repository for cleaning and editing. She's working with a group of library workers and students, so they need to make sure edits don't conflict. They also need to be able to undo any edits and preserve the original metadata. Once edits are complete, the whole group wants to review the changes before re-ingesting the spreadsheet of metadata into the repository.
-
-The team can choose to use Git by itself to track changes and resolve conflicts or they can choose to use GitHub to host the project so that users can collaborate and review changes on the Web. Git will preserve the original metadata as well as all edits. GitHub will facilitate discussion about what changes should be made, who should make them, and why.
+![Because we don't want to end up here](../figures/phd101212s.gif)
