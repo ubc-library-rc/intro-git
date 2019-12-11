@@ -5,45 +5,36 @@ parent: Lesson plan
 nav_order: 3
 ---
 
-## Collaborate using GitHub
-In the previous section you created a local Git repository on your own computer. To share your repository and invite others to collaborate you can create an empty repository in GitHub, then link it to your local repository.
+## GitHub for collaboration
+So far you used Git to create a repository called "hello-world" on your own computer. Next you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
+
+### Create an empty GitHub repository
 
 Log into your GitHub account and create a new repository by clicking the **+** icon in the upper-right corner of
-any page, then selecting **New repository**.
+any page, then selecting **New repository**.  
 
-* Create a new repository
-* Give it the name `hello-world`
+![add_new_repository](figures/add_new_repository.png)
 
-GitHub will ask if you want to add a README.md, license or a `.gitignore` file. This is not necessary because in this workshop we willDo not do any of that for now.
+- Name the repository "hello-world"
+- Add optional description
+- Ensure repository is set to "Public"
+- Click "Create repository"
 
-Choosing a license is an important part of openly sharing your creative work online. For help selecting an approparite license see <https://choosealicense.com/>.
+Choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see <https://choosealicense.com/>.
 {: .info}
 
-## Connecting your local repository to the GitHub repository
+## Linking your local repository to GitHub
 
-In the previous episode we created a local repository on our own computer.
-Now we have also created a remote repository on GitHub.
-But at this point, the two are completely isolated from each other.
-We want to link them together to synchronize them and share our project with the world.
+After creating your "hello-world" repository GitHub will display the repository page with suggestions about how to link your new GitHub repository to the "hello-world" repository you created on your own computer with Git. Linking these repositories will synchronize them and allow youto share your project.     
 
 To do this, we need the GitHub repository URL, which should look something like this
 (with "some-librarian" replaced with your username):
 
 ![The repository URL on GitHub](figures/repository-url.png)
 
-If the URL starts with `git@` rather than `https://`, please click the "HTTPS" button to change it.
+If the URL starts with "git@" rather than "https://", please click the "HTTPS" button to change it.  We use HTTPS in this workshop because it does not require additional configuration.  For information about setting up SSH access see this [GitHub tutorial](https://help.github.com/articles/generating-ssh-keys).
+{: .note}
 
-> ## HTTPS vs. SSH
->
-> We use HTTPS here because it does not require additional configuration, which vary
-> from operating system to operating system. If you start using Git regularly, you would
-> like to set up SSH access, which is a bit more secure and convenient, by
-> following one of the great tutorials from
-> [GitHub](https://help.github.com/articles/generating-ssh-keys),
-> [Atlassian/BitBucket](https://confluence.atlassian.com/bitbucket/set-up-an-ssh-key-728138079.html)
-> and [GitLab](https://about.gitlab.com/2014/03/04/add-ssh-key-screencast/)
-> (this one has a screencast).
-{: .callout}
 
 Notice that GitHub is actually helpful enough to provide instructions for us
 so we don't have to remember these commands:
