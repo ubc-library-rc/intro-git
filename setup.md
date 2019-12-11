@@ -34,8 +34,6 @@ Do not blah blah blah...
 
 
 Bunch of stuff, including
-- unordered list
-- and things
 {: .prereq }
 
 Another test 
