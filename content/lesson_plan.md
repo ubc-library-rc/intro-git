@@ -15,7 +15,7 @@ This is your session. If you have a question or feel we are going too fast, plea
 
 | Time | Content 
 | --- | --- 
-| 0:00 |  What is Git/GitHub?
+| 0:00 | [lesson/01_what_is_git.md](What is Git/GitHub?)
 | 0:10 | Getting started with Git
 | 0:30 | Sharing your work with GitHub
 | 1:00 | Review and practice
