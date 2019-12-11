@@ -3,7 +3,7 @@ layout: default
 title: Setup
 ---
 
-## Pre-workshp setup 
+## Pre-workshop setup 
 Please bring a laptop with the Bash Shell and Git installed **before** the workshop.
 
 If you do not have access to a laptop or have difficulty meeting these prerequisites please contact jeremy.buhler@ubc.ca.  We will do our best to ensure that everyone is able to participate.
