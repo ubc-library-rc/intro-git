@@ -4,9 +4,11 @@ title: Additional resources
 nav_order: 10
 ---
 
-## Basic command reference
+## Basic reference
 
-### Navigating the shell
+### Bash shell commands
+
+[t\Command line cheat sheet from Tower](https://www.git-tower.com/blog/command-line-cheat-sheet/)
 
 `pwd`
 : print working directory
@@ -16,9 +18,6 @@ nav_order: 10
 
 `cd`
 : change directory
-
-
-### Interacting with files
 
 `mkdir`
 : make directory
@@ -47,7 +46,7 @@ nav_order: 10
 ### Git commands
 
 * [GitHub git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
-* [Tower client git cheat sheet](https://www.git-tower.com/blog/git-cheat-sheet/)
+* [Git cheat sheet from Tower](https://www.git-tower.com/blog/git-cheat-sheet/)
 
 `git init`
 : create a new local git repository
