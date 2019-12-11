@@ -3,6 +3,7 @@ layout: default
 nav_order: 3
 title: Lesson plan
 has_children: true
+has_toc: false
 
 ---
 ## Goal
@@ -11,7 +12,7 @@ has_children: true
 
 This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover.
 
-### Outline
+## Outline
 
 | Time | Content 
 | --- | --- 
