@@ -18,7 +18,8 @@ This is your session. If you have a question or feel we are going too fast, plea
 | 0:00 |  What is Git/GitHub?
 | 0:10 | Getting started with Git
 | 0:30 | Sharing your work with GitHub
-| 1:00 | Review
+| 1:00 | Review and practice
+| 1:20 | Wrap-up
 
 _Actual schedule may vary depending on group needs_
 
