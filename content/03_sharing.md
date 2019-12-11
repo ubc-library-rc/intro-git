@@ -1,24 +1,23 @@
 ---
 layout: default
-title: Sharing
+title: GitHub for collaboration
 parent: Lesson plan
 nav_order: 3
 ---
 
-## Create a repository on GitHub
+## Collaborate using GitHub
+In the previous section you created a local Git repository on your own computer. To share your repository and invite others to collaborate you can create an empty repository in GitHub, then link it to your local repository.
 
-When we have logged in to GitHub, we can create a new repository by clicking the **+** icon in the upper-right corner of
-any page then selecting **New repository**. Let's do this now.
+Log into your GitHub account and create a new repository by clicking the **+** icon in the upper-right corner of
+any page, then selecting **New repository**.
 
 * Create a new repository
 * Give it the name `hello-world`
 
-GitHub will ask if you want to add a README.md, license or a `.gitignore` file. Do not do any of that for now.
+GitHub will ask if you want to add a README.md, license or a `.gitignore` file. This is not necessary because in this workshop we willDo not do any of that for now.
 
-> ## Choosing a license
-> Choosing a license is an important part of openly sharing your creative work online. For help in wading through the
-> many types of open source licenses, please visit <https://choosealicense.com/>.
-{: .callout}
+Choosing a license is an important part of openly sharing your creative work online. For help selecting an approparite license see <https://choosealicense.com/>.
+{: .info}
 
 ## Connecting your local repository to the GitHub repository
 
