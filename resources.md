@@ -4,23 +4,21 @@ title: Additional resources
 nav_order: 10
 ---
 
-## Quick reference
+## Basic reference
 
-### Basics - navigating the shell
+### Navigating the shell
 
 `pwd`
 : print working directory
 
 `ls`
-: list directory
-:
-: - `-l`: list file information
-: - `-lh`: list human readable file information
+: list contents of directory
 
 `cd`
 : change directory
 
-### Basics - interacting with files
+
+### Interacting with files
 
 `mkdir`
 : make directory
@@ -44,11 +42,11 @@ nav_order: 10
 : redirect output. Syntax with `cat`: `cat FILENAME1 FILENAME2 > NEWFILENAME`
 
 `rm`
-: remove a file or files. NB: *USE WITH CAUTION!!!*
+: remove a file or files. *USE WITH CAUTION!!!*
 
-### Basic Git commands
+### Git commands
 
-Git cheat sheet handouts:
+Git cheat sheets:
 
 * [GitHub git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 * [Tower client git cheat sheet](https://www.git-tower.com/blog/git-cheat-sheet/)
@@ -80,25 +78,10 @@ Git cheat sheet handouts:
 `git remote add origin`
 : add a remote repository named 'origin', to upload changes to or download changes from
 
-## Useful library GitHub repositories
-
-* [DavidChouinard/mrc_to_csv](https://github.com/DavidChouinard/mrc_to_csv): 'Python script for converting MARC21 files to a saner format (CSV), originally designed for the Harvard Libraries MARC21 records'
-* [Process MARC records from Python](https://github.com/edsu/pymarc)
-  * https://pypi.org/project/pymarc/
-* [umd-mith/git-intro](https://umd-mith.github.io/git-intro/): high level intro to git 
-* [edsu/mirador](https://github.com/edsu/mirador)
-* [edsu/microdata](https://github.com/edsu/microdata)
-* [dhtaxonomy/TaDiRAH](https://github.com/dhtaxonomy/TaDiRAH)
-* [OpenAPC/openapc-de](https://github.com/OpenAPC/openapc-de)
-* [JiscMonitor/allapc](https://github.com/JiscMonitor/allapc)
-* [Python Programming for Humanities](http://www.karsdorp.io/python-course/)
-* [Code4Lib 2008 lightning talk – Git and distributed cataloging](https://galencharlton.com/blog/2008/03/code4lib-2008-lightning-talk-git-and-distributed-cataloging/)
-* [Open Science Guide](http://book.openingscience.org.s3-website-eu-west-1.amazonaws.com/)
 
 ## Further reading
 
-* The [help pages](https://help.github.com/) of GitHub are a good place to start
+* The GitHub [help pages](https://help.github.com/) are a good place to start
 * GitHub has '[activities](https://guides.github.com/activities/hello-world/)' which aim to explain how git works
 * GitHub also has interactive tutorials for their [online version (Learning Labs)](https://lab.github.com/) and for [using Git offline (Git-It)](https://github.com/jlord/git-it-electron#git-it-desktop-app)
-* Atlassian has in depth but clear [tutorials](https://www.atlassian.com/git/tutorials) on using git
-* The [Programming Historian](https://programminghistorian.org) uses GitHub to manage lessons useful to historians and also people working in libraries. It is a useful resource for lessons but also to see GitHub in action.
+* Atlassian has in depth and clear [tutorials](https://www.atlassian.com/git/tutorials) on using Git
