@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Getting started
+title: Git basics
 parent: Lesson plan
 nav_order: 2
 ---
