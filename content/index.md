@@ -1,7 +1,7 @@
 ---
 layout: default
 nav_order: 1
-title: This is the start
+title: Lesson plan
 ---
 #### What We Will Try to Do
 
