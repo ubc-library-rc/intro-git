@@ -1,9 +1,9 @@
 ---
 layout: default
-nav_order: 1
+nav_order: 3
 title: Lesson plan
 has_children: true
-permalink: /content/lesson
+
 ---
 #### What We Will Try to Do
 
@@ -24,4 +24,4 @@ permalink: /content/lesson
 > 1. Setup a [GitHub account](https://github.com/)
 > 2. [Install git on your own computer](https://help.github.com/articles/set-up-git/)
 > 3. [Configure your git setup]({% link setup.md %})
-{: .prereq}
+
