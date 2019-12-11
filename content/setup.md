@@ -13,7 +13,7 @@ If you haven't done so already, to follow this lesson you will need to:
 $ git config --global user.name "Your Name"
 $ git config --global user.email "your@email"
 ~~~
-{: .bash}
+
 
 This user name and email will be recorded with each commit in the history of your repositories. 
 The email address should be the same one you used when setting up your GitHub account.
