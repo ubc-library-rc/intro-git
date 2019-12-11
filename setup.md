@@ -35,8 +35,10 @@ Do not blah blah blah...
 
 <div class="prereq">
   Bunch of stuff, including
-  - this thing
-  - second thing
+  <ul>
+    <li>this thing</li>
+    <li>econd thing</li>
+  </ul>
 </div>
 
 
