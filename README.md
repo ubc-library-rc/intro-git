@@ -2,11 +2,9 @@
 nav_exclude: true
 ---
 
-Say things about workshop for people who might find it on GitHub
+Placeholder for:
 
-- Content acknowledgement
-- UBC Research Commons context
-- License
-- Link to class site
-- link to about jekyll template
+- Content acknowledgement (adapted from [Library Carpentry: Introduction to Git](https://librarycarpentry.org/lc-git/)
+- Research Commons context
+- [Workshop page](https://jeremybuhler.github.io/rc-git/), based on [Just the Docs](https://github.com/pmarsceill/just-the-docs) Jekyll theme
 
