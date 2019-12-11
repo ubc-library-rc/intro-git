@@ -26,3 +26,9 @@ $callouts: (
 .navigation-list-item .navigation-list-child-list {
   display: block !important;
 }
+
+code {
+  font-family: $mono-font-family;
+  font-size: 16px;
+  line-height: $body-line-height;
+}
