@@ -33,4 +33,4 @@ Git was designed for _text_ files that can be opened in a text editor (as oppose
 ## Why use version control?
 Because no one wants to end up in this familiar place:
 
-![Because we don't want to end up here](../figures/phd101212s.gif)
+![Because we don't want to end up here](figures/phd101212s.gif)
