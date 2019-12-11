@@ -5,23 +5,22 @@ title: Lesson plan
 has_children: true
 
 ---
-#### What We Will Try to Do
+# Goal
 
 **Begin** to understand and use Git/GitHub. You will not be an expert by the end of the class. You will probably not even feel very comfortable using Git. This is okay. We want to make a start but, as with any skill, using Git takes practice.
 
-#### Be Excellent to Each Other
+This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover.
 
-* If you spot someone in the class who is struggling with something and you think you know how to help, please give them a hand. Try not to do the task for them: instead explain the steps they need to take and *what* these steps will achieve.
+# Outline
 
-#### Be Patient With Me and Yourself
+| Time | Content 
+| --- | --- 
+| 0:00 |  What is Git/GitHub?
+| 0:10 | Getting started with Git
+| 0:30 | Sharing your work with GitHub
+| 1:00 | Review
 
-* This is a big group, with different levels of knowledge, different computer systems.
-* This isn't my full-time job (though if someone wants to pay me to play with computers all day I'd probably accept). I'll do my best to make this session useful.
-* This is your session. If you feel we are going too fast, then please put up a pink sticky. We can decide as a group what to cover.
+_Actual schedule may vary depending on group needs_
 
-> ## Prerequisites
->
-> 1. Setup a [GitHub account](https://github.com/)
-> 2. [Install git on your own computer](https://help.github.com/articles/set-up-git/)
-> 3. [Configure your git setup]({% link setup.md %})
+
 
