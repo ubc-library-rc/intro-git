@@ -1,3 +1,8 @@
+---
+layout: default
+title: UI Components
+---
+
 If you haven't done so already, to follow this lesson you will need to:
 
 1. Create a free [GitHub account](https://github.com/join) and confirm your email.
