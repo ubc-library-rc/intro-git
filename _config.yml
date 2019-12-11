@@ -5,7 +5,7 @@ search_enabled: false
 aux_links:
   "UBC Library Research Commons Workshops":
     - "https://researchcommons.library.ubc.ca/workshops/"
-  "View content on GitHub":
+  "View on GitHub":
     - "https://github.com/JeremyBuhler/rc-git/"
 heading_anchors: false
 footer_content: "Copyright, acknowledgement, license, etc."
