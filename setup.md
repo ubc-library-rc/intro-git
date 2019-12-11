@@ -30,4 +30,4 @@ $ git config --global core.editor "notepad"
 
 
 Do not blah blah blah...
-{: .warn }
+{: .code_example }
