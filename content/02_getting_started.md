@@ -15,35 +15,38 @@ The best way to learn a langauge is through practice.  In this workshop we will 
 
 You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory called `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
 
-You can create an online repository using [GitHub's web interface](https://github.com/new), or on your own computer using the command line. 
+You can create repositories using [GitHub's web interface](https://github.com/new), or on your own computer using the command line.  Let's use the command line to create a Git repository for new project.
 
-Let's use the command line to create a Git repository.
+First, create a directory called `hello-world` and navigate to the new directory.
 
-First, we will create a new directory for our project and enter that directory.
-
-
+Input
+{: .label .label-green}
 ~~~
 $ mkdir hello-world
 $ cd hello-world
 ~~~
 
+If you're not sure you're in the right place use the command `pwd` (print working directory) to display the complete path of your current directory.
+{: .info}
+
 We will now create an empty git repository to track changes to our project. To do this we will use the git **init** command, 
 which is simply short for *initialise*.
 
+Input
+{: .label .label-green}
 ~~~
 $ git init
 ~~~
-
+Input
+{: .label .label-green}
 ~~~
 Initialized empty Git repository in <your file path>/hello-world/.git/
 ~~~
 
+Your `hello-world` directory is now a git repository. 
 
-
-The `hello-world` directory is now a git repository. 
-
-If we run the `ls` command now (`ls` lists the content of the `hello-world` 
-directory), the repository might seem empty; however, adding the `-a` flag 
+If we run the `ls` command to list the contents of the `hello-world` 
+directory, the repository might seem empty.  However, adding the `-a` flag 
 for all files via `ls -a` will show all hidden files, which in this case 
 includes the new hidden directory `.git`.
 
