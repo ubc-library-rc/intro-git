@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UI Components
+title: Setup
 ---
 
 If you haven't done so already, to follow this lesson you will need to:
