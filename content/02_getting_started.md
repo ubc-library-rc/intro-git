@@ -5,7 +5,7 @@ parent: Lesson plan
 nav_order: 2
 ---
 
-## Using Git
+## Git basics
 
 One of the challenges of learning Git is becoming familiar with its terminology and command structure. Git commands consist of verbs such as `add`, `commit`, and `push` preceded by the word `git`.  These base commands are often followed by arguments that provide more information about how and where Git should act.
 
@@ -13,7 +13,7 @@ The best way to learn a langauge is through practice.  In this workshop we will 
 
 ### Creating a repository
 
-You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory called `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
+You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory named `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
 
 You can create repositories using [GitHub's web interface](https://github.com/new), or on your own computer using the command line.  Let's use the command line to create a Git repository for new project.
 
@@ -29,7 +29,7 @@ $ cd hello-world
 If you're not sure you're in the right place use the command `pwd` (print working directory) to display the complete path of your current directory.
 {: .info}
 
-We will now create an empty git repository to track changes to our project. To do this we will use the git **init** command, 
+We will now create a Git repository to track changes to our project.  Use the git **init** command, 
 which is simply short for *initialise*.
 
 Input
@@ -37,39 +37,40 @@ Input
 ~~~
 $ git init
 ~~~
-Input
-{: .label .label-green}
+Output
+{: .label .label-yellow}
 ~~~
 Initialized empty Git repository in <your file path>/hello-world/.git/
 ~~~
 
 Your `hello-world` directory is now a git repository. 
 
-If we run the `ls` command to list the contents of the `hello-world` 
-directory, the repository might seem empty.  However, adding the `-a` flag 
-for all files via `ls -a` will show all hidden files, which in this case 
-includes the new hidden directory `.git`.
+If you run the `ls` command to list the contents of the `hello-world` 
+directory your repository may seem empty.  But running `ls -a` will include hidden files in the list, revealing the new hidden directory named `.git`.
+{: .info}
 
-Note that whenever we use git via the command line, we need to preface each command (or verb) with `git`, so that the computer knows 
-we are trying to get git to do something, rather than some other program.
 
-### Displaying the current project's status
+### Displaying project status
 
-We can run the `git status` command to display the current state of a project. Let's do that now.
+The `git status` command displays the current state of a project.
 
+Input
+{: .label .label-green}
 ~~~
 $ git status
 ~~~
 
+Output
+{: .label .label-yellow}
 ~~~
 On branch master
 No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ~~~
 
-
-The output tells us that we are on the master branch (more on this later) and that we have nothing to commit (no 
-unsaved changes).
+The output introduces two new Git concepts:
+- "branch master" (explain what it is)
+- "commit" (explain what it is)
 
 
 ### Adding and committing
@@ -80,19 +81,25 @@ process gives us fine-grained control over what should and should not be include
 
 Let's create a new file using the `touch` command, which is a quick way to create an empty file.
 
+Input
+{: .label .label-green}
 ~~~
 $ touch index.md
 ~~~
 
 
-The `.md` extension above signifies that we have chosen to use the Markdown format, a lightweight markup language with plain text formatting syntax. We will explore Markdown a bit later.
+The `.md` extension is for text files written using Markdown, a lightweight markup language with plain text formatting syntax. For more on Markdown see (link to Markdown resource, add .md cheatsheet to resources list)
 
 Let's check the status of our project again.
 
+Input
+{: .label .label-green}
 ~~~
 $ git status
 ~~~
 
+Output
+{: .label .label-yellow}
 ~~~
 On branch master
 No commits yet
@@ -104,11 +111,12 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 
-
-This status is telling us that git has noticed a new file in our directory that we are not yet tracking. With colourised 
+Git has noticed a new file in our directory that we are not yet tracking. With colourised 
 output, the filename will appear in red. To change this, and to tell Git we want to track any changes we make to 
 index.md, we use `git add`.
 
+Input
+{: .label .label-green}
 ~~~
 $ git add index.md
 ~~~
@@ -116,10 +124,14 @@ $ git add index.md
 
 This adds our Markdown file to the **staging area** (the area where git checks for file changes). To confirm this we want to use `git status` again.
 
+Input
+{: .label .label-green}
 ~~~
 $ git status
 ~~~
 
+Output
+{: .label .label-yellow}
 ~~~
 On branch master
 
@@ -139,10 +151,14 @@ We will open the file `index.md` with any text editor we have at hand (e.g. Note
 hash character is one way of writing a header with Markdown. Now, let's save the file within the text editor and check if Git
 has spotted the changes.
 
+Input
+{: .label .label-green}
 ~~~
 $ git status
 ~~~
 
+Output
+{: .label .label-yellow}
 ~~~
 On branch master
 
@@ -164,6 +180,8 @@ Changes not staged for commit:
 This lets us know that git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add 
 the new version of the file to the staging area.
 
+Input
+{: .label .label-green}
 ~~~
 $ git add index.md
 ~~~
@@ -174,11 +192,14 @@ Commit is similar to 'saving' a file to Git.
 However, compared to saving, a commit provides a lot more information about the changes we have made,
 and this information will remain visible to us later.
 
-
+Input
+{: .label .label-green}
 ~~~
 $ git commit -m 'Add index.md'
 ~~~
 
+Output
+{: .label .label-yellow}
 ~~~
 [master (root-commit) e9e8fd3] Add index.md
  1 file changed, 1 insertion(+)
