@@ -3,47 +3,35 @@ layout: default
 title: Setup
 ---
 
-If you haven't done so already, to follow this lesson you will need to:
+## Pre-workshp setup 
+Please bring a laptop with the Bash Shell and Git installed **before** the workshop.
 
-1. Create a free [GitHub account](https://github.com/join) and confirm your email.
-2. Download and install Git for your operating system: [https://git-scm.com/downloads](https://git-scm.com/downloads) (*Note:* Git for Windows comes bundled with the Git BASH terminal that allows you to use UNIX-style commands on Windows)
-3. Configure Git by opening a terminal window and entering the following commands:
+If you do not have access to a laptop or have difficulty meeting these prerequisites please contact jeremy.buhler@ubc.ca.  We will do our best to ensure that everyone is able to participate.
+{: .note }
+
+#### Install the Bash Shell and Git
+  - **Windows**. Follow [these instructions](https://carpentries.github.io/workshop-template/#shell) to download the Bash Shell and Git at the same time.
+  - **Mac** and **Linux**. Bash is already installed (no action required). Install Git using [these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
+#### Create a free [GitHub account](https://github.com)
+
+#### Configure Git user name and email
+Open a terminal window and enter the following commands to configure Git:
 
 ~~~
 $ git config --global user.name "Your Name"
 $ git config --global user.email "your@email"
 ~~~
 
+This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git.  
 
-This user name and email will be recorded with each commit in the history of your repositories. 
 The email address should be the same one you used when setting up your GitHub account.
+{: .warn}
 
-By default, Git will open the Vi / Vim text editor to request commit messages (for example when merging conflicts).
-To avoid confusion, most people will want to change the default editor to something more familiar using the `core.editor` config. 
-Any text editor can be made default by adding the correct file path and command line options (see [GitHub help](https://help.github.com/articles/associating-text-editors-with-git/)). 
-However, the simplest `core.editor` values are `"notepad"` on Windows,  `"nano -w"` on Mac, and `"nano -w"` on Linux. 
-For example:
+#### Set your preferred text editor
+Git sometimes opens a text editor to complete a task. The default is the Vi/Vim text editor but most people will prefer to use something more familiar. The simplest options are `"notepad"` on Windows,  `"nano -w"` on Mac, and `"nano -w"` on Linux. 
+This command will set your preferred editor to `"notepad"`:
 
 ~~~
 $ git config --global core.editor "notepad"
 ~~~
-
-
-Do not blah blah blah...
-{: .warn }
-
-
-<div class="prereq">
-  Bunch of stuff, including
-  <ul>
-    <li>this thing</li>
-    <li>econd thing</li>
-  </ul>
-</div>
-
-
-Another test 
-{: .info }
-
-And a last one 
-{: .danger }
