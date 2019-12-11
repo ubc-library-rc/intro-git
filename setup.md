@@ -42,10 +42,7 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "your@email"
 ~~~
 
-This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git.  
-
-The email address should be the same one you used when setting up your GitHub account.
-{: .warn}
+This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git. The email address should be the same one you used when setting up your GitHub account.
 
 ### 4. Set your preferred text editor
 Git sometimes opens a text editor to complete a task. The default is the Vi/Vim text editor but most people will prefer to use something more familiar. The simplest options are `"notepad"` on Windows,  `"nano -w"` on Mac, and `"nano -w"` on Linux. 
