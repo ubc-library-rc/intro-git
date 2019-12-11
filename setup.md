@@ -6,8 +6,8 @@ title: Setup
 ## Pre-workshop setup 
 Please bring a laptop with the Bash Shell and Git installed **before** the workshop.
 
-If you do not have access to a laptop or have difficulty meeting these prerequisites please contact jeremy.buhler@ubc.ca.  We will do our best to ensure that everyone is able to participate.
-{: .note }
+If you do not have access to a laptop or have difficulty meeting these prerequisites please contact jeremy.buhler@ubc.ca.  We will do our best to ensure everyone can participate.
+{: .info }
 
 ### 1. Install the Bash Shell and Git
   - **Windows**. Follow [these instructions](https://carpentries.github.io/workshop-template/#shell) to download the Bash Shell and Git at the same time.
