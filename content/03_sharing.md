@@ -30,7 +30,7 @@ We want to link them together to synchronize them and share our project with the
 To do this, we need the GitHub repository URL, which should look something like this
 (with "some-librarian" replaced with your username):
 
-![The repository URL on GitHub](../figures/repository-url.png)
+![The repository URL on GitHub](figures/repository-url.png)
 
 If the URL starts with `git@` rather than `https://`, please click the "HTTPS" button to change it.
 
@@ -49,7 +49,7 @@ If the URL starts with `git@` rather than `https://`, please click the "HTTPS" b
 Notice that GitHub is actually helpful enough to provide instructions for us
 so we don't have to remember these commands:
 
-![GitHub instructions](../figures/github-instructions.png)
+![GitHub instructions](figures/github-instructions.png)
 
 You can therefore choose to copy these and paste them on the command line.
 Or you can choose to type them out to get them into your fingers.
@@ -59,11 +59,11 @@ to the GitHub repository:
 ~~~
 $ git remote add origin https://github.com/some-librarian/hello-world.git
 ~~~
-{: .bash}
+
 
 where `some-librarian` should be replaced with your own username.
 
-> ## Why `origin`?
+> ## Why "origin"?
 > `origin` in the `git remote add` line is just a short name or alias we're giving to that big long repository URL.
 > It could be almost any string we want, but by convention in git, it is usually called `origin`, representing where
 > the repo originated.
@@ -74,12 +74,12 @@ We can check that it is set up correctly with the command:
 ~~~
 $ git remote -v
 ~~~
-{: .bash}
+
 ~~~
 origin  https://github.com/<your_github_username>/hello-world (fetch)
 origin  https://github.com/<your_github_username>/hello-world (push)
 ~~~
-{: .output}
+
 
 ## Pushing changes
 
@@ -91,7 +91,7 @@ will have to "push" our local changes to the GitHub repository. We do this using
 ~~~
 $ git push -u origin master
 ~~~
-{: .bash}
+
 ~~~
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 226 bytes | 0 bytes/s, done.
@@ -100,7 +100,7 @@ To https://github.com/<your_github_username/hello-world
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
-{: .output}
+
 
 The nickname of our remote repository is "origin" and the default local branch name is "master".
 The `-u` flag tells git to remember the parameters, so that next time we can simply run `git push`
@@ -115,13 +115,13 @@ little longer. We can check where we're at with `git status`.
 ~~~
 $ git status
 ~~~
-{: .bash}
+
 ~~~
 On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working tree clean
 ~~~
-{: .output}
+
 
 This output lets us know where we are working (the master branch). We can also see that we have no changes to commit 
 and everything is in order.
@@ -133,7 +133,7 @@ We will then use `git diff` to see the changes we made:
 ~~~
 $ git diff
 ~~~
-{: .bash}
+
 ~~~
 diff --git a/index.md b/index.md
 index aed0629..989787e 100644
@@ -145,7 +145,7 @@ index aed0629..989787e 100644
 +# Hello, world!
 +A new line
 ~~~
-{: .output}
+
 
 The command produces lots of information and it can be a bit overwhelming at first,
 but let's go through some key information here:
@@ -164,7 +164,7 @@ We can now commit these changes:
 $ git add index.md
 $ git commit -m 'Add another line'
 ~~~
-{: .bash}
+
 
 If we are very forgetful and have already forgotten what we changes we have made, `git log` allows us to look at what 
 we have been doing with our git repository (in reverse chronological order, with the very latest changes first).
@@ -173,7 +173,7 @@ we have been doing with our git repository (in reverse chronological order, with
 ~~~
 $ git log
 ~~~
-{: .bash}
+
 ~~~
 commit 8e2eb9920eaa0bf18a4adfa12474ad58b765fd06
 Author: Your Name <your_email>
@@ -187,7 +187,7 @@ Date:   Fri Jun 2 18:15:43 2017 +0100
 
     Add index.md
 ~~~
-{: .output}
+
 
 This shows us the two commits we have made and shows the messages we wrote. It is important to try to use meaningful 
 commit messages when we make changes. This is especially important when we are working with other people who might not 
@@ -200,7 +200,7 @@ Now, let's have a look at the repository at GitHub again
 (that is, `https://github.com/some-librarian/hello-world` with `some-librarian` replaced with your username).
 We see that the `index.md` file is there, but there is only one commit:
 
-![Only one commit on GitHub](../figures/github-one-commit.png)
+![Only one commit on GitHub](figures/github-one-commit.png)
 
 And if you click on `index.md` you will see that it contains the "Hello, world!" header,
 but not the new line we just added.
@@ -217,7 +217,7 @@ But let's push our changes now, using the `git push` command:
 ~~~
 $ git push
 ~~~
-{: .bash}
+
 ~~~
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 272 bytes | 0 bytes/s, done.
@@ -225,7 +225,6 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/<your_github_username>/hello-world
    e9e8fd3..8e2eb99  master -> master
 ~~~
-{: .output}
 
 And let's check on GitHub that we now have 2 commits there.
 
@@ -251,7 +250,7 @@ our local repository using the `git pull` command.
 ~~~
 $ git pull
 ~~~
-{: .bash}
+
 ~~~
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (2/2), done.
@@ -265,7 +264,7 @@ Fast-forward
  1 file changed, 1 insertion(+)
  create mode 100644 README.md
 ~~~
-{: .output}
+
 
 The above output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm
 this by entering the `ls` command.
