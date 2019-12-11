@@ -33,8 +33,12 @@ Do not blah blah blah...
 {: .warn }
 
 
-Bunch of stuff, including
-{: .prereq }
+<div class="prereq">
+  Bunch of stuff, including
+  - this thing
+  - second thing
+</div>
+
 
 Another test 
 {: .info }
