@@ -7,29 +7,23 @@ nav_order: 1
 
 ## What is Version Control
 
-Version control is a name used for software which can help you record changes you make to the files in a directory on your computer. Version control software and tools (such as Git and Subversion/SVN) are often associated with software development, and increasingly, they are being used to collaborate in research and academic environments. Version control systems work best with plain text files such as documents or computer code, but modern version control systems can be used to track changes in any type of file.
+Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development and are increasingly used for collaboration and sharing in research and academic environments.  Version control systems work best with plain text files but can be used ot track versions of any type of file. It takes some discipline to learn and make use of version control software like Git, but there are many benefits:
 
-At its most basic level, version control software helps us register and track sets of changes made to files on our computer. We can then reason about and share those changes with others. As we build up sets of changes over time, we begin to see some benefits.
-
-### Benefits of version control?
-
-* **Collaboration** - Version control allows us to define formalized ways we can work together and share writing and code. For example merging together sets of changes from different parties enables co-creation of documents and software across distributed teams.
-* **Versioning** - Having a robust and rigorous log of changes to a file, without renaming files (v1, v2, _final_copy_)
-* **Rolling Back** - Version control allows us to quickly undo a set of changes. This can be useful when new writing or new additions to code introduce problems.
-* **Understanding** - Version control can help you understand how the code or writing came to be, who wrote or contributed particular parts, and who you might ask to help understand it better.
-* **Backup** - While not meant to be a backup solution, using version control systems mean that your code and writing can be stored on multiple other computers.
-
-There are many more reasons to use version control, and we'll explore some of these in the library context, but first let's learn a bit about a popular version control tool called Git.
+* **Collaboration** - Version control helps teams work collaboratively on same set of documents without interfering with each other.
+* **Versioning** - It provides a thorough log of changes to tracked files without creating multiple copies, making it easier to identify the most current version.
+* **Rolling back** - Made a mistake?  Version control lets you review and undo changes, reverting to previous stages in the document's history. This can be useful when changes to your files introduce unforeseen problems.
+* **Context** - Version control can help you understand how the code or writing came to be, who wrote or contributed particular parts, and who you might ask to help understand it better.
+* **Backup** - While not meant to be a backup solution, version control systems mean your code and writing can be stored on multiple computers.
 
 ## What are Git and GitHub?
 
 We often hear the terms **_Git_** and **_GitHub_** used interchangeably but they are slightly different things.
 
-**_Git_** is one of the most widely used version control systems in the world. It is a free, open source tool that can be downloaded to your local machine and used for logging all changes made to a group of designated computer files (referred to as a "git repository" or "repo" for short) over time. It can be used to control file versions locally by you alone on your computer, but is perhaps most powerful when employed to coordinate simultaneous work on a group of files shared among distributed groups of people. 
+**_Git_** is one of the most widely used version control systems in the world. It is a free, open source tool that can be installed on your local machine to track changes made to selected files (referred to as a "git repository" or "repo"). Git was originally developed to help teams of software developers collaborate, but it can be used for managing revisions to any file type on a computer system, including text documents.
 
 Rather than emailing documents with tracked changes and some comments and renaming different versions of files (example.txt, exampleV2.txt, exampleV3.text) to differentiate them, we can use Git to save (or in Git parlance, "commit") all that information with the document itself. This makes it easy to get an overview of all changes made to a file over time by looking at a log of all the changes that have been made. And all earlier versions of each file still remain in their original form: they are not overwritten, should we ever wish to "roll back" to them. 
 
-Git was originally developed to help software developers work collaboratively on software projects, but it can be and is used for managing revisions to any file type on a computer system, including text documents. Once installed, interaction with Git is done through the Command Prompt in Windows, or the Terminal on Mac/Linux. Since Word documents contain special formatting, Git unfortunately cannot version control those, nor can it version control PDFs, though both file types can be stored in Git repositories.   
+ Once installed, interaction with Git is done through the Command Prompt in Windows, or the Terminal on Mac/Linux. Since Word documents contain special formatting, Git unfortunately cannot version control those, nor can it version control PDFs, though both file types can be stored in Git repositories.   
 
 *How can understanding Git help with work in libraries?*
 * Enables you to contribute to, collaborate on, and support digital research projects 
