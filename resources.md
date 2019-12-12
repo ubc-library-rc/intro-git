@@ -1,55 +1,43 @@
 ---
 layout: default
-title: Additional resources
+title: Reference
 nav_order: 10
 ---
 
-## Basic reference
+## Reference
 
 ### Bash shell commands
 
-[t\Command line cheat sheet from Tower](https://www.git-tower.com/blog/command-line-cheat-sheet/)
+[Command line cheat sheet from Tower](https://www.git-tower.com/blog/command-line-cheat-sheet/)
 
-`pwd`
-: print working directory
+`pwd`: print working directory
 
-`ls`
-: list contents of directory
+`ls`: list contents of directory
 
-`cd`
-: change directory
+`cd`: change directory
 
-`mkdir`
-: make directory
+`mkdir`: make directory
 
-`cat`
-: send file or files to output (in most cases, print to shell)
+`cat`: send file or files to output (in most cases, print to shell)
 
-`head`
-: output first parts of a file or files
+`head`: output first parts of a file or files
 
-`tail`
-: output last parts of a file or files
+`tail`: output last parts of a file or files
 
-`mv`
-: rename or move a file or files. Syntax for renaming a file: `mv FILENAME NEWFILENAME`
+`mv`: rename or move a file or files. Syntax for renaming a file: `mv FILENAME NEWFILENAME`
 
-`cp`
-: copy a file or files. Syntax: `cp FILENAME NEWFILENAME`
+`cp`: copy a file or files. Syntax: `cp FILENAME NEWFILENAME`
 
-`>`
-: redirect output. Syntax with `cat`: `cat FILENAME1 FILENAME2 > NEWFILENAME`
+`>`: redirect output. Syntax with `cat`: `cat FILENAME1 FILENAME2 > NEWFILENAME`
 
-`rm`
-: remove a file or files. *USE WITH CAUTION!!!*
+`rm`: remove a file or files. *USE WITH CAUTION!!!*
 
 ### Git commands
 
 * [GitHub git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 * [Git cheat sheet from Tower](https://www.git-tower.com/blog/git-cheat-sheet/)
 
-`git init`
-: create a new local git repository
+`git init`: create a new local git repository
 
 `git status`
 : view the status of your files in the working directory and staging area
