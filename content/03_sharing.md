@@ -6,7 +6,7 @@ nav_order: 3
 ---
 
 ## GitHub for collaboration
-So far you used Git to create a repository called "hello-world" on your own computer. Next you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
+So far you used Git to create a repository called "hello-world" on your own computer, but no one else can see those files.  Next you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
 
 ### Create an empty GitHub repository
 
@@ -105,15 +105,12 @@ Your branch is up-to-date with 'origin/master'.
 nothing to commit, working tree clean
 ~~~
 
+This output lets us know where we are working (the master branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
 
-This output lets us know where we are working (the master branch). We can also see that we have no changes to commit 
-and everything is in order.
+### Reviewing local changes
 
-### Reviewing changes
-
-We can use the `git diff` command to see changes we have made before making a commit. Open index.md with any text 
-editor and enter some text on a new line, for instance "A new line" or something else.
-We will then use `git diff` to see the changes we made:
+The `git diff` command shows the changes we have made before a commit. To test this, open "index.md" with any text 
+editor and enter a new line of text (in this example we added "It's a beautiful rainy day" on the second line of "index.md").  Save the file, then use `git diff` to see the changes.
 
 Input
 {: .label .label-green }
@@ -129,33 +126,29 @@ index aed0629..989787e 100644
 --- a/index.md
 +++ b/index.md
 @@ -1 +1,2 @@
--# Hello, world!
-\ No newline at end of file
-+# Hello, world!
-+A new line
+ # Hello, world!
++It's a beautiful rainy day
 ~~~
 
 
-The command produces lots of information and it can be overwhelming at first.  Here's what's happening:
+Here's what the output reveals:
 
-- Line 1 tells us that Git is producing output similar to the Unix "diff" command, comparing the old and new 
-versions of the file.
-- Line 2 indicates which versions of the file Git is comparing; "aed0629" and "989787e" are unique 
-computer-generated identifiers for those versions.
-- Lines 3-4 name the files that wer changed show the name of the file being changed.
-- The remaining lines are the most interesting; they show us the actual differences and the lines on which they occur. 
-In particular, the + markers in the first column show where we have added lines.
+- Line 1 tells us Git is comparing "a" and "b" versions of the index.md file
+- Line 2 indicates which tracked versions "a" and "b" correspond to; "aed0629" and "989787e" are unique computer-generated identifiers for each version
+- The last two lines show the changes to the "index.md" between the compared versions: 
+    - there were no changes to the `# Hello, world!` line
+    - a line was added with the text `It's a beautiful rainy day` ("+" indicates an addition and "-", a deletion)
 
-We can now commit these changes:
+We can now add and commit the updated version of "index.md":
 
 Input
 {: .label .label-green }
 ~~~
 $ git add index.md
-$ git commit -m 'Add another line'
+$ git commit -m 'Add note about the weather'
 ~~~
 
-The `git log` command allows us to look at what we have been doing with our git repository (in reverse chronological order, with the very latest changes first).
+The `git log` command provides another way to view past activity in our git repository.
 
 Input
 {: .label .label-green }
@@ -170,7 +163,7 @@ commit 8e2eb9920eaa0bf18a4adfa12474ad58b765fd06
 Author: Your Name <your_email>
 Date:   Mon Jun 5 12:41:45 2017 +0100
 
-    Add another line
+    Add note about the weather
 
 commit e9e8fd3f12b64fc3cbe8533e321ef2cdb1f4ed39
 Author: Your Name <your_email>
@@ -180,30 +173,15 @@ Date:   Fri Jun 2 18:15:43 2017 +0100
 ~~~
 
 
-This shows us the two commits we have made and shows the messages we wrote. It is important to try to use meaningful 
-commit messages when we make changes. This is especially important when we are working with other people who might not 
-be able to guess as easily what our short cryptic messages might mean. Note that it is best practice to always write 
-commit messages in the imperative (e.g. 'Add index.md', rather than 'Adding index.md').
+`git log` lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working on teams.  Best practice is to write commit messages in the imperative (e.g. 'Add index.md' instead of 'Adding index.md').
 
-## Pushing changes (again)
+## Keeping Git and GitHub in sync
 
-Now, let's have a look at the repository at GitHub again
-(that is, `https://github.com/some-librarian/hello-world` with `some-librarian` replaced with your username).
-We see that the `index.md` file is there, but there is only one commit:
+Take another look at your "hello-world" repository on GitHub.  The "index.md" ifle is there, but there is only one commit.
 
 ![Only one commit on GitHub](figures/github-one-commit.png)
 
-And if you click on `index.md` you will see that it contains the "Hello, world!" header,
-but not the new line we just added.
-
-This is because we haven't yet pushed our local changes to the remote repository.
-This might seem like a mistake in design but it is 
-often useful to make a lot of commits for small changes so you are able to make careful revisions later and you don't 
-necessarily want to push all these changes one by one.
-
-Another benefit of this design is that you can make commits without being connected to internet.
-
-But let's push our changes now, using the `git push` command:
+If you click on the "index.md" file you will see that it contains the "Hello, world!" header but not our new line about the weather.  This is because we haven't pushed our most recent local changes to the remote repository.  Do so now using the `git push` command.
 
 Input
 {: .label .label-green }
@@ -221,7 +199,7 @@ To https://github.com/<your_github_username>/hello-world
    e9e8fd3..8e2eb99  master -> master
 ~~~
 
-And let's check on GitHub that we now have 2 commits there.
+Checking GitHub again shows 2 commits, the same as in our local repository.
 
 ### Pulling changes
 
