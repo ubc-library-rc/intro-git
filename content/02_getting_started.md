@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Git basics
-parent: Lesson plan
+parent: Outline
 nav_order: 2
 ---
 
