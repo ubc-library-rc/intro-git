@@ -35,7 +35,7 @@ On the same page GitHub provides instructions to "push an existing repository fr
 
 ![GitHub instructions](figures/github-instructions.png)
 
-#### Step 1: link the repositories with "git remote add"
+**Step 1: link the repositories with "git remote add"**
 Enter the command below, replacing <your_github_username> as appropriate.
 
 Input
@@ -62,7 +62,7 @@ origin  https://github.com/<your_github_username>/hello-world (push)
 ~~~
 
 
-#### Step 2: Synchronizing the repositories with "git push"
+**Step 2: synchronize the repositories with "git push"**
 The `git push` command can "push" our local content and tracking information to the GitHub repository, synchronizing the content.
 
 Input
@@ -175,7 +175,7 @@ Date:   Fri Jun 2 18:15:43 2017 +0100
 
 `git log` lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working on teams.  Best practice is to write commit messages in the imperative (e.g. 'Add index.md' instead of 'Adding index.md').
 
-## Keeping Git and GitHub in sync
+### Keeping Git and GitHub in sync
 
 Take another look at your "hello-world" repository on GitHub.  The "index.md" ifle is there, but there is only one commit.
 
@@ -203,22 +203,14 @@ Checking GitHub again shows 2 commits, the same as in our local repository.
 
 ### Pulling changes
 
-When working with others, or when we're making our own changes from different machines, we need a way of pulling those
-remote changes back into our local copy. For now, we can see how this works by making a change on the GitHub website and 
-then 'pulling' that change back to our computer.
+When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then "pulling" that change back to our computer.
 
-Let's go to our repository in GitHub and make a change. Underneath where our index.md file is listed you will see a 
-button to 'Add a README'. Do this now, entering whatever you like, scrolling to the bottom and clicking 'Commit new 
-file' (The default commit message will be 'Create README.md', which is fine for our purposes).
+Near the bottom of the "hello-world" repository on GitHub there is a button to "Add a README" file to your repository. Click the button, enter some text, then scroll to the bottom and click "Commit new file" (The default commit message will be "Create README.md", which is fine for our purposes).
 
-> ## The README file
-> It is good practice to add a README file to each project to give a brief overview of what the project is about. If you 
-> put your README file in your repository's root directory, GitHub will recognize and automatically surface your README 
-> to repository visitors
-{: .callout}
+It is good practice to add a README file to each repository briefly describing what the project is about. If the README file is in the root directory of your repository, GitHub will automatically display its contents like a cover page for the repository.
+{: .info}
 
-Our local repository is now out of sync with our remote repository, so let's fix that by pulling the remote changes into
-our local repository using the `git pull` command.
+After adding a README on GitHub your local repository is now out of sync with the remote repository.  Let's fix that by pulling the remote changes into local repository using the `git pull` command.
 
 Input
 {: .label .label-green }
@@ -243,7 +235,7 @@ Fast-forward
 ~~~
 
 
-The above output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm
+The output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm
 this by entering the `ls` command.
 
 When we begin collaborating on more complex projects, we may have to consider more aspects of git functionality, but 
