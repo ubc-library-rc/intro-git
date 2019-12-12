@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Syncing with GitHub
-parent: Lesson plan
+parent: Outline
 nav_order: 3
 ---
 
