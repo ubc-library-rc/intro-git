@@ -1,11 +1,14 @@
 ---
 layout: default
 nav_order: 3
-title: Lesson plan
+title: Outline
 has_children: true
 has_toc: false
 
 ---
+
+## Outline
+
 ### Goal of this workshop
 
 Our goal is to **begin** to understand and use Git and GitHub. You will not be an expert by the end of the class. You will probably not even feel very comfortable using Git. This is okay. We want to make a start but, as with any skill, using Git takes practice.
