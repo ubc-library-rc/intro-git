@@ -20,48 +20,33 @@ any page, then selecting **New repository**.
 - Ensure repository is set to "Public"
 - Click "Create repository"
 
-Choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see <https://choosealicense.com/>.
+Though not mandatory, choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see <https://choosealicense.com/>.
 {: .info}
 
-## Linking your local repository to GitHub
+### Linking your local repository to GitHub
 
-After creating your "hello-world" repository GitHub will display the repository page with suggestions about how to link your new GitHub repository to the "hello-world" repository you created on your own computer with Git. Linking these repositories will synchronize them and allow youto share your project.     
+After creating the "hello-world" repository GitHub will display the repository page.  This includes information required to link your GitHub repository to the "hello-world" repository you created with Git on your own computer.     
 
-To do this, we need the GitHub repository URL, which should look something like this
-(with "some-librarian" replaced with your username):
+We will need the GitHub repository URL, which will look something like this:
 
 ![The repository URL on GitHub](figures/repository-url.png)
 
-If the URL starts with "git@" rather than "https://", please click the "HTTPS" button to change it.  We use HTTPS in this workshop because it does not require additional configuration.  For information about setting up SSH access see this [GitHub tutorial](https://help.github.com/articles/generating-ssh-keys).
-{: .note}
-
-
-Notice that GitHub is actually helpful enough to provide instructions for us
-so we don't have to remember these commands:
+On the same page GitHub provides instructions to "push an existing repository from the command line."  We will use these commands to synchronize our repositories:
 
 ![GitHub instructions](figures/github-instructions.png)
 
-You can therefore choose to copy these and paste them on the command line.
-Or you can choose to type them out to get them into your fingers.
-I will do that. So we start with the command to link our local repository
-to the GitHub repository:
+#### Step 1: link the repositories with "git remote add"
+Enter the command below, replacing <your_github_username> as appropriate.
 
 Input
 {: .label .label-green }
 ~~~
-$ git remote add origin https://github.com/some-librarian/hello-world.git
+$ git remote add origin https://github.com/<your_github_username>/hello-world.git
 ~~~
 
+This links your local Git repository to a _remote_ one. The URL indicates the location of the remote repository, which is nicknamed _origin_ in this example.  The nickname can be anything but Git convention is to refer to the remote repository as "origin".  
 
-where `some-librarian` should be replaced with your own username.
-
-> ## Why "origin"?
-> `origin` in the `git remote add` line is just a short name or alias we're giving to that big long repository URL.
-> It could be almost any string we want, but by convention in git, it is usually called `origin`, representing where
-> the repo originated.
-{: .callout}
-
-We can check that it is set up correctly with the command:
+We can confirm that it is set up correctly with this command:
 
 Input
 {: .label .label-green }
@@ -77,12 +62,9 @@ origin  https://github.com/<your_github_username>/hello-world (push)
 ~~~
 
 
-## Pushing changes
+#### Step 2: Synchronizing the repositories with "git push"
 
-Now we have established a connection between the two repositories, but we still haven't
-synchronized their content, so the remote repository is still empty. To fix that, we
-will have to "push" our local changes to the GitHub repository. We do this using the
-`git push` command:
+Now that you have established a connection between the remote and local repositories the next step is to synchronize the content.  The `git push` command can "push" our local content and tracking information to the GitHub repository.
 
 Input
 {: .label .label-green }
@@ -100,7 +82,6 @@ To https://github.com/<your_github_username/hello-world
  * [new branch]      master -> master
 Branch master set up to track remote branch master from origin.
 ~~~
-
 
 The nickname of our remote repository is "origin" and the default local branch name is "master".
 The `-u` flag tells git to remember the parameters, so that next time we can simply run `git push`
@@ -228,7 +209,7 @@ To https://github.com/<your_github_username>/hello-world
 
 And let's check on GitHub that we now have 2 commits there.
 
-## Pulling changes
+### Pulling changes
 
 When working with others, or when we're making our own changes from different machines, we need a way of pulling those
 remote changes back into our local copy. For now, we can see how this works by making a change on the GitHub website and 
