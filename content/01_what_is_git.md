@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Concepts and tools
-parent: Lesson plan
+parent: Outline
 nav_order: 1
 ---
 
