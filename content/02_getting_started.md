@@ -213,7 +213,7 @@ along with information about who made the commit and at what time.
 
 ## Another look at the staging area
 
-If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will stage all your changes and commit them at the same time so use this option with caution. 
+If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution. 
 
 ![The Git Staging Area](figures/git_staging_area.svg)
 
