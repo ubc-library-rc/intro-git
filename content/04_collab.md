@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collaborating on GitHub
-parent: Lesson plan
+parent: Outline
 nav_order: 4 
 ---
 
