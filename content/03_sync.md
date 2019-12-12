@@ -207,7 +207,7 @@ When working with others or on multiple computers we need a way to pull all the 
 
 Near the bottom of the "hello-world" repository on GitHub there is a button to "Add a README" file to your repository. Click the button, enter some text, then scroll to the bottom and click "Commit new file" (The default commit message will be "Create README.md", which is fine for our purposes).
 
-It is good practice to add a README file to each repository briefly describing what the project is about. If the README file is in the root directory of your repository, GitHub will automatically display its contents like a cover page for the repository.
+It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
 {: .info}
 
 After adding a README on GitHub your local repository is now out of sync with the remote repository.  Let's fix that by pulling the remote changes into local repository using the `git pull` command.
