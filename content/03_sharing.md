@@ -238,6 +238,4 @@ Fast-forward
 The output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm
 this by entering the `ls` command.
 
-When we begin collaborating on more complex projects, we may have to consider more aspects of git functionality, but 
-this should be a good start. In the next section, we can look more closely at collaborating and using GitHub pages to
-create a website for our project.
+This section introduces some basic git commands but there are many others that may be useful in more complex and collaborative projects. For a more detailed introduction see the the online Software Carpentry course [Version control with Git](https://swcarpentry.github.io/git-novice/).
