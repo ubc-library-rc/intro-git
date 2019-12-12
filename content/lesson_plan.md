@@ -18,8 +18,8 @@ This is your session. If you have a question or feel we are going too fast, plea
 | --- | --- 
 | 0:00 | [Concepts and tools](lesson/01_what_is_git.md)
 | 0:10 | [Git basics](lesson/02_getting_started.md)
-| 0:30 | [GitHub for collaboration](lesson/03_sharing.md)
-| 1:00 | [Review and practice](lesson/04_review.md)
+| 0:30 | [Syncing with GitHub](lesson/03_sync.md)
+| 1:00 | [Collaborating on GitHub](lesson/04_collab.md)
 | 1:20 | Wrap-up
 
 _Actual schedule may vary depending on group needs_
