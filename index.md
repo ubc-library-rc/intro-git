@@ -38,7 +38,7 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 
 This will provide you with both Git and Bash in the Git Bash program.
 
- **3. Configure Git user name and email**
+ **3. Configure Git user name and email**  
 Open a terminal window and enter the following commands to configure Git:
 
 ~~~
@@ -48,7 +48,7 @@ $ git config --global user.email "your@email"
 
 This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git. The email address should be the same one you used when setting up your GitHub account.
 
- **4. Set your preferred text editor**
+ **4. Set your preferred text editor**  
 Git sometimes opens a text editor to complete a task. The default is the Vi/Vim text editor but most people will prefer to use something more familiar. The simplest options are `"notepad"` on Windows,  `"nano -w"` on Mac, and `"nano -w"` on Linux. 
 This command will set your preferred editor to Notepad:
 
