@@ -6,13 +6,13 @@ has_children: true
 has_toc: false
 
 ---
-## Goal
+### Goal of this workshop
 
-**Begin** to understand and use Git and GitHub. You will not be an expert by the end of the class. You will probably not even feel very comfortable using Git. This is okay. We want to make a start but, as with any skill, using Git takes practice.
+Our goal is to **begin** to understand and use Git and GitHub. You will not be an expert by the end of the class. You will probably not even feel very comfortable using Git. This is okay. We want to make a start but, as with any skill, using Git takes practice.
 
 This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover.
 
-## Outline
+### Outline
 
 | Time | Content 
 | --- | --- 
