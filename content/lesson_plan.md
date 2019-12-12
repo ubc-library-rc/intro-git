@@ -26,5 +26,5 @@ _Actual schedule may vary depending on group needs_
 
 
 
-Please create a GitHub account and install Bash and Git before the workshop. See [Setup](../setup.md) for instructions.
+Please create a GitHub account and install Bash and Git before the workshop. See [Setup](../index.md) for instructions.
 {: .prereq}
