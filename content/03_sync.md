@@ -210,7 +210,7 @@ Near the bottom of the "hello-world" repository on GitHub there is a button to "
 It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
 {: .info}
 
-After adding a README on GitHub your local repository is now out of sync with the remote repository.  Let's fix that by pulling the remote changes into local repository using the `git pull` command.
+After adding a README on GitHub your local repository is out-of-sync with the remote repository.  Let's fix that by pulling the remote changes into local repository with `git pull`.
 
 Input
 {: .label .label-green }
