@@ -15,7 +15,7 @@ Our goal is to **begin** to understand and use Git and GitHub. You will not be a
 
 This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover.
 
-### Outline
+### Schedule
 
 | Time | Content 
 | --- | --- 
