@@ -63,8 +63,7 @@ origin  https://github.com/<your_github_username>/hello-world (push)
 
 
 #### Step 2: Synchronizing the repositories with "git push"
-
-Now that you have established a connection between the remote and local repositories the next step is to synchronize the content.  The `git push` command can "push" our local content and tracking information to the GitHub repository.
+The `git push` command can "push" our local content and tracking information to the GitHub repository, synchronizing the content.
 
 Input
 {: .label .label-green }
@@ -84,19 +83,22 @@ Branch master set up to track remote branch master from origin.
 ~~~
 
 The nickname of our remote repository is "origin" and the default local branch name is "master".
-The `-u` flag tells git to remember the parameters, so that next time we can simply run `git push`
+The `-u` flag tells git to remember these parameters, so that next time we can simply run `git push`
 and Git will know what to do.
 
 You may be prompted to enter your GitHub username and password to complete the command.
 
-When we do a `git push`, we will see Git 'pushing' changes upstream to GitHub. Because our file is very small, this 
-won't take long but if we had made a lot of changes or were adding a very large repository, we might have to wait a 
-little longer. We can check where we're at with `git status`.
+When we do a `git push` we will see Git "pushing" changes to the specified remote repository - in this case, on GitHub. Because our file is small this happens instantly, but it may take longer if you made many changes or are adding a very large repository.  The `git status` command will indicate the status after "pushing" is complete.  
 
+
+Input
+{: .label .label-green }
 ~~~
 $ git status
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 On branch master
 Your branch is up-to-date with 'origin/master'.
@@ -107,14 +109,20 @@ nothing to commit, working tree clean
 This output lets us know where we are working (the master branch). We can also see that we have no changes to commit 
 and everything is in order.
 
+### Reviewing changes
+
 We can use the `git diff` command to see changes we have made before making a commit. Open index.md with any text 
 editor and enter some text on a new line, for instance "A new line" or something else.
 We will then use `git diff` to see the changes we made:
 
+Input
+{: .label .label-green }
 ~~~
 $ git diff
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 diff --git a/index.md b/index.md
 index aed0629..989787e 100644
@@ -128,33 +136,35 @@ index aed0629..989787e 100644
 ~~~
 
 
-The command produces lots of information and it can be a bit overwhelming at first,
-but let's go through some key information here:
+The command produces lots of information and it can be overwhelming at first.  Here's what's happening:
 
-1. The first line tells us that Git is producing output similar to the Unix `diff` command, comparing the old and new 
+- Line 1 tells us that Git is producing output similar to the Unix "diff" command, comparing the old and new 
 versions of the file.
-2. The second line tells exactly which versions of the file Git is comparing; `aed0629` and `989787e` are unique 
+- Line 2 indicates which versions of the file Git is comparing; "aed0629" and "989787e" are unique 
 computer-generated identifiers for those versions.
-3. The third and fourth lines once again show the name of the file being changed.
-4. The remaining lines are the most interesting; they show us the actual differences and the lines on which they occur. 
+- Lines 3-4 name the files that wer changed show the name of the file being changed.
+- The remaining lines are the most interesting; they show us the actual differences and the lines on which they occur. 
 In particular, the + markers in the first column show where we have added lines.
 
 We can now commit these changes:
 
+Input
+{: .label .label-green }
 ~~~
 $ git add index.md
 $ git commit -m 'Add another line'
 ~~~
 
+The `git log` command allows us to look at what we have been doing with our git repository (in reverse chronological order, with the very latest changes first).
 
-If we are very forgetful and have already forgotten what we changes we have made, `git log` allows us to look at what 
-we have been doing with our git repository (in reverse chronological order, with the very latest changes first).
-
-
+Input
+{: .label .label-green }
 ~~~
 $ git log
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 commit 8e2eb9920eaa0bf18a4adfa12474ad58b765fd06
 Author: Your Name <your_email>
@@ -195,10 +205,14 @@ Another benefit of this design is that you can make commits without being connec
 
 But let's push our changes now, using the `git push` command:
 
+Input
+{: .label .label-green }
 ~~~
 $ git push
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 272 bytes | 0 bytes/s, done.
@@ -228,10 +242,14 @@ file' (The default commit message will be 'Create README.md', which is fine for 
 Our local repository is now out of sync with our remote repository, so let's fix that by pulling the remote changes into
 our local repository using the `git pull` command.
 
+Input
+{: .label .label-green }
 ~~~
 $ git pull
 ~~~
 
+Output
+{: .label .label-yellow }
 ~~~
 remote: Counting objects: 3, done.
 remote: Compressing objects: 100% (2/2), done.
