@@ -28,8 +28,6 @@ Input
 $ git clone https://github.com/<owner's-github-username>/hello-world.git ~/Desktop/owner-hello-world
 ~~~
 
-![After Creating Clone of Repository](../fig/github-collaboration.svg)
-
 The Collaborator can now make changes in their clone of the Owner's repository,
 exactly the same way as we've been doing before.
 
