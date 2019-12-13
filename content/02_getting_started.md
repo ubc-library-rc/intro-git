@@ -69,8 +69,8 @@ nothing to commit (create/copy files and use "git add" to track)
 ~~~
 
 The output introduces two new Git concepts:
-- "branch master" (explain what it is)
-- "commit" (explain what it is)
+- **branch master**. A Git repository can be split into multiple "branches" that can be worked on independently before merging later. New repositories start with only one branch, named "master" by default. In this workshop everything we do is will be in branch master.
+- **commit**. The `git commit` command saves your changes to the repository. The output above tells us there is nothing new to save in our repository.
 
 
 ### Adding and committing
