@@ -6,4 +6,4 @@ aux_links:
   "UBC Library Research Commons Workshops":
     - "https://researchcommons.library.ubc.ca/workshops/"
 heading_anchors: false
-footer_content: "Copyright, acknowledgement, license, etc."
+footer_content: "© UBC Library Research Commons. Adapted from [Library Carpentry: Introduction to Git](https://librarycarpentry.org/lc-git/) and [Software Carpentry: Version Control with Git](https://swcarpentry.github.io/git-novice/08-collab/index.html).  Source material and this revised version: [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0) license."
