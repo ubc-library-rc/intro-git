@@ -18,7 +18,7 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
  **2. Install the Bash Shell and Git**
 - **Mac** and **Linux**. Bash is already installed (no action required). Install Git using [these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - **Windows**. Follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
-    1. Download the Git for Windows [installer](installer).
+    1. Download the Git for Windows [installer](https://git-for-windows.github.io).
     2. Run the installer and follow the steps below:
         1. Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
         2. From the dropdown menu select "Use the nano editor by default" and click on "Next".
