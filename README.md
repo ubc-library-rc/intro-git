@@ -1,6 +1,4 @@
----
-nav_exclude: true
----
+
 
 ### Introduction to Git and GitHub
 Workshop offered by the UBC Library Research Commons.
