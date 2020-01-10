@@ -219,7 +219,7 @@ If we just run `git commit` without the `-m` flag Git will launch a text editor 
 Having made a commit, we now have a permanent record of what changed,
 along with information about who made the commit and at what time.
 
-## Another look at the staging area
+## Another look at the git workflow
 
 If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution. 
 
