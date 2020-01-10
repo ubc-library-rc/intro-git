@@ -7,7 +7,11 @@ nav_order: 2
 
 ## Git basics
 
-One of the challenges of learning Git is becoming familiar with its terminology and command structure. Git commands consist of verbs such as `add`, `commit`, and `push` preceded by the word `git`.  These base commands are often followed by options that provide more information about how and where Git should act.
+One of the challenges of learning Git is becoming familiar with its terminology and command structure. Git commands consist of verbs such as `init`, `add`, `commit`, and `push` preceded by the word `git`.  These base commands are often followed by options that provide more information about how and where Git should act.
+
+Below are some basic git commands and what they do in the git workflow. We'll use all of these during the workshop and it will be helpful to understand how they work together.
+
+![table of basic git commands](figures/git_commands.png)
 
 The best way to learn a langauge is through practice.  In this workshop we will use Git to setup a new version-controlled project.
 
