@@ -11,7 +11,7 @@ One of the challenges of learning Git is becoming familiar with its terminology 
 
 Below are some basic git commands and what they do in the git workflow. We'll use all of these during the workshop and it will be helpful to understand how they work together.
 
-![table of basic git commands](figures/git_commands.png)
+![table of basic git commands](figures/git_command.png)
 
 The best way to learn a langauge is through practice.  In this workshop we will use Git to setup a new version-controlled project.
 
