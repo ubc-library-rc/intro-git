@@ -9,7 +9,12 @@ nav_order: 1
 
 ### What is version control?
 
-Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments.  
+Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments. 
+
+**Why use version control?**
+Because no one wants to end up in this familiar place:
+
+![Because we don't want to end up here](figures/phd101212s.gif)
 
 It takes some discipline to learn and make use of version control but there are many benefits:
 
@@ -31,8 +36,3 @@ Git was designed for _text_ files that can be opened in a text editor (as oppose
 
 
 **_GitHub_** is a popular website for hosting and sharing Git repositories. GitHub provides online infrastructure that makes it easier for teams to collaborate with Git.  Team members make contributions to the repository on local copies of the files, then "push" their changes back to GitHub so everyone else can see them.  The GitHub interface makes it easy to view files in the repository and what changes have been made. GitHub also makes it easier for groups to publish their work (each GitHub repository can have its own project website, blog, and wiki using [GitHub Pages](https://pages.github.com/).)
-
-### Why use version control?
-Because no one wants to end up in this familiar place:
-
-![Because we don't want to end up here](figures/phd101212s.gif)
