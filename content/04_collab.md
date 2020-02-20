@@ -2,7 +2,7 @@
 layout: default
 title: Collaborating on GitHub
 parent: Outline
-nav_order: 4 
+nav_order: 4
 ---
 
 ## Collaborating on GitHub
@@ -12,7 +12,7 @@ the Owner's repository. If there is time we will switch roles at the end so ever
 
 First the Owner needs to give the Collaborator access to their repository.
 On GitHub, click the settings button on the right,
-then select Collaborators, and enter your partner's GitHub username.
+then select Manage access, and enter your partner's GitHub username in the search bar.
 
 ![Adding Collaborators on GitHub](figures/github-add-collaborators.png)
 
