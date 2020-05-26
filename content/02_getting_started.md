@@ -23,7 +23,7 @@ The best way to learn a langauge is through practice.  In this workshop we will 
 
 You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory named `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
 
-You can create repositories using [GitHub's web interface](https://github.com/new), or on your own computer using the command line.  Let's use the command line to create a Git repository for new project.
+You can create repositories using [GitHub's web interface](https://github.com/new), or on your own computer using the command line.  Let's use the command line to create a Git repository for new project. (On a Mac, open _Terminal_, on a PC open _Git Bash_.)
 
 First, create a directory called `hello-world` and navigate to the new directory.
 
@@ -37,7 +37,7 @@ $ cd hello-world
 If you're not sure you're in the right place use the command "pwd" (print working directory) to display the complete path of your current directory.
 {: .info}
 
-We will now create a Git repository to track changes to our project.  Use the git **init** command, 
+We will now create a Git repository to track changes to our project.  Use the git **init** command,
 which is simply short for *initialise*.
 
 Input
@@ -51,9 +51,9 @@ Output
 Initialized empty Git repository in <your file path>/hello-world/.git/
 ~~~
 
-Your `hello-world` directory is now a git repository. 
+Your `hello-world` directory is now a git repository.
 
-If you run the "ls" command to list the contents of the "hello-world" 
+If you run the "ls" command to list the contents of the "hello-world"
 directory your repository may seem empty.  But running "ls -a" instead will include hidden files in the list, revealing the new hidden directory named ".git".
 {: .info}
 
@@ -83,8 +83,8 @@ The output introduces two new Git concepts:
 
 ### Adding and committing
 
-We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which 
-we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage 
+We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which
+we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage
 process gives us fine-grained control over what should and should not be included in a particular commit.
 
 Let's create a new file using the `touch` command, which is a quick way to create an empty file.
@@ -119,8 +119,8 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 
-Git has noticed a new file in our directory that we are not yet tracking. With colourised 
-output, the filename will appear in red. To change this, and to tell Git we want to track any changes we make to 
+Git has noticed a new file in our directory that we are not yet tracking. With colourised
+output, the filename will appear in red. To change this, and to tell Git we want to track any changes we make to
 index.md, we use `git add`.
 
 Input
@@ -182,7 +182,7 @@ Changes not staged for commit:
 ~~~
 
 
-This lets us know that Git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add 
+This lets us know that Git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add
 the new version of "index.md" to the staging area.
 
 Input
@@ -209,7 +209,7 @@ Output
 ~~~
 
 
-We can see that one file has changed and that we made one insertion, which was a line with the text '#Hello, world!'. 
+We can see that one file has changed and that we made one insertion, which was a line with the text '#Hello, world!'.
 We can also see the commit message 'Add index.md', which we added by using the `-m` flag after `git commit`.
 The commit message is used to record a short, descriptive, and specific summary of what we did to help us remember later on without having to look at the actual changes.
 
@@ -221,7 +221,6 @@ along with information about who made the commit and at what time.
 
 ## Another look at the git workflow
 
-If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution. 
+If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution.
 
 ![The Git Staging Area](figures/git_staging_area.svg)
-

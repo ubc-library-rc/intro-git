@@ -11,8 +11,8 @@ will be the "Collaborator". The goal is for the Collaborator to add changes into
 the Owner's repository. If there is time we will switch roles at the end so everyone can play Owner and Collaborator.
 
 First the Owner needs to give the Collaborator access to their repository.
-On GitHub, click the settings button on the right,
-then select Manage access, and enter your partner's GitHub username in the search bar.
+Navigate to your repository On GitHub, click the settings button on the right,
+then select Manage access. Click the green <em>Invite a collaborator</em> button and enter your partner's GitHub username in the search bar.
 
 ![Adding Collaborators on GitHub](figures/github-add-collaborators.png)
 
@@ -25,10 +25,10 @@ their `Desktop` the Collaborator would enter this command:
 Input
 {: .label .label-green}
 ~~~
-$ git clone https://github.com/<owner's-github-username>/hello-world.git ~/Desktop/owner-hello-world
+$ git clone https://github.com/owner's-github-username/hello-world.git ~/Desktop/owner-hello-world
 ~~~
 
-The Collaborator can now make changes in their clone of the Owner's repository using the commands introduced earlier.
+This creates a local copy of the owner's hello-world repository in a folder named <em>owner-hello-world</em>.  The collaborator can now make changes in their clone of the Owner's repository using the commands introduced earlier.
 
 - use `cd` to navigate to the cloned repository
 - use `touch` to create a new file in the repository
