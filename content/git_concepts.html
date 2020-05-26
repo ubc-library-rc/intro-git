@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<!-- Title of page (as it will appear in search results) -->
+<title>Intro to Git and GitHub</title>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://ubc-library-rc.github.io/reveal-ubc/css/reset.css">
+<link rel="stylesheet" href="https://ubc-library-rc.github.io/reveal-ubc/css/reveal.css">
+<link rel="stylesheet" href="https://ubc-library-rc.github.io/reveal-ubc/css/ubc.css" id="theme">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="https://ubc-library-rc.github.io/reveal-ubc/lib/css/monokai.css">
+
+<!-- Printing and PDF exports -->
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ubc-library-rc.github.io/reveal-ubc/css/print/pdf.css' : 'https://ubc-library-rc.github.io/reveal-ubc/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+
+				<section>
+				<h3>Introduction to Git and GitHub</h3>
+				https://ubc-library-rc.github.io/intro-git/
+				</section>
+
+
+				<section>
+					Use the Zoom toolbar to engage
+					<img  data-src="figures/zoom_toolbar.png" alt="The Zoom toolbar">
+					<div class="fragment">
+						<p style="font-size: smaller"><em>Participants</em> window</p>
+						<img data-src="figures/participants_window_menu.png" alt="The participants menu">
+					</div>
+				</section>
+
+				<section>
+					<img width="500px" data-src="figures/open_annotate_toolbar.png" alt="annotate menu">
+					<div class="fragment" style="padding-top: 20px">
+						<img data-src="figures/annotate_toolbar.png" alt="annotation toolbar">
+					</div>
+				</section>
+
+				<section>
+					<div style="position: relative; float: left; width: 25%; font-size: smaller">
+						<p>I have never used the command line</p>
+					</div>
+					<div style="position: relative; float: right; width: 25%; font-size: smaller">
+						<p>I use the command line often</p>
+					</div>
+					<div style="clear: both">
+						<hr/>
+					</div>
+				</section>
+
+
+				<section data-background="#e6f7ff">
+					<h3>Concepts and tools</h3>
+				</section>
+
+		    <section data-background="#e6f7ff">
+          <p><b>What is version control?</b></p>
+					<p class="fragment">A way to track changes made to files</p>
+				</section>
+
+
+				<section data-background="#e6f7ff">
+					<img height="600px" data-src="figures/phd101212s.gif">
+				</section>
+
+				<section>
+					<p><b>Benefits of version control</b></p>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">collaboration</li>
+						<li class="fragment fade-in-then-semi-out">versioning</li>
+						<li class="fragment fade-in-then-semi-out">rolling back</li>
+						<li class="fragment fade-in-then-semi-out">understanding context</li>
+						<li class="fragment">backup</li>
+					</ul>
+				</section>
+
+				<section>
+					<div style="font-size:smaller; text-align: left; margin-left: 30px">
+						<p><b>Git:</b> open source tool installed on your local computer to track changes made to a set of files (referred to as a git <em>repository</em>)</p>
+						<p class="fragment"><b>GitHub:</b> a popular website for hosting and sharing Git repositories</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Git basics</h3>
+				</section>
+
+				<section>
+					<p style="margin-bottom: 40px">Git commands consist of verbs (<em>init, add, commit, push</em>) preceded by the word <em>git</em></p>
+					<img width="900px" class="fragment" data-src="figures/git_command.png">
+				</section>
+
+				<section>
+					<p><b>Try it out!</b></p>
+					<p>Instructons in <em>Git basics</em> section of site<br />
+						<b>https://ubc-library-rc.github.io/intro-git/</b></p>
+				</section>
+
+				<section>
+					<img width="900px" data-src="figures/git_staging_area.svg">
+				</section>
+
+				<section>
+					<h3>Syncing with GitHub</h3>
+				</section>
+
+
+
+			</div>
+		</div>
+
+		<script src="https://ubc-library-rc.github.io/reveal-ubc/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'https://ubc-library-rc.github.io/reveal-ubc/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'https://ubc-library-rc.github.io/reveal-ubc/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'https://ubc-library-rc.github.io/reveal-ubc/plugin/highlight/highlight.js' },
+					{ src: 'https://ubc-library-rc.github.io/reveal-ubc/plugin/search/search.js', async: true },
+					{ src: 'https://ubc-library-rc.github.io/reveal-ubc/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'https://ubc-library-rc.github.io/reveal-ubc/plugin/notes/notes.js', async: true }
+					]
+				});
+
+		</script>
+	</body>
+</html>

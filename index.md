@@ -7,7 +7,7 @@ Learn the basics of using Git and GitHub for version control and collaboration. 
 
 In this beginner workshop participants will learn key concepts, create their own Git repository, and publish to GitHub.  No previous experience with Git is required.  Familiarity with the command line interface will be helpful but is not necessary.
 
-### Pre-workshop setup 
+### Pre-workshop setup
 Please bring a laptop with the Bash Shell and Git installed **before** the workshop.
 
 If you do not have access to a laptop or have difficulty meeting these prerequisites please contact jeremy.buhler@ubc.ca.  We will do our best to ensure everyone can participate.
@@ -48,9 +48,8 @@ $ git config --global user.email "your@email"
 
 This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git. The email address should be the same one you used when setting up your GitHub account.
 
- **4. Set your preferred text editor**  
-Git sometimes opens a text editor to complete a task. The default is the Vi/Vim text editor but most people will prefer to use something more familiar. The simplest options are `"notepad"` on Windows,  `"nano -w"` on Mac, and `"nano -w"` on Linux. 
-This command will set your preferred editor to Notepad:
+ **4. (OPTIONAL) Set your preferred text editor**  
+Git sometimes opens a text editor automatically so you can complete a task. The Git default is the Vi/Vim text editor, which some users may find difficult to use. To change the default text editor run the command below and indicate your preferred editor. This can be any text editor, but common choices are `"notepad"` on Windows and `"nano"` on Mac or Linux). 
 
 ~~~
 $ git config --global core.editor "notepad"
