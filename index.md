@@ -39,7 +39,7 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 This will provide you with both Git and Bash in the Git Bash program.
 
  **3. Configure Git user name and email**  
-Open a terminal window and enter the following commands to configure Git:
+Open Bash (_Terminal_ in Mac, _Git Bash_ in Windows) and enter the following commands to configure Git. (Note that `$` represents the command prompt; the commands themselves start with the word `git`.)
 
 ~~~
 $ git config --global user.name "Your Name"
