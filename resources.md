@@ -63,6 +63,10 @@ nav_order: 10
 `git remote add origin`
 : add a remote repository named 'origin', to upload changes to or download changes from
 
+### Markdown
+
+- GitHub Guide to [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+- [Markdown cheat-sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for quick reference 
 
 ## Other resources
 
