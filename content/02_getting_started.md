@@ -96,7 +96,7 @@ $ touch index.md
 ~~~
 
 
-The `.md` extension is for text files written using Markdown, a lightweight markup language with plain text formatting syntax. For more on Markdown see (link to Markdown resource, add .md cheatsheet to resources list)
+The `.md` extension is for text files written using Markdown, a lightweight markup language with plain text formatting syntax. For more on Markdown see the [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) guide.
 
 Let's check the status of our project again.
 
