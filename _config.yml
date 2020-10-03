@@ -1,9 +1,10 @@
 title: "Introduction to Git and GitHub"
 remote_theme: ubc-library-rc/rc-workshop-template
-color_scheme: "nil"
 search_enabled: false
-heading_anchors: false
 github_repo_url: "https://github.com/ubc-library-rc/intro-git/"
 license_url: "http://creativecommons.org/licenses/by/4.0/"
 license_name: "Creative Commons Attribution 4.0 International License"
 license_image_url: "https://i.creativecommons.org/l/by/4.0/88x31.png"
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
