@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reference
-nav_order: 10
+nav_order: 9
 ---
 
 ## Reference
@@ -66,7 +66,7 @@ nav_order: 10
 ### Markdown
 
 - GitHub Guide to [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-- [Markdown cheat-sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for quick reference 
+- [Markdown cheat-sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for quick reference
 
 ## Other resources
 

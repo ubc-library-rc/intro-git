@@ -1,9 +1,8 @@
 title: "Introduction to Git and GitHub"
 remote_theme: ubc-library-rc/rc-workshop-template
 color_scheme: "nil"
-search_enabled: false
-aux_links:
-  "UBC Library Research Commons Workshops":
-    - "https://researchcommons.library.ubc.ca/workshops/"
 heading_anchors: false
-footer_content: "<a href=\"https://github.com/ubc-library-rc/intro-git/\">View workshop content in GitHub</a>"
+github_repo_url: "https://github.com/ubc-library-rc/intro-git/"
+license_url: "http://creativecommons.org/licenses/by/4.0/"
+license_name: "Creative Commons Attribution 4.0 International License"
+license_image_url: "https://i.creativecommons.org/l/by/4.0/88x31.png"
