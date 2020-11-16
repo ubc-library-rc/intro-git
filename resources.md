@@ -68,9 +68,16 @@ nav_order: 9
 - GitHub Guide to [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Markdown cheat-sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for quick reference
 
-## Other resources
+## Getting Started With Git
+
+* An author at Webtuu.com provided both a [clear introduction to git for absolute beginners](https://webtuu.com/blog/04/a-laymans-introduction-to-git) and a follow-up [git basics and branching](https://webtuu.com/blog/04/git-basics-branching-merging-push-to-github) blog post
+* This recent [Git guide for beginners](https://d3vnull.com/git-for-beginners/) covers the basics and includes tips for both Github and Gitlab
+* For more in-depth coverage, Scott Chacon and Ben Straub's "Pro Git" book is [available as an online resource here](https://git-scm.com/book/en/v2) 
+
+## Hands-on Learning and Guides
 
 * The GitHub [help pages](https://help.github.com/) are a good place to start
 * GitHub has '[activities](https://guides.github.com/activities/hello-world/)' which aim to explain how git works
 * GitHub also has interactive tutorials for their [online version (Learning Labs)](https://lab.github.com/) and for [using Git offline (Git-It)](https://github.com/jlord/git-it-electron#git-it-desktop-app)
 * Atlassian has in depth and clear [tutorials](https://www.atlassian.com/git/tutorials) on using Git
+* ["Dang It, Git"](https://dangitgit.com/en) provides a great quick walkthrough of how to fix common errors for Git beginners
