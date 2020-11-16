@@ -28,11 +28,13 @@ It takes some discipline to learn and make use of version control but there are 
 
 **_Git_** and **_GitHub_** are often used interchangeably but it's important to understand what each does and how they work together.
 
-**_Git_** is a free, open source tool that can be installed on your local computer to track changes made to a set of files (referred to as a "git repository" or "repo"). Git can be used independently to organize one's own work, or to coordinate team projects with multiple authors. Git ensures that everyone's contributions are tracked and merged effectivel by keeping copies of all previous versions and documenting the changes, when they were made, and by whom.   
+**_Git_** is a free, open source tool that can be installed on your local computer to track changes made to a set of files (referred to as a "git repository" or "repo"). Git can be used independently to organize one's own work, or to coordinate team projects with multiple authors. Git ensures that everyone's contributions are tracked and merged effectively by keeping copies of all previous versions and documenting the changes, when they were made, and by whom.   
 
 
 Git was designed for _text_ files that can be opened in a text editor (as opposed to _binary_ file formats like .pdf and .docx).  A Git repository can preserve files of any type, but only text files will benefit from all Git's features.  
 {: .info}
 
 
-**_GitHub_** is a popular website for hosting and sharing Git repositories. GitHub provides online infrastructure that makes it easier for teams to collaborate with Git.  Team members make contributions to the repository on local copies of the files, then "push" their changes back to GitHub so everyone else can see them.  The GitHub interface makes it easy to view files in the repository and what changes have been made. GitHub also makes it easier for groups to publish their work (each GitHub repository can have its own project website, blog, and wiki using [GitHub Pages](https://pages.github.com/).)
+**_GitHub_** is a popular website for hosting and sharing Git repositories. GitHub provides online infrastructure that makes it easier for teams to collaborate with Git.  Team members make contributions to the repository on local copies of the files, then "push" their changes back to GitHub so everyone else can see them.  
+
+The GitHub interface makes it easy to view files in the repository and what changes have been made. GitHub also makes it easier for groups to publish their work (each GitHub repository can have its own project website, blog, and wiki using [GitHub Pages](https://pages.github.com/).)
