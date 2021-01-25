@@ -8,9 +8,9 @@ Learn the basics of using Git and GitHub for version control and collaboration. 
 In this beginner workshop participants will learn key concepts, create their own Git repository, and publish to GitHub.  No previous experience with Git is required.  Familiarity with the command line interface will be helpful but is not necessary.
 
 ### Pre-workshop setup
-Please bring a laptop with the Bash Shell and Git installed **before** the workshop.
+Please make sure to have a Bash Shell and Git installed **before** the workshop.
 
-If you do not have access to a laptop or have difficulty meeting these prerequisites please contact jeremy.buhler@ubc.ca.  We will do our best to ensure everyone can participate.
+If you do not have access to a laptop or have difficulty meeting these prerequisites please contact eka.grguric@ubc.ca.  We will do our best to ensure everyone can participate.
 {: .info }
 
  **1. Create a free [GitHub account](https://github.com)**
