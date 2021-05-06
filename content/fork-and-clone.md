@@ -25,16 +25,16 @@ To create a fork sign in to GitHub, navigate to the main project repository, the
 ### Clone the fork to your own computer
 GitHub is great for storing and sharing files but it's not a good platform for editing. The recommended practice is to _clone_ your repository, which creates a local copy on your own computer where you can edit the files with your preferred text editor. 
 
-*1*{: .circle .circle-blue} In GitHub, find the repository to cone and click the _Code_ button. Copy the URL to use in the command below.  
+*1*{: .circle .circle-blue} In GitHub, find the repository to clone and click the _Code_ button. Copy the URL to use in the command below.  
 
-*2*{: .circle .circle-blue} Open a terminal and navigate to the directory where you would like to store the repository files
+*2*{: .circle .circle-blue} Open a terminal and navigate to the directory where you would like to copy the repository files.
 
-*3*{: .circle .circle-blue} In the terminal use the command below to clone
+*3*{: .circle .circle-blue} In the terminal use the command below to clone, replacing the URL with the one copied in step 1 above.
 
 Input
 {: .label .label-green}
 ```sh
-$ git clone https://github.com/ubc-geomatics-textbook/practice.git
+$ git clone https://github.com/YOUR_GITHUB_USERNAME/REPOSITORY_NAME.git
 ```
 
 Output
@@ -54,7 +54,7 @@ As you edit the files on your local computer use the `git add` and `git commit` 
 
 
 ### Pushing local changes to your fork
-As you edit the files on your local computer use the `git add` and `git commit` commands to take snapshots of your work. It is good practice to regularly synchronize your local copy (the _clone_) with the copy in your own GitHub repository (the _fork_).
+It is good practice to regularly synchronize your local copy of the repository (the _clone_) with the repository in your own GitHub account (the _fork_).
 
 To do this, open a terminal in your clone directory and run the command `git push`
 
@@ -63,13 +63,13 @@ Only local changes that have been _committed_ will be pushed back up to the fork
 
 
 ### Contributing to the main project directory
-Once your work is in your _fork_ in GitHub you can contribute it to the main project repository by using a _Pull Request_. This alerts the owner of the project repository and invites them to "pull" your contributions into the project repository, merging them with changes from other team members. 
+Once your work is in your _fork_ in GitHub you can contribute it to the main project repository by using a _Pull request_. This alerts the owner of the project repository and invites them to "pull" your contributions into the project repository, merging them with changes from other team members. 
 
-*1*{: .circle .circle-blue} To create a _Pull Request_ navigate to your fork in GitHub and click the _Pull Request_ link.
+*1*{: .circle .circle-blue} To create a _Pull request_ navigate to your fork in GitHub and click the _Pull requests_ link.
 
 ![pull request button](figures/pull-request.png)
 
-*2*{: .circle .circle-blue} In the next step click _Create Pull Request_
+*2*{: .circle .circle-blue} In the next step click _Create pull request_
 
 ![pull request button](figures/compare.png)
 
@@ -77,16 +77,16 @@ Once your work is in your _fork_ in GitHub you can contribute it to the main pro
 
 ![pull request button](figures/pull-request-comment.png)
 
-*4*{: .circle .circle-blue} The final step is to click _Create Pull Request_ to save your contribution. The project repository owner then has the opportunity to review your contributions before merging them into the main project.
+*4*{: .circle .circle-blue} The final step is to click _Create pull request_ to save your contribution. The project repository owner then has the opportunity to review your contributions before merging them into the main project.
 
 
 ### Keeping your fork current
-A _fork_ is a copy of a directory at a moment in time. As other team members make contributions your own fork may no longer reflect the current state of the project. When a fork is "behind" the project directory a note will appear in GitHub above the list of files. To incorporate changes from the main project directory into your local copy click the _Fetch Upstream_ link.
+A _fork_ is a copy of a directory at a moment in time. As other team members make contributions to the project repository your own fork may no longer reflect the current state of the project. When a fork is "behind" the project repository a note will appear in GitHub above the list of files. To incorporate changes from the main project into your local copy click the _Fetch upstream_ link.
 
 ![pull request button](figures/fetch-upstream.png)
 
 ### Keeping your local copy current
-_Fetch Upstream_ will update your _fork_ with other team members' changes. To bring those same changes back down to the _clone_ on your local machine use the `git pull` command.
+_Fetch upstream_ will update your _fork_ with other team members' changes. To bring those same changes back down to the _clone_ on your local machine use the `git pull` command.
 
 *1*{: .circle .circle-blue} Open a terminal and navigate to the cloned repository in your local file system 
 
