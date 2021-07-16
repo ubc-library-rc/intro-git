@@ -71,13 +71,13 @@ $ git status
 Output
 {: .label .label-yellow}
 ~~~
-On branch master
+On branch main
 No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ~~~
 
 The output introduces two new Git concepts:
-- **branch master**. A Git repository can be split into multiple "branches" that can be worked on independently before merging later. New repositories start with only one branch, named "master" by default. In this workshop everything we do will be in branch master.
+- **branch main**. A Git repository can be split into multiple "branches" that can be worked on independently before merging later. New repositories start with only one branch, named "main" by default. In this workshop everything we do will be in branch main.
 - **commit**. The `git commit` command saves your changes to the repository. The output above tells us there is nothing new to save in our repository.
 
 
@@ -109,7 +109,7 @@ $ git status
 Output
 {: .label .label-yellow}
 ~~~
-On branch master
+On branch main
 No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -141,7 +141,7 @@ $ git status
 Output
 {: .label .label-yellow}
 ~~~
-On branch master
+On branch main
 
 No commits yet
 
@@ -165,7 +165,7 @@ $ git status
 Output
 {: .label .label-yellow}
 ~~~
-On branch master
+On branch main
 
 No commits yet
 
@@ -203,7 +203,7 @@ $ git commit -m 'Add index.md'
 Output
 {: .label .label-yellow}
 ~~~
-[master (root-commit) e9e8fd3] Add index.md
+[main (root-commit) e9e8fd3] Add index.md
  1 file changed, 1 insertion(+)
  create mode 100644 index.md
 ~~~

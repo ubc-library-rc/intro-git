@@ -68,7 +68,7 @@ The `git push` command can "push" our local content and tracking information to 
 Input
 {: .label .label-green }
 ~~~
-$ git push -u origin master
+$ git push -u origin main
 ~~~
 
 Output
@@ -78,11 +78,11 @@ Counting objects: 3, done.
 Writing objects: 100% (3/3), 226 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/<your_github_username/hello-world
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
+ * [new branch]      main -> main
+Branch main set up to track remote branch main from origin.
 ~~~
 
-The nickname of our remote repository is "origin" and the default local branch name is "master".
+The nickname of our remote repository is "origin" and the default local branch name is "main".
 The `-u` flag tells git to remember these parameters, so that next time we can simply run `git push`
 and Git will know what to do.
 
@@ -100,12 +100,12 @@ $ git status
 Output
 {: .label .label-yellow }
 ~~~
-On branch master
-Your branch is up-to-date with 'origin/master'.
+On branch main
+Your branch is up-to-date with 'origin/main'.
 nothing to commit, working tree clean
 ~~~
 
-This output lets us know where we are working (the master branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
+This output lets us know where we are working (the main branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
 
 ### Reviewing local changes
 
@@ -196,7 +196,7 @@ Counting objects: 3, done.
 Writing objects: 100% (3/3), 272 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/<your_github_username>/hello-world
-   e9e8fd3..8e2eb99  master -> master
+   e9e8fd3..8e2eb99  main -> main
 ~~~
 
 Checking GitHub again shows 2 commits, the same as in our local repository.
@@ -226,7 +226,7 @@ remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From https://github.com/<your_github_username>/hello-world
-   8e2eb99..0f5a7b0  master     -> origin/master
+   8e2eb99..0f5a7b0  main     -> origin/main
 Updating 8e2eb99..0f5a7b0
 Fast-forward
  README.md | 1 +

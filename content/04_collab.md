@@ -41,7 +41,7 @@ Then push the Collaborator's change(s) to the *Owner's* repository on GitHub:
 Input
 {: .label .label-green}
 ~~~
-$ git push origin master
+$ git push origin main
 ~~~
 
 Note that this time we didn't have to create a remote called `origin`: Git uses this
@@ -57,7 +57,7 @@ To download the Collaborator's changes from GitHub, the Owner now enters this co
 Input
 {: .label .label-green}
 ~~~
-$ git pull origin master
+$ git pull origin main
 ~~~
 
 Now the three repositories - Owner's local, Collaborator's local, and Owner's on
@@ -70,7 +70,7 @@ ___Switch Owner and Collaborator roles if time permits and you'd like more pract
 When collaborating it's important to work from an updated version of the repository so you should `git pull` before making
 any changes. A basic workflow for collaboration might look like this:
 
-* update your local repo with `git pull origin master`,
+* update your local repo with `git pull origin main`,
 * make your changes and stage them with `git add`,
 * commit your changes with `git commit -m`, and
-* upload the changes to GitHub with `git push origin master`
+* upload the changes to GitHub with `git push origin main`
