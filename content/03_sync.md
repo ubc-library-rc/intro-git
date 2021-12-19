@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Syncing with GitHub
-parent: Outline
+parent: Workshop Content
 nav_order: 3
 ---
 
