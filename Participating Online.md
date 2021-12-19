@@ -1,11 +1,12 @@
 ---
 layout: default
-nav_order: 2
+nav_order: 3
 title: Participating online
 has_children: false
 has_toc: false
 ---
 # Participating online
+
 Active participation enlivens the session with other voices and perspectives. We encourage you to engage with instructors and with each other.
 
 Microphones are muted by default to improve audio quality and recording is disabled to preserve participant privacy.
