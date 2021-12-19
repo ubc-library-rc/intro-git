@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_order: 3
+nav_order: 4
 title: Workshop Content
 has_children: true
 has_toc: false
