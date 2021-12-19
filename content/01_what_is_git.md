@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Concepts and tools
-parent: Outline
+parent: Workshop Content
 nav_order: 1
 ---
 
