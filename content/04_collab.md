@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Collaborating on GitHub
-parent: Outline
+parent: Workshop Content
 nav_order: 4
 ---
 
