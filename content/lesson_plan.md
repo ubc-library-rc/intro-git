@@ -1,7 +1,7 @@
 ---
 layout: default
 nav_order: 3
-title: Outline
+title: Workshop Content
 has_children: true
 has_toc: false
 
