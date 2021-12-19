@@ -1,6 +1,6 @@
 ---
 layout: default
-nav_order:1
+nav_order: 1
 title: Pre-workshop Setup
 ---
 ## Introduction to Git and GitHub
