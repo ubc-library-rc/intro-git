@@ -29,5 +29,5 @@ _Actual schedule may vary depending on group needs_
 
 
 
-Please create a GitHub account and install Bash and Git before the workshop. See [Setup](../Pre-workshop-setup.md) for instructions.
+Please create a GitHub account and install Bash and Git before the workshop. See [Setup](https://ubc-library-rc.github.io/intro-git/) for instructions.
 {: .prereq}
