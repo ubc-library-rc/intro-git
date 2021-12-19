@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Git basics
-parent: Outline
+parent: Workshop Content
 nav_order: 2
 ---
 
