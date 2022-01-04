@@ -17,7 +17,14 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
  **1. Create a free [GitHub account](https://github.com)**
 
  **2. Install the Bash Shell and Git**
-- **Mac** and **Linux**. Bash is already installed (no action required). Install Git using [these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- **Mac** and **Linux**. Bash is already installed.
+    1. Install Git using [these instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+    2. If you use macOS Catalina or newer versions, change the default shell to Bash by running the following command:
+
+~~~
+$ chsh -s /bin/bash
+~~~
+
 - **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following [these instructions](https://stackoverflow.com/questions/36352627/how-to-enable-bash-in-windows-10-developer-preview/36465000#36465000). If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
     1. Download the Git for Windows [installer](https://git-for-windows.github.io).
     2. Run the installer and follow the steps below:
