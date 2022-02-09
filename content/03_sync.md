@@ -33,7 +33,7 @@ We will use the Secure Shell (SSH) protocol for this lesson, so please make sure
 
 On the same page GitHub provides instructions to "push an existing repository from the command line."  We will use these commands to synchronize our repositories:
 
-![GitHub instructions](figures/github-instructions.png)
+![GitHub instructions](figures/github-instructions-ssh.png)
 
 **Step 1: link the repositories with "git remote add"**
 Enter the command below, replacing <your_github_username> as appropriate.
