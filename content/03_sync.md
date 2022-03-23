@@ -231,6 +231,45 @@ nothing to commit, working tree clean
 
 This output lets us know where we are working (the main branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
 
+### Pulling changes
+
+When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then "pulling" that change back to our computer.
+
+Near the bottom of the "hello-world" repository on GitHub there is a button to "Add a README" file to your repository. Click the button, enter some text, then scroll to the bottom and click "Commit new file" (The default commit message will be "Create README.md", which is fine for our purposes).
+
+It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
+{: .info}
+
+After adding a README on GitHub your local repository is out-of-sync with the remote repository.  Let's fix that by pulling the remote changes into local repository with `git pull`.
+
+Input
+{: .label .label-green }
+~~~
+$ git pull
+~~~
+
+Output
+{: .label .label-yellow }
+~~~
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/<your_github_username>/hello-world
+   8e2eb99..0f5a7b0  main     -> origin/main
+Updating 8e2eb99..0f5a7b0
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+~~~
+
+
+The output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm
+this by entering the `ls` command.
+
+This section introduces some basic git commands but there are many others that may be useful in more complex and collaborative projects. For a more detailed introduction see the the online Software Carpentry course [Version control with Git](https://swcarpentry.github.io/git-novice/).
+
 ### Reviewing local changes
 
 The `git diff` command shows the changes we have made before a commit. To test this, open "index.md" with any text 
@@ -325,41 +364,4 @@ To https://github.com/<your_github_username>/hello-world
 
 Checking GitHub again shows 2 commits, the same as in our local repository.
 
-### Pulling changes
 
-When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then "pulling" that change back to our computer.
-
-Near the bottom of the "hello-world" repository on GitHub there is a button to "Add a README" file to your repository. Click the button, enter some text, then scroll to the bottom and click "Commit new file" (The default commit message will be "Create README.md", which is fine for our purposes).
-
-It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
-{: .info}
-
-After adding a README on GitHub your local repository is out-of-sync with the remote repository.  Let's fix that by pulling the remote changes into local repository with `git pull`.
-
-Input
-{: .label .label-green }
-~~~
-$ git pull
-~~~
-
-Output
-{: .label .label-yellow }
-~~~
-remote: Counting objects: 3, done.
-remote: Compressing objects: 100% (2/2), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-From https://github.com/<your_github_username>/hello-world
-   8e2eb99..0f5a7b0  main     -> origin/main
-Updating 8e2eb99..0f5a7b0
-Fast-forward
- README.md | 1 +
- 1 file changed, 1 insertion(+)
- create mode 100644 README.md
-~~~
-
-
-The output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm
-this by entering the `ls` command.
-
-This section introduces some basic git commands but there are many others that may be useful in more complex and collaborative projects. For a more detailed introduction see the the online Software Carpentry course [Version control with Git](https://swcarpentry.github.io/git-novice/).
