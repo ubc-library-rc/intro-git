@@ -8,61 +8,7 @@ nav_order: 3
 ## Syncing with GitHub
 So far you used Git to create a repository called "hello-world" on your own computer, but no one else can see those files.  Next you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
 
-### Create an empty GitHub repository
-
-Log into your GitHub account and create a new repository by clicking the **+** icon in the upper-right corner of
-any page, then selecting **New repository**.  
-
-![add_new_repository](figures/add_new_repository.png)
-
-- Name the repository "hello-world"
-- Add optional description
-- Ensure repository is set to "Public"
-- Click "Create repository"
-
-Though not mandatory, choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see <https://choosealicense.com/>.
-{: .info}
-
-### Linking your local repository to GitHub
-
-After creating the "hello-world" repository GitHub will display the repository page.  This includes information required to link your GitHub repository to the "hello-world" repository you created with Git on your own computer.     
-
-We will use the Secure Shell (SSH) protocol for this lesson, so please make sure that button shows that it is selected and that the address in the text box starts with git@github. It will look something like this:
-
-![The repository SSH on GitHub](figures/repository_ssh1.png)
-
-On the same page GitHub provides instructions to "push an existing repository from the command line."  We will use these commands to synchronize our repositories:
-
-![GitHub instructions](figures/github-instructions-ssh.png)
-
-**Step 1: link the repositories with "git remote add"**
-Enter the command below, replacing <your_github_username> as appropriate.
-
-Input
-{: .label .label-green }
-~~~
-$ git remote add origin git@github.com:yourname/hello-world.git 
-~~~
-{: .language-bash }
-
-This links your local Git repository to a _remote_ one. The SSH indicates the location of the remote repository, which is nicknamed _origin_ in this example.  The nickname can be anything but Git convention is to refer to the remote repository as "origin".  
-
-We can confirm that it is set up correctly with this command:
-
-Input
-{: .label .label-green }
-~~~
-$ git remote -v
-~~~
-
-Output
-{: .label .label-yellow }
-~~~
-origin  https://github.com/<your_github_username>/hello-world (fetch)
-origin  https://github.com/<your_github_username>/hello-world (push)
-~~~
-
-**Step 2: SSH Background and Setup**  
+### SSH Background and Setup
 We need to set up a way for our local computer to authenticate with GitHub so that GitHub recognizes our computer as belonging to the same person who owns the GitHub repository. 
 
 We will use SSH as our authentication method. SSH stands for Secure SHell protocol.  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
@@ -75,7 +21,7 @@ What we will do now is the minimum required to set up the SSH keys and add the p
 
 The first thing we are going to do is check if this has already been done on the computer you’re on.  
 
-> ## Keeping your keys secure
+> ### Keeping your keys secure
 > You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good
 >  practice to audit your secure shell keys every so often. Especially if you are using multiple
 >  computers to access your account.
@@ -185,8 +131,62 @@ Hi YourName! You've successfully authenticated, but GitHub does not provide shel
 ~~~
 {: .output}
 
+### Create an empty GitHub repository
 
-**Step 3: synchronize the repositories with "git push"**
+Log into your GitHub account and create a new repository by clicking the **+** icon in the upper-right corner of
+any page, then selecting **New repository**.  
+
+![add_new_repository](figures/add_new_repository.png)
+
+- Name the repository "hello-world"
+- Add optional description
+- Ensure repository is set to "Public"
+- Click "Create repository"
+
+Though not mandatory, choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see <https://choosealicense.com/>.
+{: .info}
+
+### Linking your local repository to GitHub
+
+After creating the "hello-world" repository GitHub will display the repository page.  This includes information required to link your GitHub repository to the "hello-world" repository you created with Git on your own computer.     
+
+We will use the Secure Shell (SSH) protocol for this lesson, so please make sure that button shows that it is selected and that the address in the text box starts with git@github. It will look something like this:
+
+![The repository SSH on GitHub](figures/repository_ssh1.png)
+
+On the same page GitHub provides instructions to "push an existing repository from the command line."  We will use these commands to synchronize our repositories:
+
+![GitHub instructions](figures/github-instructions-ssh.png)
+
+**Step 1: link the repositories with "git remote add"**
+Enter the command below, replacing <your_github_username> as appropriate.
+
+Input
+{: .label .label-green }
+~~~
+$ git remote add origin git@github.com:yourname/hello-world.git 
+~~~
+{: .language-bash }
+
+This links your local Git repository to a _remote_ one. The SSH indicates the location of the remote repository, which is nicknamed _origin_ in this example.  The nickname can be anything but Git convention is to refer to the remote repository as "origin".  
+
+We can confirm that it is set up correctly with this command:
+
+Input
+{: .label .label-green }
+~~~
+$ git remote -v
+~~~
+
+Output
+{: .label .label-yellow }
+~~~
+origin  https://github.com/<your_github_username>/hello-world (fetch)
+origin  https://github.com/<your_github_username>/hello-world (push)
+~~~
+
+
+**Step 2: synchronize the repositories with "git push"**
 The `git push` command can "push" our local content and tracking information to the GitHub repository, synchronizing the content.
 
 Input
