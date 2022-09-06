@@ -9,7 +9,7 @@ nav_order: 1
 
 ### What is version control?
 
-Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments. 
+Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments.. 
 
 **Why use version control?**
 Because no one wants to end up in this familiar place:
