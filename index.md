@@ -11,7 +11,7 @@ In this beginner workshop participants will learn key concepts, create their own
 ### Pre-workshop setup
 Please make sure to have a Bash Shell and Git installed **before** the workshop.
 
-If you do not have access to a laptop or have difficulty meeting these prerequisites please contact eka.grguric@ubc.ca.  We will do our best to ensure everyone can participate.
+If you do not have access to a laptop or have difficulty meeting these prerequisites please contact shayanfa@mail.ubc.ca.  We will do our best to ensure everyone can participate.
 {: .info }
 
  **1. Create a free [GitHub account](https://github.com)**
@@ -25,7 +25,7 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 $ chsh -s /bin/bash
 ~~~
 
-- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following [these instructions](https://stackoverflow.com/questions/36352627/how-to-enable-bash-in-windows-10-developer-preview/36465000#36465000). If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
+- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following [these instructions](https://learn.microsoft.com/en-us/windows/wsl/install). If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
     1. Download the Git for Windows [installer](https://git-for-windows.github.io).
     2. Run the installer and follow the steps below:
         1. Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
