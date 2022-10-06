@@ -8,3 +8,4 @@ license_image_url: "https://i.creativecommons.org/l/by/4.0/88x31.png"
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - github-pages

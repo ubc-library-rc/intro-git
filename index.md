@@ -3,6 +3,7 @@ layout: default
 nav_order: 1
 title: Pre-workshop Setup
 ---
+
 ## Introduction to Git and GitHub
 Learn the basics of using Git and GitHub for version control and collaboration.  Git is widely used version control software that tracks changes to a group of files, referred to as a repository.  GitHub is a popular website for hosting and sharing Git repositories, making it easier to collaborate and share your work.  Together, Git and GitHub provide a platform that is increasingly used for collaboration in research and academic environments.  
 
@@ -25,7 +26,11 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 $ chsh -s /bin/bash
 ~~~
 
-- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following [these instructions](https://learn.microsoft.com/en-us/windows/wsl/install). If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
+- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following. Windows Subsystem for Linux (WSL), is a compatibility layer to run Linux binary files natively on Windows 10. If you have Windows 10, it is recommended to install Jekyll on WSL instead of Windows. The process of installing Jekyll on Linux is much simpler and more robust, and if you are familiar with Linux, it makes manipulating files and directories much easier. Please follow this guide to activate WSL on your system.
+
+To install WSL on your Windows Machine, use the [Simplified install](https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders).
+
+If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
     1. Download the Git for Windows [installer](https://git-for-windows.github.io).
     2. Run the installer and follow the steps below:
         1. Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.

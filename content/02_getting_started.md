@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Git basics
-parent: Workshop Content
-nav_order: 2
+nav_order: 6
 ---
 
 ## Git basics
@@ -11,11 +10,7 @@ One of the challenges of learning Git is becoming familiar with its terminology 
 
 Below are some basic git commands and what they do in the git workflow. We'll use all of them during the workshop and it's helpful to understand how they work together.
 
-
-
 ![table of basic git commands](figures/git_command.png)
-
-
 
 The best way to learn a langauge is through practice.  In this workshop we will use Git to setup a new version-controlled project.
 
@@ -224,3 +219,7 @@ along with information about who made the commit and at what time.
 If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution.
 
 ![The Git Staging Area](figures/git_staging_area.svg)
+
+### .gitignore file
+
+### Why staging is useful

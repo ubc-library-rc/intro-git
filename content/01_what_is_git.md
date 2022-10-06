@@ -1,11 +1,41 @@
 ---
 layout: default
 title: Concepts and tools
-parent: Workshop Content
-nav_order: 1
+nav_order: 5
 ---
 
 ## Concepts and tools
+
+We need to know a little about the terminal to be able to use the features of Git. You should know the following commands:
+
+Input
+{: .label .label-green}
+~~~
+$ cd
+~~~
+
+`cd ..`
+
+Input
+{: .label .label-green}
+~~~
+$ mkdir
+~~~
+
+
+Input
+{: .label .label-green}
+~~~
+$ ls
+~~~
+
+`ls -a`
+
+Input
+{: .label .label-green}
+~~~
+$ touch
+~~~
 
 ### What is version control?
 
