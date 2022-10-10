@@ -4,9 +4,9 @@ title: Reference
 nav_order: 9
 ---
 
-## Reference
+# Reference
 
-### Bash shell commands
+## Bash shell commands
 
 [Command line cheat sheet from Tower](https://www.git-tower.com/blog/command-line-cheat-sheet/)
 
@@ -32,7 +32,7 @@ nav_order: 9
 
 `rm`: remove a file or files. *USE WITH CAUTION!!!*
 
-### Git commands
+## Git commands
 
 * [GitHub git cheat sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 * [Git cheat sheet from Tower](https://www.git-tower.com/blog/git-cheat-sheet/)
@@ -63,7 +63,7 @@ nav_order: 9
 `git remote add origin`
 : add a remote repository named 'origin', to upload changes to or download changes from
 
-### Markdown
+## Markdown
 
 - GitHub Guide to [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Markdown cheat-sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for quick reference

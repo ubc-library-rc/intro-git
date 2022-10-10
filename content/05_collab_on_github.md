@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Repository forks and clones
+title: Collaborating on Github
 nav_order: 9
 nav_exclude: false
 ---
 
-## Repository forks and clones
+# Collaborating on Github
+
 The GitHub platform facilitates collaboration by managing access and tracking activity on multi-author projects. A common workflow for teamwork is to use the _fork_, _clone_, and _pull request_ features of Git and GitHub. Consider this example: 
 
 > _A team of 10 people is writing a text book. Everyone will contribute content and the files will be stored in a main project repository. To avoid unintended conflicts each team member will work in their own copy of the repository, periodically merging their work back into the main project repository._ 
@@ -22,7 +23,7 @@ In this scenario team members never edit the main project repository: each perso
 To create a fork sign in to GitHub, navigate to the main project repository, then click the _Fork_ button in the top right corner. 
 ![Fork button in GitHub](figures/fork.png)
 
-### Clone the fork to your own computer
+## Clone the fork to your own computer
 GitHub is great for storing and sharing files but it's not a good platform for editing. The recommended practice is to _clone_ your repository, which creates a local copy on your own computer where you can edit the files with your preferred text editor. 
 
 *1*{: .circle .circle-blue} In GitHub, find the repository to clone and click the _Code_ button. Copy the URL to use in the command below.  
@@ -91,3 +92,24 @@ _Fetch upstream_ will update your _fork_ with other team members' changes. To br
 *1*{: .circle .circle-blue} Open a terminal and navigate to the cloned repository in your local file system 
 
 *2*{: .circle .circle-blue} Use the command `git pull` to incorporate content from the fork on GitHub 
+
+### A Basic Collaborative Workflow
+
+When collaborating it's important to work from an updated version of the repository so you should `git pull` before making
+any changes. A basic workflow for collaboration might look like this:
+
+* update your local repo with `git pull origin main`,
+* make your changes and stage them with `git add`,
+* commit your changes with `git commit -m`, and
+* upload the changes to GitHub with `git push origin main`
+
+Note: it is a good idea to make frequents commits to keep a history of changes in the git repository and prevent conflicts with other collaborators of the project
+
+
+## Exercise
+
+In this exercise, you are going to use Git and Github to fix mistakes in a repository. You can download the `sandbox` repository here: [address](address)
+
+This repository supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
+
+There are some major mistakes, such as files in wrong locations, files with wrong format for names, and extra files, and some minor mistakes, such as mistakes in spelling of words. You are asked to fix the repository either directly on Github or by pulling the local repository, fixing the problems, and pushing it to the remote repository. 

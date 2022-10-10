@@ -4,7 +4,7 @@ title: Git basics
 nav_order: 6
 ---
 
-## Git basics
+# Git basics
 
 One of the challenges of learning Git is becoming familiar with its terminology and command structure. Git commands consist of verbs such as `init`, `add`, `commit`, and `push` preceded by the word `git`.  These base commands are often followed by options that provide more information about how and where Git should act.
 
@@ -14,7 +14,7 @@ Below are some basic git commands and what they do in the git workflow. We'll us
 
 The best way to learn a langauge is through practice.  In this workshop we will use Git to setup a new version-controlled project.
 
-### Creating a repository
+## Creating a repository
 
 You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory named `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
 
@@ -53,7 +53,7 @@ directory your repository may seem empty.  But running "ls -a" instead will incl
 {: .info}
 
 
-### Displaying project status
+## Displaying project status
 
 The `git status` command displays the current state of a project.
 
@@ -76,7 +76,7 @@ The output introduces two new Git concepts:
 - **commit**. The `git commit` command saves your changes to the repository. The output above tells us there is nothing new to save in our repository.
 
 
-### Adding and committing
+## Adding and committing
 
 We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which
 we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage
@@ -146,6 +146,8 @@ Changes to be committed:
     new file:   index.md
 ~~~
 
+Note: if you want to add all the modified parts to the staging area, you should use `git add -A`.
+
 
 The "index.md" file now appears under "changes to be committed."  If you are using colourised output in your terminal the filename may have changed colour from red to green.
 
@@ -176,6 +178,7 @@ Changes not staged for commit:
 	modified:   index.md
 ~~~
 
+Note: To remove the files from the staging area, you can use `git reset` command.
 
 This lets us know that Git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add
 the new version of "index.md" to the staging area.
@@ -203,6 +206,13 @@ Output
  create mode 100644 index.md
 ~~~
 
+Note: Before committing your changes to `index.md`, you can use the following command to cancel all the changes you made and return the file to the latest commit:
+
+Input
+{: .label .label-green}
+~~~
+$ git checkout index.md
+~~~
 
 We can see that one file has changed and that we made one insertion, which was a line with the text '#Hello, world!'.
 We can also see the commit message 'Add index.md', which we added by using the `-m` flag after `git commit`.
@@ -220,6 +230,112 @@ If you think of Git as taking snapshots of changes over the life of a project, `
 
 ![The Git Staging Area](figures/git_staging_area.svg)
 
-### .gitignore file
+*figure depicted from [Library Carpentry: Introduction to Git](https://librarycarpentry.org/lc-git/02-getting-started/index.html)*
 
-### Why staging is useful
+## Git branches
+
+Git branches can help you to collaborate on projects without any conflicts. 
+
+To see all the branches in your current repository:
+
+Input
+{: .label .label-green}
+~~~
+$ git branch
+~~~
+
+We want to make a new branch called `withdate` and add the date to the bottom of `index.md`. 
+
+Input
+{: .label .label-green}
+~~~
+$ git branch withdate
+~~~
+
+Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to move between branches. We want to move to the newly created branch, `withdate`.
+
+Input
+{: .label .label-green}
+~~~
+$ git checkout withdate
+~~~
+
+You can use `git status` to see your current branch. 
+
+To merge a branch to the `master` branch, you should merge it.
+
+Input
+{: .label .label-green}
+~~~
+$ git merge withdate
+~~~
+
+The output shows the updated files after the merge. When you merge a branch, it does not get removed from the git tree. To delete a git branch after merging it with another branch:
+
+Input
+{: .label .label-green}
+~~~
+$ git branch -d withdate
+~~~
+
+## .gitignore file
+
+A `.gitignore` is the name of a text file in the main folder of your git repository that includesthe names of the files and directories that should be ignored by git. Each new line should list a new file or folder. You can also use a matching pattern to ignore a set of files or folders.
+
+For example, in Mac, a `.DS_store` file is added by the filesystem. You can ignore it as well as all files with the extension of `.env` and all the files in `_site` folder by making a `.gitignore` file like below:
+
+Input
+{: .label .label-green}
+~~~
+.DS_Store
+*.env
+_site\
+~~~
+
+## Why staging is useful
+
+The index or staging are is a place to hold the current changes that will be committed when `git commit` is executed. It allows you to only commit parts of the working area into the respository. 
+
+For example, when you are working in on a big change with a few different subtasks, you can add the corresponding part to the staging area and commit those changes in separately with appropriate messages focused on one aspect of changes.
+
+## Undoing changes in Git
+
+You want to go back to the previous version in a number of scnearios:
+
+* **1.Undoing Local Changes That Have Not Been Committed**: If the changes have not been committed yet, you should check out the file or files that you want to revert back to its previous version:
+
+~~~
+$ git checkout <filename>
+~~~
+
+* **2.Undoing Your Last Commit (That Has Not Been Pushed)**: If you made a mistake on your last commit and have not pushed it yet, you can undo it by moving the HEAD of your repository. For this purpose, run the following commands in the repository directory.
+
+~~~
+$ git reset --soft HEAD~
+~~~
+
+Now, your latest commit is undone. The changes remain in place and the files go back to being staged so you can make additional changes or add any missing files and make a new commit.
+
+## Graphical user interface for Git
+
+Some terminal shells use some simple graphics to communicate a great deal of information about the current status of your git repository. 
+
+**Zsh** is highly customizable and **Oh My Zsh** is a community-driven framework that provides lots of plugins and themes to enhance your command line experience. For example, you can view the state of your Git repository right inside the terminal. You can install Oh My Zsh [here](https://ohmyz.sh/#install).
+
+![Zsh with agnoster theme](https://ubc-library-rc.github.io/intro-development-environment/content/images/Zsh-with-agnoster-theme.jpg)
+
+*Zsh with agnoster theme*
+
+## Git tags
+
+The common practice is to use at least two branches, `development` and `production`, for a project. The latest features are implemented in the `development` branch and the tested features will be merged into the `production` branch.
+
+Git also supports **tags**, which you can use to specify a version for the current project. Tags can be viewed as versions for your code and can help you to quickly checkout your project up to a certain commit.
+
+Input
+{: .label .label-green}
+~~~
+git tag -a v1.0 -m 'This is the first version of my project'
+~~~
+
+Tags and branches are fundamentally different. A branch always points to the top of the development line and only changes when a new commit is pushed. A tag will not change by making a new commit and will always stay on that version of the code.

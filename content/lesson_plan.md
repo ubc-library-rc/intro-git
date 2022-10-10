@@ -7,23 +7,33 @@ has_toc: false
 
 ---
 
-## Outline
+# Outline
 
-### Goal of this workshop
+## Goal of this workshop
 
 The goal of this workshop is to **begin** to understand and use Git and GitHub. You will not be an expert by the end of the class. You will probably not even feel very comfortable using Git. This is okay. We want to make a start but, as with any skill, using Git takes practice.
 
 This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover.
 
-### Schedule
+### Learning Objectives
+
+At the end of this workshop, attendees will be able to:
+
+- Create a Git repository on their local machine and track changes
+- Create a remote repository on Github
+- Link a local Git repository to a remote Github repository and sync changes
+- List Git and Github features for project development and team collaboration
+
+## Schedule
 
 | Time | Content 
 | --- | --- 
 | 0:00 | [Concepts and tools](01_what_is_git.md)
 | 0:10 | [Git basics](02_getting_started.md)
 | 0:30 | [Syncing with GitHub](03_sync.md)
-| 1:00 | [Collaborating on GitHub](04_collab.md)
-| 1:20 | Wrap-up
+| 0:50 | [Github features](04_github.md)
+| 1:20 | [Collaborating on Github](05_collab_on_github.md)
+| 1:30 | Wrap-up
 
 _Actual schedule may vary depending on group needs_
 

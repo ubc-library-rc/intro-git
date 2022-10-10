@@ -2,7 +2,7 @@
 nav_exclude: true
 ---
 
-Positive Feedbacks from previous workshops:
+### Positive Feedbacks from previous workshops:
 
 - Hands on activity
 - Liked having the script to follow along with the commands & what they actioned
@@ -15,7 +15,7 @@ Positive Feedbacks from previous workshops:
 - Interactive!
 
 
-Negative Feedbacks from previous workshops:
+### Negative Feedbacks from previous workshops:
 
 - The instructor was good at explaining git terminology
 It might make sense to split this into a basic git intro in small groups (maybe even by degree/background)and an advanced workshop. people who haven't worked with the command line are overwhelmed by this, and those who have are a bit underwhelmed. 

@@ -4,7 +4,9 @@ title: Concepts and tools
 nav_order: 5
 ---
 
-## Concepts and tools
+# Concepts and tools
+
+## Important terminal commands
 
 We need to know a little about the terminal to be able to use the features of Git. You should know the following commands:
 
@@ -14,14 +16,15 @@ Input
 $ cd
 ~~~
 
-`cd ..`
+To navigate through files and directories within a system, use the `cd` command followed by either the full path or the directory name. Running this command without a flag or option will take you to the home folder. Use `cd ..` to move to the parent directory (one directory up) and `cd -` to the previous direcotry.
 
 Input
 {: .label .label-green}
 ~~~
-$ mkdir
+$ mkdir <new-directory>
 ~~~
 
+This command creates one or multiple directories at once. You should have the privilege to make a new folder in the parent directory. 
 
 Input
 {: .label .label-green}
@@ -29,19 +32,30 @@ Input
 $ ls
 ~~~
 
-`ls -a`
+This command lists files and directories within a system and running it  without a flag or parameter will show the current working directory's content. With `ls -a`, hidden files will also be shown. The files created by Git in your Git repository are hidden and stored in `.git` directory.
 
 Input
 {: .label .label-green}
 ~~~
-$ touch
+$ touch <new-file-name>
 ~~~
 
-### What is version control?
+The `touch` command creates an empty file in the current directory. In this workshop, we use this command to make multiple empty files. You can use other methods to make empty files or copy files from other directories to populate your git folder.
+
+Input
+{: .label .label-green}
+~~~
+$ cat <file-name>
+~~~
+
+`cat` reads files and writes them on the screen. The name comes from its function to catenate files.
+
+## What is version control?
 
 Version control software tracks the changes made to a group of files.  Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments.. 
 
 **Why use version control?**
+
 Because no one wants to end up in this familiar place:
 
 ![Because we don't want to end up here](figures/phd101212s.gif)
@@ -54,16 +68,19 @@ It takes some discipline to learn and make use of version control but there are 
 * **Understanding context** - Version control can help you understand how the code or writing came to be, who wrote or contributed particular parts, and who you might ask to help understand it better.
 * **Backup** - While not meant to be a backup solution, version control systems mean your code and writing can be stored on multiple computers.
 
-### What are Git and GitHub?
+## What are Git and GitHub?
 
 **_Git_** and **_GitHub_** are often used interchangeably but it's important to understand what each does and how they work together.
 
-**_Git_** is a free, open source tool that can be installed on your local computer to track changes made to a set of files (referred to as a "git repository" or "repo"). Git can be used independently to organize one's own work, or to coordinate team projects with multiple authors. Git ensures that everyone's contributions are tracked and merged effectively by keeping copies of all previous versions and documenting the changes, when they were made, and by whom.   
+**_Git_** is a free, open source tool that can be installed on your local computer to track changes made to a set of files (referred to as a "git repository" or "repo"). Git can be used independently to organize one's own work, or to coordinate team projects with multiple authors. Git makes it easy to get a overview of all changes made to the file over time. Git keeps a list of changes made to the files of the project, thus, the earlier versions of each file are not overwritten and we can roll back to them.
+
+Git also ensures that everyone's contributions are tracked and merged effectively by keeping copies of all previous versions and documenting the changes, when they were made, and by whom.    
 
 
 Git was designed for _text_ files that can be opened in a text editor (as opposed to _binary_ file formats like .pdf and .docx).  A Git repository can preserve files of any type, but only text files will benefit from all Git's features.  
 {: .info}
 
+Git is developed in 2005 by Linus Torvalds, the famous creator of the Linux operating system kernel. A great number of software projects rely on Git for version control. 
 
 **_GitHub_** is a popular website for hosting and sharing Git repositories. GitHub provides online infrastructure that makes it easier for teams to collaborate with Git.  Team members make contributions to the repository on local copies of the files, then "push" their changes back to GitHub so everyone else can see them.  
 
