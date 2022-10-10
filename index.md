@@ -28,28 +28,29 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 $ chsh -s /bin/bash
 ~~~
 
-- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following. Windows Subsystem for Linux (WSL), is a compatibility layer to run Linux binary files natively on Windows 10. If you have Windows 10, it is recommended to install Jekyll on WSL instead of Windows. The process of installing Jekyll on Linux is much simpler and more robust, and if you are familiar with Linux, it makes manipulating files and directories much easier. Please follow this guide to activate WSL on your system.
+- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following. Windows Subsystem for Linux (WSL), is a compatibility layer to run Linux binary files natively on Windows 10. Please follow this guide to activate WSL on your system.
 
 To install WSL on your Windows Machine, use the [Simplified install](https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders).
 
 If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
-    1. Download the Git for Windows [installer](https://git-for-windows.github.io).
-    2. Run the installer and follow the steps below:
-        1. Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
-        2. From the dropdown menu select "Use the nano editor by default" and click on "Next".
-        3. Ensure that "Git from the command line and also from 3rd-party software" is selected and click on "Next". (If you don't do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the "Git from the command line and also from 3rd-party software" option.)
-        4. Ensure that "Use the native Windows Secure Channel library" is selected and click on "Next".
-        5. Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
-        6. Ensure that "Use Windows' default console window" is selected and click on "Next".
-        7. Ensure that "Enable file system caching" and "Enable Git Credential Manager" are selected and click on "Next".
-        8. Click "Install".
-        9. Click "Finish".
-    3. If your "HOME" environment variable is not set (or you don't know what this is):
-        1. Open command prompt (Open Start Menu then type `cmd` and press "Enter"
-        2. Type the following line into the command prompt window exactly as shown:
+
+1. Download the Git for Windows [installer](https://git-for-windows.github.io).
+2. Run the installer and follow the steps below:
+     1. Click on "Next" four times (two times if you've previously installed Git). You don't need to change anything in the Information, location, components, and start menu screens.
+     2. From the dropdown menu select "Use the nano editor by default" and click on "Next".
+     3. Ensure that "Git from the command line and also from 3rd-party software" is selected and click on "Next". (If you don't do this Git Bash will not work properly, requiring you to remove the Git Bash installation, re-run the installer and to select the "Git from the command line and also from 3rd-party software" option.)
+     4. Ensure that "Use the native Windows Secure Channel library" is selected and click on "Next".
+     5. Ensure that "Checkout Windows-style, commit Unix-style line endings" is selected and click on "Next".
+     6. Ensure that "Use Windows' default console window" is selected and click on "Next".
+     7. Ensure that "Enable file system caching" and "Enable Git Credential Manager" are selected and click on "Next".
+     8. Click "Install".
+     9. Click "Finish".
+3. If your "HOME" environment variable is not set (or you don't know what this is):
+     1. Open command prompt (Open Start Menu then type `cmd` and press "Enter"
+     2. Type the following line into the command prompt window exactly as shown:
          `setx HOME "%USERPROFILE%"`
-        3. Press "Enter." you should see `SUCCESS: Specified value was saved.`
-        4. Quit command prompt by typing `exit` then pressing "Enter"
+     3. Press "Enter." you should see `SUCCESS: Specified value was saved.`
+     4. Quit command prompt by typing `exit` then pressing "Enter"
 
 This will provide you with both Git and Bash in the Git Bash program.
 
