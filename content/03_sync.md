@@ -5,9 +5,7 @@ nav_order: 7
 ---
 
 ## Syncing with GitHub
-So far you used Git to create a repository called "hello-world" on your own computer, but no one else can see those files.  Next you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
-
-You can link your local machine to Github through SSH keys. To find more about this feature, check out [this page]().
+So far you used Git to create a repository called "hello-world" on your own computer, but no one else can see those files.  Next you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository. There are two ways to do this, using either SSH or HTTPS (we will cover HTTPS here).
 
 ### Create an empty GitHub repository
 
@@ -24,23 +22,19 @@ any page, then selecting **New repository**.
 Though not mandatory, choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see <https://choosealicense.com/>.
 {: .info}
 
-### Linking your local repository to GitHub
+### OPTIONAL: SSH Method 
 
-After creating the "hello-world" repository GitHub will display the repository page.  This includes information required to link your GitHub repository to the "hello-world" repository you created with Git on your own computer.     
+To connect your local machine to Github securely, you can use SSH keys. This is a step you perform every time you wish to add a new computer to your GitHub account. In other words, this is a connection between your computer and your GitHub account, a way for GitHub to recognize your computer belongs to the same person so it allows you to sync your repositories. If you work often with GitHub from a local computer, you can follow [these steps] () to link your computer with GitHub.
 
-You have two ways to connect your local machine to Github. To connect your local machine to Github securely, you can use SSH keys. If you want to use the SSH keys, open this tab on Github and take the SSH key address:
+### HTTPS Method 
 
-![The repository SSH on GitHub](figures/repository_ssh1.png)
+In this workshop, you will not set up SSH. Instead, you will use the HTTPS method, which requires you to authenticate using your password. This is often enough for basic needs and is easier.
 
-On the same page GitHub provides instructions to "push an existing repository from the command line."  We will use these commands to synchronize our repositories:
-
-![GitHub instructions](figures/github-instructions-ssh.png)
-
-You can also use HTTPS to connect your local repository to Github using username and password. 
-
-Take a look at the following figure and find the commands you need to use to sync your local repository with Github:
+After creating the new "hello-world" repository GitHub will display the repository page.  This includes information required to link your GitHub repository to the "hello-world" repository you created with Git on your own computer. Since we are using the HTTPS method, make sure you have the HTTPS tab selected (not SSH).
 
 ![Pushing Existing Repository](figures/pushing-existing-repository.png)
+
+As you can see, there are a couple ways to add content to the new repository you just created. Since we already have a local repository, we will use the second option: "push an existing repository from the command line."
 
 **Step 1: link the repositories with "git remote add"**
 Enter the command below, replacing <your_github_username> as appropriate.
@@ -48,11 +42,11 @@ Enter the command below, replacing <your_github_username> as appropriate.
 Input
 {: .label .label-green }
 ~~~
-$ git remote add origin git@github.com:yourname/hello-world.git 
+$ git remote add origin https://github.com/[your_username]/hello-world.git
 ~~~
 {: .language-bash }
 
-This links your local Git repository to a _remote_ one. The SSH indicates the location of the remote repository, which is nicknamed _origin_ in this example.  The nickname can be anything but Git convention is to refer to the remote repository as "origin".  
+This links your local Git repository to a _remote_ one. Your remote repository is nicknamed _origin_. The nickname can be anything but Git convention is to refer to the remote repository as "origin".  
 
 We can confirm that it is set up correctly with this command:
 
@@ -113,9 +107,6 @@ nothing to commit, working tree clean
 ~~~
 
 This output lets us know where we are working (the main branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
-
-If you add a readme file or license file to your Github repository, the commit on Github is ahead of your latest commit on the local main branch and you need to pull the latest changes to sync the two repositories:
-
 
 ### Pulling changes
 
