@@ -112,4 +112,4 @@ In this exercise, you are going to use Git and Github to fix mistakes in a repos
 
 This repository supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
 
-There are some major mistakes, such as files in wrong locations, files with wrong format for names, and extra files, and some minor mistakes, such as mistakes in spelling of words. You are asked to fix the repository either directly on Github or by pulling the local repository, fixing the problems, and pushing it to the remote repository. 
+There are some mistakes in the repository, such as files with wrong extensions, and some minor mistakes, such as mistakes in spelling of words. You are asked to add one more piece of news or fix the repository either directly on Github or by pulling the local repository, fixing the problems, and pushing it to the remote repository. 

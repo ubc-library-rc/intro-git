@@ -15,12 +15,15 @@ The source control icon on the Activity Bar indicates an overview of the changes
 
 In VS Code, you can stage and commit changes using the graphical user interface or by the terminal.
 
+## Graphical user interface for Git
 
-### Git and Open source community
+Some terminal shells use some simple graphics to communicate a great deal of information about the current status of your git repository. 
 
-Github hosts millions of open-source projects. With open-source projects, people on different skill levels can work to make technologies more accessible or build meaningful resources for communities. Learning how an open-source software is built and maintained can be a great programming class as well.
+**Zsh** is highly customizable and **Oh My Zsh** is a community-driven framework that provides lots of plugins and themes to enhance your command line experience. For example, you can view the state of your Git repository right inside the terminal. You can install Oh My Zsh [here](https://ohmyz.sh/#install).
 
-If you would like to participate in open-source projects on Github, October is the perfect month. [Hacktoberfest](https://hacktoberfest.com/) is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. Developers get involved by completing pull requests, participating in events, and donating to open source projects.
+![Zsh with agnoster theme](https://ubc-library-rc.github.io/intro-development-environment/content/images/Zsh-with-agnoster-theme.jpg)
+
+*Zsh with agnoster theme*
 
 #### Example: Source Control with VS Code
 

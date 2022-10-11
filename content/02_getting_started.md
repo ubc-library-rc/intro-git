@@ -12,7 +12,12 @@ Below are some basic git commands and what they do in the git workflow. We'll us
 
 ![table of basic git commands](figures/git_command.png)
 
-The best way to learn a langauge is through practice.  In this workshop we will use Git to setup a new version-controlled project.
+The best way to learn a langauge is through practice. In this workshop we will learn the following Git workflows:
+
+* Making and maintaining a repository on your machine
+* Creating a repository on Github
+* Syncing local repository with Github
+* Forking projects and working collaboratively
 
 ## Creating a repository
 
@@ -43,7 +48,7 @@ $ git init
 Output
 {: .label .label-yellow}
 ~~~
-Initialized empty Git repository in <your file path>/hello-world/.git/
+Initialized empty Git repository in <your file path>/hello-world.git/
 ~~~
 
 Your `hello-world` directory is now a git repository.
@@ -206,15 +211,7 @@ Output
  create mode 100644 index.md
 ~~~
 
-Note: Before committing your changes to `index.md`, you can use the following command to cancel all the changes you made and return the file to the latest commit:
-
-Input
-{: .label .label-green}
-~~~
-$ git checkout index.md
-~~~
-
-We can see that one file has changed and that we made one insertion, which was a line with the text '#Hello, world!'.
+We can see that one file has changed and that we made one insertion, which was a line with the text `Hello, world!`.
 We can also see the commit message 'Add index.md', which we added by using the `-m` flag after `git commit`.
 The commit message is used to record a short, descriptive, and specific summary of what we did to help us remember later on without having to look at the actual changes.
 
@@ -223,6 +220,14 @@ If we just run `git commit` without the `-m` flag Git will launch a text editor 
 
 Having made a commit, we now have a permanent record of what changed,
 along with information about who made the commit and at what time.
+
+Note: Before committing your changes to `index.md`, you can use the following command to cancel all the changes you made and return the file to the latest commit:
+
+Input
+{: .label .label-green}
+~~~
+$ git checkout index.md
+~~~
 
 ## Another look at the git workflow
 
@@ -234,7 +239,7 @@ If you think of Git as taking snapshots of changes over the life of a project, `
 
 ## Git branches
 
-Git branches can help you to collaborate on projects without any conflicts. 
+Git branches allows you to work on different parts of a project collaboratively without impacting the main branch. When the work is complete, a branch can be merged to with the main project. Each branch is a separate version of the main repository.
 
 To see all the branches in your current repository:
 
@@ -244,15 +249,15 @@ Input
 $ git branch
 ~~~
 
-We want to make a new branch called `withdate` and add the date to the bottom of `index.md`. 
+We want to make a new branch called `new-feature` and add your name to  the bottom of `index.md` and a new file `about-me.md`
 
 Input
 {: .label .label-green}
 ~~~
-$ git branch withdate
+$ git branch new-feature
 ~~~
 
-Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to move between branches. We want to move to the newly created branch, `withdate`.
+Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to switch between branches. The default branch in Git is `master`. This branch is not different than any other branch in a Git repository. To move to the newly created branch, `new-feature`, we ask git to "checkout" this branch:
 
 Input
 {: .label .label-green}
@@ -260,14 +265,16 @@ Input
 $ git checkout withdate
 ~~~
 
-You can use `git status` to see your current branch. 
+You can run `git status` to check the current/active branch. Some shell themes provide graphical hints to inform you of the current branch at all times. 
 
-To merge a branch to the `master` branch, you should merge it.
+
+When your feature is ready, you can merge it with the `master` branch. To do so, you first need to checkout to the `master` branch:
 
 Input
 {: .label .label-green}
 ~~~
-$ git merge withdate
+$ git checkout master
+$ git merge new-feature
 ~~~
 
 The output shows the updated files after the merge. When you merge a branch, it does not get removed from the git tree. To delete a git branch after merging it with another branch:
@@ -275,12 +282,12 @@ The output shows the updated files after the merge. When you merge a branch, it 
 Input
 {: .label .label-green}
 ~~~
-$ git branch -d withdate
+$ git branch -d new-feature
 ~~~
 
 ## .gitignore file
 
-A `.gitignore` is the name of a text file in the main folder of your git repository that includesthe names of the files and directories that should be ignored by git. Each new line should list a new file or folder. You can also use a matching pattern to ignore a set of files or folders.
+A `.gitignore` is the name of a text file in the main folder of your git repository that includes the names of the files and directories that should be ignored by git. Each new line should list a new file or folder. You can also use a matching pattern to ignore a set of files or folders.
 
 For example, in Mac, a `.DS_store` file is added by the filesystem. You can ignore it as well as all files with the extension of `.env` and all the files in `_site` folder by making a `.gitignore` file like below:
 
@@ -291,6 +298,102 @@ Input
 *.env
 _site\
 ~~~
+
+Note: Git is not good in managing binary files. If you are doing frequent updates to your binary files, you might need to solve merging conflicts frequently and `git diff` does not return useful information.
+
+## Reviewing local changes
+
+The `git diff` command shows the changes we have made before a commit. To test this, open "index.md" with any text editor and enter a new line of text (in this example we added "It's a beautiful rainy day" on the second line of "index.md").  Save the file, then use `git diff` to see the changes.
+
+Input
+{: .label .label-green }
+~~~
+$ git diff
+~~~
+
+Output
+{: .label .label-yellow }
+~~~
+diff --git a/index.md b/index.md
+index aed0629..989787e 100644
+--- a/index.md
++++ b/index.md
+@@ -1 +1,2 @@
+ # Hello, world!
++It's a beautiful rainy day
+~~~
+
+Here's what the output reveals:
+
+- Line 1 tells us Git is comparing "a" and "b" versions of the index.md file
+- Line 2 indicates which tracked versions "a" and "b" correspond to; "aed0629" and "989787e" are unique computer-generated identifiers for each version
+- The last two lines show the changes to the "index.md" between the compared versions: 
+    - there were no changes to the `# Hello, world!` line
+    - a line was added with the text `It's a beautiful rainy day` ("+" indicates an addition and "-", a deletion)
+
+When working with Git, only one branch can be checked out at a time. This is called the "HEAD" branch or "active" or "current" branch. Git makes note of this current branch in the `.git/HEAD` file in the Git repository. To find the current `HEAD`, you can print this file:
+
+Input
+{: .label .label-green }
+~~~
+$ cat .git/HEAD
+~~~
+
+With the following command, you can compare the current state of your files with your latest commit and review the changes applied after your latest commit:
+
+Input
+{: .label .label-green }
+~~~
+$ git diff HEAD
+~~~
+
+If you are going to commit the staged files and like to review the changes in the staged files, you can use the following `diff` command:
+
+Input
+{: .label .label-green }
+~~~
+$ git diff --staged
+~~~
+
+We can now add and commit the updated version of "index.md":
+
+Input
+{: .label .label-green }
+~~~
+$ git add index.md
+$ git commit -m 'Add note about the weather'
+~~~
+
+The `git log` command provides another way to view past activity in our git repository.
+
+Input
+{: .label .label-green }
+~~~
+$ git log
+~~~
+
+Output
+{: .label .label-yellow }
+~~~
+commit 8e2eb9920eaa0bf18a4adfa12474ad58b765fd06
+Author: Your Name <your_email>
+Date:   Mon Jun 5 12:41:45 2017 +0100
+
+    Add note about the weather
+
+commit e9e8fd3f12b64fc3cbe8533e321ef2cdb1f4ed39
+Author: Your Name <your_email>
+Date:   Fri Jun 2 18:15:43 2017 +0100
+
+    Add index.md
+~~~
+
+
+`git log` lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working on teams.  Best practice is to write commit messages in the imperative (e.g. 'Add index.md' instead of 'Adding index.md').
+
+To get more information about a particular commit, you can enter the commit hash in front of `git show` command.
+
+In some rare cases, for example when you checkout a specific commit or tag or remote branch, the `HEAD` file does not contain a branch reference. Your repository is then in a state called Detached HEAD.
 
 ## Why staging is useful
 
@@ -315,16 +418,6 @@ $ git reset --soft HEAD~
 ~~~
 
 Now, your latest commit is undone. The changes remain in place and the files go back to being staged so you can make additional changes or add any missing files and make a new commit.
-
-## Graphical user interface for Git
-
-Some terminal shells use some simple graphics to communicate a great deal of information about the current status of your git repository. 
-
-**Zsh** is highly customizable and **Oh My Zsh** is a community-driven framework that provides lots of plugins and themes to enhance your command line experience. For example, you can view the state of your Git repository right inside the terminal. You can install Oh My Zsh [here](https://ohmyz.sh/#install).
-
-![Zsh with agnoster theme](https://ubc-library-rc.github.io/intro-development-environment/content/images/Zsh-with-agnoster-theme.jpg)
-
-*Zsh with agnoster theme*
 
 ## Git tags
 

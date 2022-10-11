@@ -8,6 +8,12 @@ nav_order: 8
 
 Github is a great resource for programmers and enthusiasts. Many open-source projects are hosted on Github. Among them, you can find [Linux](https://github.com/torvalds/linux), [Tensorflow](https://github.com/tensorflow/tensorflow), and [Windows Terminal](https://github.com/microsoft/terminal). You can even find riginal code for [Windows Calculator app](https://github.com/microsoft/calculator) on Github. 
 
+### Git and Open source community
+
+Github hosts millions of open-source projects. With open-source projects, people on different skill levels can work to make technologies more accessible or build meaningful resources for communities. Learning how an open-source software is built and maintained can be a great programming class as well.
+
+If you would like to participate in open-source projects on Github, October is the perfect month. [Hacktoberfest](https://hacktoberfest.com/) is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. Developers get involved by completing pull requests, participating in events, and donating to open source projects.
+
 Github also has many great features that support project development and management. Here, you can find a list of those features and some notes on collaborating with other teams members on Github.
 
 * **Github issues** let you track your work on Github. When you mention an issue in another issue or pull-request, the issue's timeline tracks the related work. You can link issues to pull requests.

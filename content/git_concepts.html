@@ -41,6 +41,13 @@
 				<section>
 				<h3>Introduction to Git and GitHub</h3>
 				https://ubc-library-rc.github.io/intro-git/
+				<aside class="notes">
+					<p>
+					The goal of this workshop is to show you the basic commands in Git and Github so that you can start to use it
+					to track your projects. This workshop only introduces a few features of Git. This session is prepared for you, so if you 
+					have questions or feel the pace is not aligned with your level, please let us know. 
+					</p>
+				</aside>
 				</section>
 
 				<section style="text-align: left;">
@@ -62,6 +69,19 @@
 						<p style="font-size: smaller"><em>Participants</em> window</p>
 						<img data-src="figures/participants_window_menu.png" alt="The participants menu">
 					</div>
+					<aside class="notes">
+						<p>
+						Active participation makes the session so much fun and gives me and your peers much more energy. We are
+						all sitting in our offices with little sound. Your voices and perspectives enlivens the session. We encourage
+						you to engage with each other and instructors.
+
+						The participants window lists everyone in the session and click the icons at the bottom to communicate with
+						the instructors.
+
+						You can also use the Chat windows to comment or ask questions at any time. It is also a good place to share
+						problems with your audio connection.
+						</p>
+					</aside>
 				</section>
 
 				<section>
@@ -69,6 +89,11 @@
 					<div class="fragment" style="padding-top: 20px">
 						<img data-src="figures/annotate_toolbar.png" alt="annotation toolbar">
 					</div>
+					<aside class="notes">
+						<p>
+						For the next slide, use the annotation toolbar on the top of the screen.
+						</p>
+					</aside>
 				</section>
 
 				<section>
@@ -81,13 +106,38 @@
 					<div style="clear: both">
 						<hr/>
 					</div>
+					<aside class="notes">
+						<p>
+						To get a better idea of your familiarity with the command line, please answer to this question by
+						putting a mark on the spectrum somewhere between I have never used the command line and I use the command line
+						often.
+						Choose what to do based on their answer.
+						</p>
+					</aside>
+				</section>
+
+				<section data-background="#e6f7ff">
+					<h3>Learning Objectives</h3>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">Create a Git repository on their local machine and track changes</li>
+						<li class="fragment fade-in-then-semi-out">Create a remote repository on Github</li>
+						<li class="fragment fade-in-then-semi-out">Link a local Git repository to a remote Github repository and sync changes</li>
+						<li class="fragment fade-in-then-semi-out">List Git and Github features for project development and team collaboration</li>
+					</ul>
+					<aside class="notes">
+						<p>
+							
+						</p>
+					</aside>
 				</section>
 
 				<section data-background="#e6f7ff">
 					<h3>Pre-workshop setup</h3>
 					<ul>
-						<li class="fragment fade-in-then-semi-out">https://ubc-library-rc.github.io/intro-git/</li>					
+						<li class="fragment fade-in-then-semi-out">Install Bash Shell and Git</li>
+						<li class="fragment fade-in-then-semi-out">Create a free Github account</li>
 					</ul>
+					<p>For more information, check out <a href="https://ubc-library-rc.github.io/intro-git/">Pre-workshop setup</a></p>
 					<aside class="notes">
 						<p>
 							Please make sure to have a Bash Shell and Git installed before the workshop.
@@ -110,27 +160,44 @@
 
 				<section data-background="#e6f7ff">
 					<h3>Some Linux commands</h3>
-					<ul>
-						<li class="fragment fade-in-then-semi-out">cd</li>
-						<li class="fragment fade-in-then-semi-out">mkdir</li>
-						<li class="fragment fade-in-then-semi-out">touch</li>
-						<li class="fragment fade-in-then-semi-out">clear</li>					
-					</ul>
+					<pre><code data-trim data-noescape>
+						$ cd [directory-name]
+					</code></pre>
+					<pre><code data-trim data-noescape>
+						$ mkdir [new-directory-name]
+					</code></pre>
+					<pre><code data-trim data-noescape>
+						$ ls
+					</code></pre>
+					<pre><code data-trim data-noescape>
+						$ touch [file-name]
+					</code></pre>
+					<aside class="notes">
+						<p>
+						We need to know a little bit about the terminal to be able to explore and use the features of Git.
+
+						To navigate betwen files and directories within a system. You can either use the full path of the relative directory name
+						cd .. 
+
+						mkdir to make a new directory
+
+						ls to list files and directories within a system, ls -a also lists hidden files.
+
+						touch makes an empty file in the current directory
+
+						and cat read files and writes them on the screen.
+						</p>
+					</aside>
 				</section>
 
 
 				<section data-background="#e6f7ff">
-					<h3>Concepts and tools</h3>
-				</section>
-
-		    	<section data-background="#e6f7ff">
-          			<p><b>What is version control?</b></p>
-					<p class="fragment">A way to track changes made to files</p>
+					<h3>What is version control?</h3>
 					<aside class="notes">
 						<p>
 						Version control software tracks the changes made to a group of files. Version control systems like Git are often associated with software development but are increasingly used for collaboration in research and academic environments..
-						Explain the reason behind version control (newer versions and collaborations)
-					</p>
+						The most important reason is that you do not want to end up in this familiar place.
+						</p>
 					</aside>
 				</section>
 
@@ -138,7 +205,8 @@
 				<section data-background="#e6f7ff">
 					<img height="600px" data-src="figures/phd101212s.gif">
 					<aside class="notes">
-						Version control should be used to prevent such circumstances, that are familiar to all of us.
+					Version control can be used to keep the history of changes in the file, and you can use it to undo changes or 
+					version your files
 					</aside>
 				</section>
 
@@ -153,6 +221,7 @@
 						
 					</ul>
 					<aside class="notes">
+						But the benefit is not just that.
 						It takes some discipline to learn and make use of version control but there are many benefits:
 
 						Collaboration - Version control helps teams work collaboratively on same set of documents without interfering with each other.
@@ -185,7 +254,7 @@
 				<section>
 					<h3>Git basics</h3>
 					<aside class="notes">
-						One of the challenges of learning Git is becoming familiar with its terminology and command structure.
+						One of the challenges of learning Git is becoming familiar with its terminology and workflow.
 						This workshop is divided into several parts and each of them describes one workflow with Git.
 					</aside>
 				</section>
@@ -204,6 +273,12 @@
 
 				<section>
 					<h3>Creating a repository</h3>
+					<pre><code data-trim data-noescape>
+						$ mkdir hello-world
+						$ cd hello-world
+
+						$ git init
+					</code></pre>
 					<aside class="notes">
 						You can think of a repository as a group of files that Git tracks. When you create a repository Git generates a hidden directory named .git in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don’t get in the way.
 
@@ -218,6 +293,13 @@
 
 				<section>
 					<h3>Displaying project status</h3>
+					<pre><code data-trim data-noescape>
+						$ git status
+					</code></pre>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">branch main</li>
+						<li class="fragment fade-in-then-semi-out">commit</li>
+						</ul>
 					<aside class="notes">
 						The git status command displays the current state of a project.
 					
@@ -229,7 +311,7 @@
 				</section>
 
 				<section>
-					<h3>Git workflow</h3>
+					<h3>Git Workflow on your local machine</h3>
 					<img width="900px" data-src="figures/git_staging_area.svg">
 					<aside class="notes">
 						We will now create and save our first project file. This is a two-stage process. First, we add any files for which we want to save the changes to a staging area, then we commit those changes to the repository. This two-stage process gives us fine-grained control over what should and should not be included in a particular commit.
@@ -253,34 +335,8 @@
 				</section>
 
 				<section>
-					<h3>Github repositories</h3>
-					<p>https://github.com/</p>
-					<aside class="notes">
-						So far you used Git to create a repository called “hello-world” on your own computer, but no one else can see those files. Next you will use GitHub to share the contents of your repository so others can collaborate. This involves creating an empty repository in GitHub, then linking it to your local repository.
-						Make an empty repository, talk about the readme file, clone the repository on your local machine, add the files, push it to Github, change it on Github, pulling on the local machine
-
-						After creating the “hello-world” repository GitHub will display the repository page. This includes information required to link your GitHub repository to the “hello-world” repository you created with Git on your own computer.
-					
-						link the repositories with “git remote add” Enter the command below, replacing as appropriate.
-					
-					</aside>
-				</section>
-
-				<section>
-					<h3>Push and pull </h3>
-					<aside class="notes">
-						The git push command can “push” our local content and tracking information to the GitHub repository, synchronizing the content.
-						
-						The nickname of our remote repository is “origin” and the default local branch name is “main”. The -u flag tells git to remember these parameters, so that next time we can simply run git push and Git will know what to do.
-					
-						When we do a git push we will see Git “pushing” changes to the specified remote repository - in this case, on GitHub. Because our file is small this happens instantly, but it may take longer if you made many changes or are adding a very large repository. The git status command will indicate the status after “pushing” is complete.
-
-						When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then “pulling” that change back to our computer.
-					</aside>
-				</section>
-
-				<section>
 					<h3>Diff and log command</h3>
+					
 					<aside class="notes">
 						The git diff command shows the changes we have made before a commit. To test this, open “index.md” with any text editor and enter a new line of text (in this example we added “It’s a beautiful rainy day” on the second line of “index.md”). Save the file, then use git diff to see the changes.
 					
@@ -295,8 +351,96 @@
 				</section>
 
 				<section>
-					<h3>Undoing in Git</h3>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">Git branches</li>
+						<li class="fragment fade-in-then-semi-out">.gitignore</li>
+						<li class="fragment fade-in-then-semi-out">Why staging is useful</li>
+						<li class="fragment fade-in-then-semi-out">Undoing changes in Git</li>
+						<li class="fragment fade-in-then-semi-out">Git tags</li>
+					</ul>
 					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>Github repositories</h3>
+					<p>https://github.com/</p>
+					<aside class="notes">
+						So far you used Git to create a repository called “hello-world” on your own computer, but no one else can see those files. Next you will use GitHub to share the contents of your repository so others can collaborate. This involves creating an empty repository in GitHub, then linking it to your local repository.
+						Make an empty repository, talk about the readme file, clone the repository on your local machine, add the files, push it to Github, change it on Github, pulling on the local machine
+
+						After creating the “hello-world” repository GitHub will display the repository page. This includes information required to link your GitHub repository to the “hello-world” repository you created with Git on your own computer.
+					
+						link the repositories with “git remote add” Enter the command below, replacing as appropriate.
+					
+					</aside>
+				</section>
+
+				<section>
+					<h3>Linking your local repository to Github</h3>
+					<img width="900px" data-src="figures/github-instructions-https.png">
+					<aside class="notes">
+						You have two options to connect your local machine to Github. SSH is a security protocol widely used by many application. You can use the following commands to connect your newly created repository or your existing repository to Github.
+					
+						You can also use HTTPS protocol to connect your local repository to Github. Take a look at the following figure and find the commands you need to use to sync your local repository with Github. We will explain these commands in the rest of this section.
+					
+						Github removed password authentication on August 13, 2021. SSH is a secure way to connect your local machine to Github. To use the SSH protocol, we need a little more setup before we can actually connect to the remote repository.
+
+						In this workshop, we are going to use the HTTPS protocol and Github access tokens. The latter is simpler but should be used with cautious.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Git remote</h3>
+					<pre><code data-trim data-noescape>
+						$ git remote add origin https://github.com/[your_github_username]/[github-repository-name].git
+						$ git remote -v
+					</code></pre>
+					<aside class="notes">
+						This links your local Git repository to a remote one. The link indicates the location of the remote repository, which is nicknamed origin in this example. The nickname can be anything but Git convention is to refer to the remote repository as “origin”.
+
+						We can confirm that it is set up correctly with this command:
+					</aside>
+				</section>
+
+				<section>
+					<h3>HTTPS connection to remote</h3>
+					<p>Configure access token on Github</p>
+					<pre><code data-trim data-noescape>
+						$ git remote set-url origin origin https://<github-token>@github.com/[your_github_username]/[github-repository-name].git
+					</code></pre>
+					<aside class="notes">
+						You can use token-based authentication when performing Git operations requiring authentication.
+
+						In the first step, we will create a personal Access Token on Github. Follow these steps for create one for your Github account:
+
+						Click on your Github profile icon on the top right corner and click on Settings
+						Choose Developer Settings on the menu on the left
+						Click Personal access tokens and Generate new token]* Add a specific note that will help you identify the scope of the access token
+						Choose the Expiration period from the drop down menu and select the scopes you want to grant the corresponding access to the generated access token. Make sure to select the minimum required scopes. For this workshop, public_repo should be enough.
+						Click on Generate Token
+						Now, a new page is openned in which you can see your personal access token and copy it.
+
+						Now, we need to run the following command to use this access token:
+					</aside>
+				</section>
+
+				<section>
+					<h3>Git push and pull</h3>
+					<pre><code data-trim data-noescape>
+						$ git push -u origin main
+						$ git pull
+					</code></pre>
+					<aside class="notes">
+						The git push command can “push” our local content and tracking information to the GitHub repository, synchronizing the content. 
+
+						When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then “pulling” that change back to our computer.
+
+						Near the bottom of the “hello-world” repository on GitHub there is a button to “Add a README” file to your repository. Click the button, enter some text, then scroll to the bottom and click “Commit new file” (The default commit message will be “Create README.md”, which is fine for our purposes).
+
+						It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
+
+						After adding a README on GitHub your local repository is out-of-sync with the remote repository. Let’s fix that by pulling the remote changes into local repository with git pull.
 					</aside>
 				</section>
 
@@ -315,15 +459,39 @@
 				</section>
 
 				<section>
-					<h3>Github features</h3>
+					<h3>Git and open source community</h3>
+					<p>
+					<a href="https://hacktoberfest.com/">Hacktoberfest</a>is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. 
+					</p>
 					<aside class="notes">
-						<ul>
-							<li class="fragment fade-in-then-semi-out">Gist code</li>
-							<li class="fragment fade-in-then-semi-out">Project management with Github</li>
-							<li class="fragment fade-in-then-semi-out">Github Wiki</li>
-							<li class="fragment fade-in-then-semi-out">Github Pages</li>
-							<li class="fragment fade-in-then-semi-out">Collaborating on GitHub</li>
-						</ul>
+						Github is a great resource for programmers and enthusiasts. Many open-source projects are hosted on Github. Among them, you can find [Linux](https://github.com/torvalds/linux), [Tensorflow](https://github.com/tensorflow/tensorflow), and [Windows Terminal](https://github.com/microsoft/terminal). You can even find riginal code for [Windows Calculator app](https://github.com/microsoft/calculator) on Github. 
+						
+						Github hosts millions of open-source projects. With open-source projects, people on different skill levels can work to make technologies more accessible or build meaningful resources for communities. Learning how an open-source software is built and maintained can be a great programming class as well.
+
+						If you would like to participate in open-source projects on Github, October is the perfect month. [Hacktoberfest](https://hacktoberfest.com/) is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. Developers get involved by completing pull requests, participating in events, and donating to open source projects.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Github features</h3>
+					<ul>
+						<li class="fragment fade-in-then-semi-out">Gist code</li>
+						<li class="fragment fade-in-then-semi-out">Project management with Github</li>
+						<li class="fragment fade-in-then-semi-out">Github Wiki</li>
+						<li class="fragment fade-in-then-semi-out">Github Pages <a href="https://ubc-library-rc.github.io/intro-jekyll/">(UBC Library workshop)</a></li>
+					</ul>
+					<aside class="notes">
+						Github also has many great features that support project development and management. Here, you can find a list of those features and some notes on collaborating with other teams members on Github.
+
+						* **Github issues** let you track your work on Github. When you mention an issue in another issue or pull-request, the issue's timeline tracks the related work. You can link issues to pull requests.
+
+						* **Gist code** is a simple way to share code snippets with others. It is used when you need to share a sample piece of code or technique with your co-workers or friends. To learn more Github Gists and how to create them, check out [Github Tutorial on Creating Gists](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)
+
+						* **Project management with Github** is possible is Github offers a card-based project management tool like the one offered by [Trello](https://trello.com/). To begin the setup process, you should click on the **projects** tab in your repository and select **create a project**. Github offers templates to organize tasks within the project workflow. You can also set automatic triggers and link them to Github pull requests.
+
+						* **Github Wiki** is a feature on Github to host the documentation of the repository. You can edit wikis directly on Github or edit wiki files locally. Github Docs give you more information about [Github Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis).
+
+						* **Github Pages** is a static site hosting website that takes HTML, CSS, and JavaScript files straight from a repository on Github and publishes a website with them. To learn more about this feature, you can check [Github Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) or the [Introduction to Jekyll](https://ubc-library-rc.github.io/intro-jekyll/) workshop.
 					</aside>
 				</section>
 				<section>
@@ -348,11 +516,6 @@
 					</aside>
 				</section>
 
-				<section>
-					<h3>Git and open source community</h3>
-					<aside class="notes">
-					</aside>
-				</section>
 			</div>
 		</div>
 
