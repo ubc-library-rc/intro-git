@@ -336,7 +336,11 @@
 
 				<section>
 					<h3>Diff and log command</h3>
-					
+					<pre><code data-trim data-noescape>
+						$ git diff
+						$ git diff HEAD
+						$ git log
+					</code></pre>
 					<aside class="notes">
 						The git diff command shows the changes we have made before a commit. To test this, open “index.md” with any text editor and enter a new line of text (in this example we added “It’s a beautiful rainy day” on the second line of “index.md”). Save the file, then use git diff to see the changes.
 					
@@ -351,8 +355,21 @@
 				</section>
 
 				<section>
+					<h3>Git branches</h3>
+					<pre><code data-trim data-noescape>
+						$ git branch
+						$ git branch new-feature
+						$ git checkout new-feature
+					</code></pre>
+					<img width="900px" data-src="figures/GIT-Branchand-its-Operations.webp">
+					<aside class="notes">
+						Git branches allows you to work on different parts of a project collaboratively without impacting the main branch. When the work is complete, a branch can be merged to with the main project. Each branch is a separate version of the main repository.
+					</aside>
+				</section>
+
+				<section>
+					<h3>Other features</h3>
 					<ul>
-						<li class="fragment fade-in-then-semi-out">Git branches</li>
 						<li class="fragment fade-in-then-semi-out">.gitignore</li>
 						<li class="fragment fade-in-then-semi-out">Why staging is useful</li>
 						<li class="fragment fade-in-then-semi-out">Undoing changes in Git</li>
@@ -407,7 +424,8 @@
 					<h3>HTTPS connection to remote</h3>
 					<p>Configure access token on Github</p>
 					<pre><code data-trim data-noescape>
-						$ git remote set-url origin origin https://<github-token>@github.com/[your_github_username]/[github-repository-name].git
+						$ git remote set-url origin https://[github-token]@github.com/
+						[your_github_username]/[github-repository-name].git
 					</code></pre>
 					<aside class="notes">
 						You can use token-based authentication when performing Git operations requiring authentication.
@@ -451,17 +469,9 @@
 				</section>
 
 				<section>
-					<p><b>Try it out!</b></p>
-					<p>Instructons in <em>Git basics</em> section of site<br />
-						<b>https://ubc-library-rc.github.io/intro-git/</b></p>
-					<aside class="notes">
-					</aside>
-				</section>
-
-				<section>
 					<h3>Git and open source community</h3>
 					<p>
-					<a href="https://hacktoberfest.com/">Hacktoberfest</a>is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. 
+					<a href="https://hacktoberfest.com/">Hacktoberfest</a> is a month-long celebration of open-source software by DigitalOcean that encourages participation in giving back to the open-source community. 
 					</p>
 					<aside class="notes">
 						Github is a great resource for programmers and enthusiasts. Many open-source projects are hosted on Github. Among them, you can find [Linux](https://github.com/torvalds/linux), [Tensorflow](https://github.com/tensorflow/tensorflow), and [Windows Terminal](https://github.com/microsoft/terminal). You can even find riginal code for [Windows Calculator app](https://github.com/microsoft/calculator) on Github. 
@@ -495,18 +505,14 @@
 					</aside>
 				</section>
 				<section>
-					<h3>Collaborating with Git</h3>
+					<h3>A sandbox repository</h3>
+					<a href="https://github.com/shf/sandbox">Link to the repository</a> 
 					<aside class="notes">
-						Owner and collarborators of project, what is a pull request, registering issues
+						In this exercise, you are going to use Git and Github to fix mistakes in a repository. You can download the `sandbox` repository here: [address](address)
 
-					</aside>
-				</section>
+						This repository supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
 
-				<section>
-					<h3>Git and graphics</h3>
-					<aside class="notes">
-						Owner and collarborators of project, what is a pull request, registering issues
-
+						There are some mistakes in the repository, such as files with wrong extensions, and some minor mistakes, such as mistakes in spelling of words. You are asked to add one more piece of news or fix the repository either directly on Github or by pulling the local repository, fixing the problems, and pushing it to the remote repository. 
 					</aside>
 				</section>
 
@@ -516,6 +522,13 @@
 					</aside>
 				</section>
 
+				<section>
+					<p><b>Try it out!</b></p>
+					<p>Instructons in <em>Git basics</em> section of site<br />
+						<b>https://ubc-library-rc.github.io/intro-git/</b></p>
+					<aside class="notes">
+					</aside>
+				</section>
 			</div>
 		</div>
 

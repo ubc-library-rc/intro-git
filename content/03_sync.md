@@ -88,7 +88,7 @@ Now, we need to run the following command to use this access token:
 Input
 {: .label .label-green }
 ~~~
-$ git remote set-url origin origin https://<github-token>@github.com/<username>/<repository-name>.git
+$ git remote set-url origin https://<github-token>@github.com/<username>/<repository-name>.git
 ~~~
 
 Now, we have successfully configured token-based authentication and established a connection between the two repositories. To synchronize the content of the remote and local repositories, we will have to "push" our local changes to the Github repository.
