@@ -6,9 +6,9 @@ title: Pre-workshop Setup
 
 # Introduction to Git and GitHub
 
-Learn the basics of using Git and GitHub for version control and collaboration.  Git is widely used version control software that tracks changes to a group of files, referred to as a repository.  GitHub is a popular website for hosting and sharing Git repositories, making it easier to collaborate and share your work.  Together, Git and GitHub provide a platform that is increasingly used for collaboration in research and academic environments.  
+Learn the basics of using Git and GitHub for version control and collaboration.  Git is a widely used version control software that tracks changes to a group of files, referred to as a repository.  GitHub is a popular website for hosting and sharing Git repositories, making it easier to collaborate and share your work.  Together, Git and GitHub provide a platform that is increasingly used for collaboration in research and academic environments.  
 
-In this beginner workshop participants will learn key concepts, create their own Git repository, and publish to GitHub.  No previous experience with Git is required.  Familiarity with the command line interface will be helpful but is not necessary.
+In this beginner workshop, participants will learn key concepts, create their own Git repository, and publish to GitHub.  No previous experience with Git is required.  Familiarity with the command line interface will be helpful but is not necessary.
 
 ## Pre-workshop setup
 
@@ -50,7 +50,7 @@ If you want to take a more manual route on Windows, follow these instructions to
      2. Type the following line into the command prompt window exactly as shown:
          `setx HOME "%USERPROFILE%"`
      3. Press "Enter." you should see `SUCCESS: Specified value was saved.`
-     4. Quit command prompt by typing `exit` then pressing "Enter"
+     4. Quit the Command Prompt by typing `exit` then pressing "Enter"
 
 This will provide you with both Git and Bash in the Git Bash program.
 
@@ -62,7 +62,7 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "your@email"
 ~~~
 
-This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git. **The email address should be the same one you used when setting up your GitHub account.** You can find all the other existing configuration of git on your local machine by running `git config --list`
+This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git. **The email address should be the same one you used when setting up your GitHub account.** You can find all the other existing configurations of git on your local machine by running `git config --list`
 
  **4. (OPTIONAL) Set your preferred text editor**  
 Git sometimes opens a text editor automatically so you can complete a task. The Git default is the Vi/Vim text editor, which some users may find difficult to use. To change the default text editor run the command below and indicate your preferred editor. This can be any text editor, but common choices are `"notepad"` on Windows and `"nano"` on Mac or Linux.

@@ -12,18 +12,18 @@ Below are some basic git commands and what they do in the git workflow. We'll us
 
 ![table of basic git commands](figures/git_command.png)
 
-The best way to learn a langauge is through practice. In this workshop we will learn the following Git workflows:
+The best way to learn git commands is through practice. In this workshop, we will learn about and go through the following Git workflows:
 
 * Making and maintaining a repository on your machine
-* Creating a repository on Github
-* Syncing local repository with Github
+* Creating a repository on GitHub
+* Syncing local repository with GitHub
 * Forking projects and working collaboratively
 
 ## Creating a repository
 
 You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory named `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
 
-You can create repositories using [GitHub's web interface](https://github.com/new), or on your own computer using the command line.  Let's use the command line to create a Git repository for new project. (On a Mac, open _Terminal_, on a PC open _Git Bash_.)
+You can create repositories using [GitHub's web interface](https://github.com/new), or on your own computer using the command line.  Let's use the command line to create a Git repository for a new project. (On a Mac, open _Terminal_, on a PC open _Git Bash_.)
 
 First, create a directory called `hello-world` and navigate to the new directory.
 
@@ -34,11 +34,9 @@ $ mkdir hello-world
 $ cd hello-world
 ~~~
 
-If you're not sure you're in the right place use the command "pwd" (print working directory) to display the complete path of your current directory.
-{: .info}
+If you're not sure you're in the right place use the command `pwd` (print working directory) to display the complete path of your current directory.
 
-We will now create a Git repository to track changes to our project.  Use the git **init** command,
-which is simply short for *initialise*.
+We will now create a Git repository to track changes to our project.  Use the `git init` command, as shown below, to *initialize* a git repository.
 
 Input
 {: .label .label-green}
@@ -53,10 +51,7 @@ Initialized empty Git repository in <your file path>/hello-world.git/
 
 Your `hello-world` directory is now a git repository.
 
-If you run the "ls" command to list the contents of the "hello-world"
-directory your repository may seem empty.  But running "ls -a" instead will include hidden files in the list, revealing the new hidden directory named ".git".
-{: .info}
-
+If you run the `ls` command to list the contents of the `hello-world` directory, your repository may seem empty.  But running `ls -a` shows the hidden files in the list, thus, revealing the new hidden directory named `.git`.
 
 ## Displaying project status
 
@@ -77,17 +72,16 @@ nothing to commit (create/copy files and use "git add" to track)
 ~~~
 
 The output introduces two new Git concepts:
-- **branch main**. A Git repository can be split into multiple "branches" that can be worked on independently before merging later. New repositories start with only one branch, named "main" by default. In this workshop everything we do will be in branch main.
+- **branch main**. A Git repository can be split into multiple **branches** that can be changed and modified independently before merging them eventually. New repositories start with only one branch, named **main** by default. In this workshop, we mainly work on the **main** branch.
+
 - **commit**. The `git commit` command saves your changes to the repository. The output above tells us there is nothing new to save in our repository.
 
 
 ## Adding and committing
 
-We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which
-we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage
-process gives us fine-grained control over what should and should not be included in a particular commit.
+We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage process gives us fine-grained control over what should and should not be included in a particular commit and helps us to review the changes.
 
-Let's create a new file using the `touch` command, which is a quick way to create an empty file.
+Let's create a new file using the `touch` command, which is a command used to quickly make an empty file using the terminal.
 
 Input
 {: .label .label-green}
@@ -119,9 +113,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ~~~
 
-Git has noticed a new file in our directory that we are not yet tracking. With colourised
-output, the filename will appear in red. To change this, and to tell Git we want to track any changes we make to
-index.md, we use `git add`.
+Git has noticed a new file in our directory that we are not yet tracking. With colourised output, the filename will appear in red. To change this, and tell Git we want to track any changes we make to index.md, we use `git add`.
 
 Input
 {: .label .label-green}
@@ -129,8 +121,7 @@ Input
 $ git add index.md
 ~~~
 
-
-This adds the file to the **staging area**, telling Git that "index.md" is a file it should track. To see what effect this had we can use `git status` again.
+This adds the file to the **staging area**, telling Git that `index.md` is a file that should be tracked. To see the effects of this change on the status of our repository, we run `git status` again.
 
 Input
 {: .label .label-green}
@@ -151,12 +142,11 @@ Changes to be committed:
     new file:   index.md
 ~~~
 
-Note: if you want to add all the modified parts to the staging area, you should use `git add -A`.
+Note: if you want to add all the modified files to the staging area in a single command, you can use `git add -A`.
 
+The `index.md` file now appears under **changes to be committed**.  If you are using colourised output in your terminal, the filename may have changed colour from red to green.
 
-The "index.md" file now appears under "changes to be committed."  If you are using colourised output in your terminal the filename may have changed colour from red to green.
-
-Before committing the new file, open "index.md" in a text editor, add a line of text, then save the file. (In this example we enter the text `Hello, world!`). Use `git status ` to see what has chnaged from Git's perpective.
+Before committing the new file, open `index.md` in a text editor, add a line of text, then save the file. (In this example we enter the text `Hello, world!`). Use `git status ` to see what has changed from Git's perpective.
 
 Input
 {: .label .label-green}
@@ -185,8 +175,7 @@ Changes not staged for commit:
 
 Note: To remove the files from the staging area, you can use `git reset` command.
 
-This lets us know that Git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add
-the new version of "index.md" to the staging area.
+This lets us know that Git has indeed spotted the changes to our file, but that it hasn't yet staged them, so let's add the new version of `index.md` to the staging area.
 
 Input
 {: .label .label-green}
@@ -194,8 +183,7 @@ Input
 $ git add index.md
 ~~~
 
-
-Now we are ready to  **commit** our first changes. Commit is similar to "saving" a file, but in addition to saving the _contents_ of a file `git commit` stores information about the file's history, including what changes were made, when, and by whom.
+Now we are ready to  **commit** our first changes. Commit is similar to **saving** a file, but in addition to saving the _contents_ of a file, `git commit` stores information about the file's history, including what changes were made, when, and by whom.
 
 Input
 {: .label .label-green}
@@ -211,11 +199,9 @@ Output
  create mode 100644 index.md
 ~~~
 
-We can see that one file has changed and that we made one insertion, which was a line with the text `Hello, world!`.
-We can also see the commit message 'Add index.md', which we added by using the `-m` flag after `git commit`.
-The commit message is used to record a short, descriptive, and specific summary of what we did to help us remember later on without having to look at the actual changes.
+We can see that one file has changed and that we made one insertion, which was a line with the text `Hello, world!`. We can also see the commit message `Add index.md`, which we added by using the `-m` flag after `git commit`. The commit message is used to record a short, descriptive, and specific summary of what we did to help us remember the changes without having to look at the them.
 
-If we just run `git commit` without the `-m` flag Git will launch a text editor so we can write a longer message describing the commit.
+If we just run `git commit` without the `-m` flag, Git will launch the preferred text editor to write a message describing the commit.
 {: .info}
 
 Having made a commit, we now have a permanent record of what changed,
@@ -239,7 +225,7 @@ If you think of Git as taking snapshots of changes over the life of a project, `
 
 ## Git branches
 
-Git branches allows you to work on different parts of a project collaboratively without impacting the main branch. When the work is complete, a branch can be merged to with the main project. Each branch is a separate version of the main repository.
+Git branches allows you to work on different feature or part of a project collaboratively without impacting the main branch. When the work is complete, the newly created branch can be merged with the main branch. Each branch is a separate version of the main repository.
 
 To see all the branches in your current repository:
 
@@ -249,7 +235,7 @@ Input
 $ git branch
 ~~~
 
-We want to make a new branch called `new-feature` and add your name to  the bottom of `index.md` and a new file `about-me.md`
+We want to make a new branch called `new-feature` and add your name to the bottom of `index.md` and a new file `about-me.md`
 
 Input
 {: .label .label-green}
@@ -257,12 +243,12 @@ Input
 $ git branch new-feature
 ~~~
 
-Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to switch between branches. The default branch in Git is `master`. This branch is not different than any other branch in a Git repository. To move to the newly created branch, `new-feature`, we ask git to "checkout" this branch:
+Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to switch between branches. The default branch in Git is `master` or `main`. This branch is not different than any other branch in a Git repository. To move to the newly created branch, `new-feature`, we ask git to "checkout" this branch:
 
 Input
 {: .label .label-green}
 ~~~
-$ git checkout withdate
+$ git checkout new-feature
 ~~~
 
 You can run `git status` to check the current/active branch. Some shell themes provide graphical hints to inform you of the current branch at all times. 
@@ -277,7 +263,7 @@ $ git checkout master
 $ git merge new-feature
 ~~~
 
-The output shows the updated files after the merge. When you merge a branch, it does not get removed from the git tree. To delete a git branch after merging it with another branch:
+The output shows the updated files after the merge. When you merge a branch, it does not get removed from the Git tree. To delete a Git branch after merging it with another branch:
 
 Input
 {: .label .label-green}
@@ -287,9 +273,9 @@ $ git branch -d new-feature
 
 ## .gitignore file
 
-A `.gitignore` is the name of a text file in the main folder of your git repository that includes the names of the files and directories that should be ignored by git. Each new line should list a new file or folder. You can also use a matching pattern to ignore a set of files or folders.
+A `.gitignore` is the name of a text file in the main folder of your git repository that includes the names of the files and directories that should be ignored by git. Each new line should list a new rule and Git will match the rule with the names of files or folders to find the ones that must be ignored.
 
-For example, in Mac, a `.DS_store` file is added by the filesystem. You can ignore it as well as all files with the extension of `.env` and all the files in `_site` folder by making a `.gitignore` file like below:
+For example, in Mac, a `.DS_store` file is added by the filesystem to each directory. You can ignore it as well as all files with the extension of `.env` and all the files in `_site` folder by making a `.gitignore` file like below:
 
 Input
 {: .label .label-green}
@@ -303,7 +289,7 @@ Note: Git is not good in managing binary files. If you are doing frequent update
 
 ## Reviewing local changes
 
-The `git diff` command shows the changes we have made before a commit. To test this, open "index.md" with any text editor and enter a new line of text (in this example we added "It's a beautiful rainy day" on the second line of "index.md").  Save the file, then use `git diff` to see the changes.
+The `git diff` command shows the changes we have made before a commit. To test this, open `index.md` with any text editor and enter a new line of text (in this example we added _It's a beautiful rainy day_ on the second line of `index.md`).  Save the file, then use `git diff` to see the changes.
 
 Input
 {: .label .label-green }
@@ -388,30 +374,29 @@ Date:   Fri Jun 2 18:15:43 2017 +0100
     Add index.md
 ~~~
 
-
-`git log` lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working on teams.  Best practice is to write commit messages in the imperative (e.g. 'Add index.md' instead of 'Adding index.md').
+`git log` lists information about all commits in reverse chronological order, including the commit messages we wrote to describe them. It is important to add meaningful commit messages, especially when working with teams. The best practice is to write commit messages in the imperative (e.g. 'Add index.md' instead of 'Adding index.md').
 
 To get more information about a particular commit, you can enter the commit hash in front of `git show` command.
 
-In some rare cases, for example when you checkout a specific commit or tag or remote branch, the `HEAD` file does not contain a branch reference. Your repository is then in a state called Detached HEAD.
+In some rare cases, for example when you checkout a specific commit or tag or remote branch, the `HEAD` file does not contain a branch reference. Your repository is then in a state called **Detached HEAD**. To solve the issue, you can make a new branch, commit the changes, and merge the changes back to the `main` branch.
 
 ## Why staging is useful
 
 The index or staging are is a place to hold the current changes that will be committed when `git commit` is executed. It allows you to only commit parts of the working area into the respository. 
 
-For example, when you are working in on a big change with a few different subtasks, you can add the corresponding part to the staging area and commit those changes in separately with appropriate messages focused on one aspect of changes.
+For example, when you are working on a big feature with a few different subtasks, you can modify the files as you plan, then group the changes and add them separately to the staging area, and finally commit them with appropriate messages focused on the respective change. It also makes reviewing changes more straight-forward.
 
 ## Undoing changes in Git
 
 You want to go back to the previous version in a number of scnearios:
 
-* **1.Undoing Local Changes That Have Not Been Committed**: If the changes have not been committed yet, you should check out the file or files that you want to revert back to its previous version:
+* **1. Undoing Local Changes That Have Not Been Committed**: If the changes have not been committed yet, you should check out the file or files that you want to revert back to its previous version:
 
 ~~~
 $ git checkout <filename>
 ~~~
 
-* **2.Undoing Your Last Commit (That Has Not Been Pushed)**: If you made a mistake on your last commit and have not pushed it yet, you can undo it by moving the HEAD of your repository. For this purpose, run the following commands in the repository directory.
+* **2. sUndoing Your Last Commit (That Has Not Been Pushed)**: If you made a mistake on your last commit and have not pushed it yet, you can undo it by moving the HEAD of your repository. For this purpose, run the following commands in the repository directory.
 
 ~~~
 $ git reset --soft HEAD~

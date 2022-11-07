@@ -21,8 +21,8 @@ At the end of this workshop, attendees will be able to:
 
 - Create a Git repository on their local machine and track changes
 - Create a remote repository on Github
-- Link a local Git repository to a remote Github repository and sync changes
-- List Git and Github features for project development and team collaboration
+- Link a local Git repository to a remote GitHub repository and sync changes
+- List Git and GitHub features for project development and team collaboration
 
 ## Schedule
 
@@ -32,7 +32,7 @@ At the end of this workshop, attendees will be able to:
 | 0:10 | [Git basics](02_getting_started.md)
 | 0:30 | [Syncing with GitHub](03_sync.md)
 | 0:50 | [Github features](04_github.md)
-| 1:20 | [Collaborating on Github](05_collab_on_github.md)
+| 1:20 | [Collaborating on GitHub](05_collab_on_github.md)
 | 1:30 | Wrap-up
 
 _Actual schedule may vary depending on group needs_

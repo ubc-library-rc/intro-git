@@ -5,9 +5,9 @@ nav_order: 9
 nav_exclude: false
 ---
 
-In this workshop, we only showed the basic features of Git. Git and Github have many more features. Here, we list a few of them:
+In this workshop, we only showed the basic features of Git. Git and GitHub have many more features. Here, we list a few of them:
 
-### Github and Visual Studio Code
+### GitHub and Visual Studio Code
 
 Visual Studio Code has integrated source control management and support Git. You can also install other source control providers through VS Code Extension Marketplace.
 
