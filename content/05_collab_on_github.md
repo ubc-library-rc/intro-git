@@ -11,6 +11,8 @@ The GitHub platform facilitates collaboration by managing access and tracking ac
 
 > _A team of 10 people is writing a textbook. Everyone will contribute content and the files will be stored in the main branch of the project repository. To avoid unintended conflicts each team member will work in their own copy of the repository, periodically merging their work back into the main project repository._ 
 
+ ![](figures/git-collaboration_1.png)
+
 Here are some of the Git commands and GitHub features you will encounter in this workflow.
 
 - **Fork**. A GitHub feature that makes a copy of another GitHub user's repository in your own GitHub account. You have full control over the fork because it's in your account. 
@@ -22,6 +24,8 @@ In this scenario team members never edit the main project repository: each perso
 
 To create a fork sign in to GitHub, navigate to the main project repository, then click the _Fork_ button in the top right corner. 
 ![Fork button in GitHub](figures/fork.png)
+
+ ![](figures/git-collaboration_2.png)
 
 ## Clone the fork to your own computer
 GitHub is great for storing and sharing files but it's not a good platform for editing. The recommended practice is to _clone_ your repository, which creates a local copy on your own computer where you can edit the files with your preferred text editor. 
