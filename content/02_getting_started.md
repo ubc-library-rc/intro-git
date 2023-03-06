@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Git basics
-nav_order: 6
+nav_order: 7
 ---
 
 # Git basics
+{: .no_toc}
 
 One of the challenges of learning Git is becoming familiar with its terminology and command structure. Git commands consist of verbs such as `init`, `add`, `commit`, and `push` preceded by the word `git`.  These base commands are often followed by options that provide more information about how and where Git should act.
 
@@ -19,6 +20,22 @@ The best way to learn git commands is through practice. In this workshop, we wil
 * Syncing local repository with GitHub
 * Forking projects and working collaboratively
 
+<p style="margin-bottom: 20px"></p>
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
+
+<p style="margin-bottom: 20px"></p>
+
+---
+<p style="margin-bottom: 20px"></p>
+  
 ## Creating a repository
 
 You can think of a **repository** as a group of files that Git tracks.  When you create a repository Git generates a hidden directory named `.git` in the same folder. Information about the repository, changes to the files, and previous versions are all stored in this hidden directory so they are accessible but don't get in the way.
@@ -75,10 +92,15 @@ The output introduces two new Git concepts:
 - **branch main**. A Git repository can be split into multiple **branches** that can be changed and modified independently before merging them eventually. New repositories start with only one branch, named **main** by default. In this workshop, we mainly work on the **main** branch.
 
 - **commit**. The `git commit` command saves your changes to the repository. The output above tells us there is nothing new to save in our repository.
-
-
+  
+  
 ## Adding and committing
 
+  
+
+![](figures/git-workflow.png)
+  
+  
 We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage process gives us fine-grained control over what should and should not be included in a particular commit and helps us to review the changes.
 
 Let's create a new file using the `touch` command, which is a command used to quickly make an empty file using the terminal.
@@ -216,6 +238,8 @@ $ git checkout index.md
 ~~~
 
 ## Another look at the git workflow
+
+![](figures/git-workflow.png)
 
 If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution.
 
