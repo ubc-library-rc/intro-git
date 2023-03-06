@@ -4,7 +4,16 @@ title: Concepts and tools
 nav_order: 5
 ---
 
-# Concepts and tools
+<p style="margin-bottom: 20px"></p>
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
 
 ## Git as a Version Control System
 
@@ -14,7 +23,9 @@ Version control system tracks the changes made to a group of files.  Version con
 
 Because no one wants to end up in this familiar place:
 
-![Because we don't want to end up here](figures/phd101212s.gif)
+<p style="margin-top:20px;margin-bottom:20px">
+<img src="figures/phd101212s.gif" width="300" style="margin-left:30px"/>
+</p>
 
 It takes some discipline to learn and make use of version control but there are many benefits:
 
@@ -26,7 +37,7 @@ It takes some discipline to learn and make use of version control but there are 
   
   
 ## What are Git and GitHub?
-
+  
 **_Git_** and **_GitHub_** are often used interchangeably but it's important to understand what each does and how they work together.
 
 **_Git_** is a free and open-source tool that can be installed on your local computer to track changes made to a set of files (referred to as a "git repository" or "repo"). Git can be used independently to organize one's own work or to coordinate team projects with multiple authors. Git makes it easy to get a overview of all changes made to the file over time. Git keeps a list of changes made to the files of the project, thus, the earlier versions of each file are not overwritten and the developer can roll back to them.
@@ -45,10 +56,13 @@ The GitHub interface makes it easy to view files in the repository and what chan
   
   
 ## Important terminal commands
-
+  
 We need to know a little about the terminal to be able to use the features of Git. You should know the following commands:
 
-![](figures/coding.jpg)
+<p style="margin-top:20px;margin-bottom:20px">
+<img src="figures/coding.jpg" width="300" style="margin-left:30px"/>
+</p>
+
 
 Input
 {: .label .label-green}

@@ -25,7 +25,6 @@ In this scenario team members never edit the main project repository: each perso
 To create a fork sign in to GitHub, navigate to the main project repository, then click the _Fork_ button in the top right corner. 
 ![Fork button in GitHub](figures/fork.png)
 
- ![](figures/git-collaboration_2.png)
 
 ## Clone the fork to your own computer
 GitHub is great for storing and sharing files but it's not a good platform for editing. The recommended practice is to _clone_ your repository, which creates a local copy on your own computer where you can edit the files with your preferred text editor. 
@@ -53,6 +52,8 @@ remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (6/6), done.
 ```
 Git will create a new directory named after the source repository. The directory is automatically tracked by git and it can be synchronized with its counterpart in your GitHub account. 
+
+ ![](figures/git-collaboration_2.png)
 
 ## Synchronizing forks and clones
 As you edit the files on your local computer use the `git add` and `git commit` commands to take snapshots of your work. In a team environment it will be important to periodically synchronize the forks and clones so everyone's work is represented in the main project repository.

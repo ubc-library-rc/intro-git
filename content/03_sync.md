@@ -5,8 +5,18 @@ nav_order: 8
 ---
 
 # Syncing with GitHub
+{: .no_toc}
 
 So far you used Git to create a repository called **hello-world** on your own computer, but no one else can see those files.  Next, you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
 
 ## Create an empty GitHub repository
 

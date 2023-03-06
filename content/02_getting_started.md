@@ -95,10 +95,9 @@ The output introduces two new Git concepts:
   
   
 ## Adding and committing
-
-  
-
-![](figures/git-workflow.png)
+<p style="margin-top:20px;margin-bottom:20px">
+<img src="figures/git-workflow.png" width="300" style="margin-left:30px"/>
+</p>
   
   
 We will now create and save our first project file. This is a two-stage process. First, we **add** any files for which we want to save the changes to a staging area, then we **commit** those changes to the repository. This two-stage process gives us fine-grained control over what should and should not be included in a particular commit and helps us to review the changes.
@@ -238,8 +237,11 @@ $ git checkout index.md
 ~~~
 
 ## Another look at the git workflow
+{: .no_toc}
 
-![](figures/git-workflow.png)
+<p style="margin-top:20px;margin-bottom:20px">
+<img src="figures/git-workflow.png" width="300" style="margin-left:30px"/>
+</p>
 
 If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution.
 
@@ -248,7 +250,7 @@ If you think of Git as taking snapshots of changes over the life of a project, `
 *figure depicted from [Library Carpentry: Introduction to Git](https://librarycarpentry.org/lc-git/02-getting-started/index.html)*
 
 ## Git branches
-
+  
 Git branches allows you to work on different feature or part of a project collaboratively without impacting the main branch. When the work is complete, the newly created branch can be merged with the main branch. Each branch is a separate version of the main repository.
 
 To see all the branches in your current repository:
@@ -296,7 +298,7 @@ $ git branch -d new-feature
 ~~~
 
 ## .gitignore file
-
+  
 A `.gitignore` is the name of a text file in the main folder of your git repository that includes the names of the files and directories that should be ignored by git. Each new line should list a new rule and Git will match the rule with the names of files or folders to find the ones that must be ignored.
 
 For example, in Mac, a `.DS_store` file is added by the filesystem to each directory. You can ignore it as well as all files with the extension of `.env` and all the files in `_site` folder by making a `.gitignore` file like below:
