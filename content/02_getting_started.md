@@ -96,7 +96,7 @@ The output introduces two new Git concepts:
   
 ## Adding and committing
 <p style="margin-top:20px;margin-bottom:20px">
-<img src="figures/git-workflow.png" width="300" style="margin-left:30px"/>
+<img src="figures/git-workflow.png" width="500" style="margin-left:30px"/>
 </p>
   
   
@@ -240,7 +240,7 @@ $ git checkout index.md
 {: .no_toc}
 
 <p style="margin-top:20px;margin-bottom:20px">
-<img src="figures/git-workflow.png" width="300" style="margin-left:30px"/>
+<img src="figures/git-workflow.png" width="500" style="margin-left:30px"/>
 </p>
 
 If you think of Git as taking snapshots of changes over the life of a project, `git add` specifies *what* will go in a snapshot (putting things in the staging area), and `git commit` then *actually takes* the picture and makes a permanent record of it (as a commit). If you don't have anything staged when you type `git commit`, Git will prompt you to use `git commit -a` or `git commit --all`.  This will automatically stage *and* commit all changes to all files in your repository at once, so use this option with caution.
