@@ -7,7 +7,7 @@ nav_order: 8
 # Syncing with GitHub
 {: .no_toc}
 
-So far you used Git to create a repository called **hello-world** on your own computer, but no one else can see those files.  Next, you will use GitHub to share the contents of your repository so others can collaborate.  This involves creating an empty repository in GitHub, then linking it to your local repository.
+So far you used Git to create a repository called **hello-world** on your own computer, but no one else can see those files.  Next, you will use GitHub to share the contents of your repository so others can collaborate. This involves creating an empty repository in GitHub, then linking it to your local repository.
 
 <details open markdown="block">
   <summary>
@@ -31,21 +31,24 @@ Log into your GitHub account and create a new repository by clicking the **+** i
 
 Though not mandatory, choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see [https://choosealicense.com/](https://choosealicense.com/).
 
-## Linking your local repository to GitHub
+## Linking your local repository to GitHub (SSH or HTTPS)
 
 After creating the "hello-world" repository, GitHub will display the repository main web-page on your browser.  This page contains information required to link your GitHub repository, `remote`, to the repository you created with Git on your own computer.
 
-You have two options to connect your local machine to GitHub. SSH is a security protocol widely used by many applications. You can use the following commands to connect your newly created repository or your existing repository to Github. 
+You have two options to connect your local machine to GitHub. **SSH** is a security protocol widely used by many applications. You can use the following commands to connect your newly created repository or your existing repository to Github. 
 
 ![The repository SSH on GitHub](figures/github-instructions-ssh.png)
 
-You can also use HTTPS protocol to connect your local repository to GitHub. Take a look at the following figure and find the commands you need to use to sync your local repository with Github. We will explain these commands in the rest of this section.
+You can also use **HTTPS** protocol to connect your local repository to GitHub. Take a look at the following figure and find the commands you need to use to sync your local repository with Github. We will explain these commands in the rest of this section.
 
 ![The repository HTTPS on GitHub](figures/github-instructions-https.png)
 
-Note: GitHub removed password authentication on August 13, 2021. SSH is a secure way to connect your local machine to Github. To use the SSH protocol, we need a little more setup before we can actually connect to the remote repository. To find out more about the SSH authentication, check out [the tutorial for activating SSH authentication](content/06-extra-material.html). In this workshop, we are going to use the HTTPS protocol and GitHub access tokens or Git Credential Manager, depending on your OS. GitHub access tokens are simple to obtain, but should be used with caution and should not be shared. 
+GitHub removed password authentication on August 13, 2021. SSH is a secure way to connect your local machine to Github. To use the SSH protocol, we need a little more setup before we can actually connect to the remote repository. To find out more about the SSH authentication, check out [the tutorial for activating SSH authentication](content/06-extra-material.md).
+{: .note}   
 
-### Step 1: link the repositories with "git remote add"
+In this workshop, we are going to use the HTTPS protocol and GitHub access tokens (or Git Credential Manager, depending on your OS). GitHub access tokens are simple to obtain, but should be used with caution and should not be shared. 
+
+### Step 1: link the repositories with **"git remote add"**
 Enter the command below, replacing <your_github_username> as appropriate.
 
 Input
@@ -72,11 +75,11 @@ origin  https://github.com/<your_github_username>/<github-repository-name> (fetc
 origin  https://github.com/<your_github_username>/<github-repository-name> (push)
 ~~~
 
-### Step 2: synchronize the repositories with "git push"**
+### Step 2: synchronize the repositories with **"git push"**
 
 The `git push` command can "push" our local content and tracking information to the GitHub repository, synchronizing the content. If you run `git push` right now, Git asks for your GitHub username and password. Even if you enter the correct username and password, the command will not work since support for password authentication was removed in 2021. To fix this error, you can use GitHub Access Tokens or use code editors that support API authentication. In this workshop, we use access tokens:
 
-#### Configure Access Token on GitHub
+### Step 3: Configure Access Token on GitHub
 
 You can use token-based authentication when performing Git operations requiring authentication.
 
@@ -84,7 +87,8 @@ In the first step, we will create a personal Access Token on GitHub. Follow thes
 
 * Click on your **GitHub profile icon** on the top right corner and click on **Settings**
 * Choose **Developer Settings** on the menu on the left
-* Click **Personal access tokens** and **Generate new token**]* Add a specific note that will help you identify the scope of the access token
+* Click **Personal access tokens** and **Generate new token** 
+* Add a specific note that will help you identify the scope of the access token
 * **Choose the Expiration period** from the drop down menu and select the scopes you want to grant the corresponding access to the generated access token. Make sure to select the minimum required scopes. For this workshop, `public_repo` should be enough.
 * Click on **Generate Token**
 
