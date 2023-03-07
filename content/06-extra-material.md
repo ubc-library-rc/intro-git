@@ -5,9 +5,19 @@ nav_order: 9
 nav_exclude: false
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
+
+
 In this workshop, we only showed the basic features of Git. Git and GitHub have many more features. Here, we list a few of them:
 
-### GitHub and Visual Studio Code
+## GitHub and Visual Studio Code
 
 Visual Studio Code has integrated source control management and support Git. You can also install other source control providers through VS Code Extension Marketplace.
 
@@ -25,7 +35,8 @@ Some terminal shells use some simple graphics to communicate a great deal of inf
 
 *Zsh with agnoster theme*
 
-#### Example: Source Control with VS Code
+### Example: Source Control with VS Code
+{: .no_toc}
 
 To use source control tools in VS Code, you need to install Git on your machine. You can download the latest version on Git Website. When VS Code detects a Source Control Management Provider, it will show the git repository automatically and any changes will be displayed in the Activity Bar.
 
@@ -39,7 +50,7 @@ You can create and checkout branches directly within VS Code by selecting Git: C
 
 If you have a Source Control Management Provider in the workspace, Git Status Bar will be added to the Status Bar that shows the current checked-out branch. You can Publish the current branch to a remote or Synchronize Changes which will pull remote changes down to your local repository and then push local commits to the upstream branch. To learn more about the capabilities of Git Extension in VS Code, check out the Source Control in VS Code webpage.
 
-### SSH Background and Setup
+## SSH Background and Setup
 We need to set up a way for our local computer to authenticate with GitHub so that GitHub recognizes our computer as belonging to the same person who owns the GitHub repository. 
 
 We will use SSH as our authentication method. SSH stands for Secure SHell protocol.  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
@@ -52,11 +63,10 @@ What we will do now is the minimum required to set up the SSH keys and add the p
 
 The first thing we are going to do is check if this has already been done on the computer you’re on.  
 
-> ### Keeping your keys secure
+> **Keeping your keys secure**
 > You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good
 >  practice to audit your secure shell keys every so often. Especially if you are using multiple
 >  computers to access your account.
-{: .callout}
 
 We will run the list command (`ls`) to check what key pairs already exist on your computer. 
 In our command we use the `~` as the shorthand for "my home directory."
@@ -75,6 +85,8 @@ ls: cannot access '/c/Users/YourName/.ssh': No such file or directory
 {: .output}
 
 If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.
+
+![](figures/sync_with_ssh.png)
 
 If you do not have SSH set up, let's set it up now. Use this command to create key pairs:
 
