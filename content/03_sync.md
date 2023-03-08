@@ -39,11 +39,8 @@ We need to set up a way for our local computer to authenticate with GitHub so th
 
 GitHub removed password authentication on August 13, 2021. You have two options to connect your local machine to GitHub.
 
-<details>
-  <summary>
-    Option 1. Connecting with SSH
-  </summary>
-
+### Option 1. Connecting with SSH
+  
 ![The repository SSH on GitHub](figures/github-instructions-ssh.png)
 
 
@@ -55,7 +52,7 @@ $ git remote add origin [git@github.com:yourname/hello-world.git]
 ~~~
 
 
-### SSH Background and Setup
+#### SSH Background and Setup
   
 SSH is a security protocol widely used by many applications. You can use the following commands to connect your newly created repository or your existing repository to Github. 
 {: .note}   
@@ -71,11 +68,11 @@ What we will do now is the minimum required to set up the SSH keys and add the p
 
 The first thing we are going to do is check if this has already been done on the computer you’re on.  
 
-> **Keeping your keys secure**
+> **Keeping your keys secure**  
 > You shouldn't really forget about your SSH keys, since they keep your account secure. It’s good
 >  practice to audit your secure shell keys every so often. Especially if you are using multiple
 >  computers to access your account.
-
+  
 We will run the list command (`ls`) to check what key pairs already exist on your computer. 
 In our command we use the `~` as the shorthand for "my home directory."
 
@@ -91,7 +88,7 @@ If you have not set up SSH, your output might look like this:
 ls: cannot access '/c/Users/YourName/.ssh': No such file or directory
 ~~~
 {: .output}
-
+  
 If SSH has been set up on the computer you're using, the public and private key pairs will be listed. The file names are either `id_ed25519`/`id_ed25519.pub` or `id_rsa`/`id_rsa.pub` depending on how the key pairs were set up.
 
 ![](figures/sync_with_ssh.png)
@@ -181,16 +178,9 @@ Hi YourName! You've successfully authenticated, but GitHub does not provide shel
 ~~~
 {: .output}
 
-</details>
 
 
-
-<details>
-  <summary>
-    Option 2. Connecting with HTTPS & GitHub Access Tokens
-  </summary>
-
-### Connecting using HTTPS & GitHub Access Tokens
+### Option 2. Connecting with HTTPS & GitHub Access Tokens
 
 You can also use **HTTPS** protocol to connect your local repository to GitHub. Take a look at the following figure and find the commands you need to use to sync your local repository with Github. We will explain these commands in the rest of this section.
 
@@ -198,7 +188,7 @@ You can also use **HTTPS** protocol to connect your local repository to GitHub. 
 
 Now we are going to use the HTTPS protocol and GitHub access tokens (or Git Credential Manager, depending on your OS). GitHub access tokens are simple to obtain, but should be used with caution and should not be shared. 
 
-### Step 1: link the repositories with **"git remote add"**
+#### Step 1: link the repositories with **"git remote add"**
 {: .no_toc}
 Enter the command below, replacing <your_github_username> as appropriate.
 
@@ -226,12 +216,12 @@ origin  https://github.com/<your_github_username>/<github-repository-name> (fetc
 origin  https://github.com/<your_github_username>/<github-repository-name> (push)
 ~~~
 
-### Step 2: synchronize the repositories with **"git push"**
+#### Step 2: synchronize the repositories with **"git push"**
 {: .no_toc}
 
 The `git push` command can "push" our local content and tracking information to the GitHub repository, synchronizing the content. If you run `git push` right now, Git asks for your GitHub username and password. Even if you enter the correct username and password, the command will not work since support for password authentication was removed in 2021. To fix this error, you can use GitHub Access Tokens or use code editors that support API authentication. In this workshop, we use access tokens:
 
-### Step 3: Configure Access Token on GitHub
+#### Step 3: Configure Access Token on GitHub
 {: .no_toc}
 
 You can use token-based authentication when performing Git operations requiring authentication.
@@ -254,8 +244,7 @@ Input
 ~~~
 $ git remote set-url origin https://<github-token>@github.com/<username>/<repository-name>.git
 ~~~
-</details>
-  
+
   
 ## Pushing the local repository
     
