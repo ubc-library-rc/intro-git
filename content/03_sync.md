@@ -55,8 +55,8 @@ $ git remote add origin [git@github.com:yourname/hello-world.git]
 #### SSH Background and Setup
 {: .no_toc}
   
+  
 SSH is a security protocol widely used by many applications. You can use the following commands to connect your newly created repository or your existing repository to Github. 
-{: .note}   
 
 We will use SSH as our authentication method. SSH stands for Secure SHell protocol.  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
 
