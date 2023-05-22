@@ -5,11 +5,23 @@ nav_order: 9
 nav_exclude: false
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+ - TOC
+{:toc}
+</details>
+
 # Collaborating on GitHub
+{: .no_toc}
 
 The GitHub platform facilitates collaboration by managing access and tracking activity on multi-author projects. A common workflow for teamwork is to use the _fork_, _clone_, and _pull request_ features of Git and GitHub. Consider this example: 
 
 > _A team of 10 people is writing a textbook. Everyone will contribute content and the files will be stored in the main branch of the project repository. To avoid unintended conflicts each team member will work in their own copy of the repository, periodically merging their work back into the main project repository._ 
+
+ ![](figures/git-collaboration_1.png)
 
 Here are some of the Git commands and GitHub features you will encounter in this workflow.
 
@@ -22,6 +34,7 @@ In this scenario team members never edit the main project repository: each perso
 
 To create a fork sign in to GitHub, navigate to the main project repository, then click the _Fork_ button in the top right corner. 
 ![Fork button in GitHub](figures/fork.png)
+
 
 ## Clone the fork to your own computer
 GitHub is great for storing and sharing files but it's not a good platform for editing. The recommended practice is to _clone_ your repository, which creates a local copy on your own computer where you can edit the files with your preferred text editor. 
@@ -49,6 +62,8 @@ remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (6/6), done.
 ```
 Git will create a new directory named after the source repository. The directory is automatically tracked by git and it can be synchronized with its counterpart in your GitHub account. 
+
+ ![](figures/git-collaboration_2.png)
 
 ## Synchronizing forks and clones
 As you edit the files on your local computer use the `git add` and `git commit` commands to take snapshots of your work. In a team environment it will be important to periodically synchronize the forks and clones so everyone's work is represented in the main project repository.
