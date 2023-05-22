@@ -13,7 +13,7 @@ has_toc: false
 
 The goal of this workshop is to **begin** to understand and use Git and GitHub. You will not be an expert by the end of the class. You will probably not even feel very comfortable using Git. This is okay. We want to make a start but, as with any skill, using Git takes practice.
 
-This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover.
+This is your session. If you have a question or feel we are going too fast, please let the instructor know. We can decide as a group what to cover. Browse [workshop presentation](https://ubc-library-rc.github.io/intro-git/content/git_concepts.html) to familiarize yourself with the topics covered in the workshop.
 
 ### Learning Objectives
 
@@ -33,9 +33,9 @@ At the end of this workshop, attendees will be able to:
 | 0:30 | [Syncing with GitHub](03_sync.md)
 | 0:50 | [Github features](04_github.md)
 | 1:20 | [Collaborating on GitHub](05_collab_on_github.md)
-| 1:30 | Wrap-up
+| 1:30 | [Wrap-up](6-extra-material)
 
-_Actual schedule may vary depending on group needs_
+_Actual schedule may vary depending on group needs._
 
 
 Please create a GitHub account and install Bash and Git before the workshop. See [Setup](https://ubc-library-rc.github.io/intro-git/) for instructions.

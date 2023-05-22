@@ -68,13 +68,13 @@ The `git push` command can "push" our local content and tracking information to 
 
 #### Configure Access Token on GitHub
 
-You can use token-based authentication when performing Git operations requiring authentication.
+You can use token-based authentication in place of a password when performing Git operations. Github currently supports two types of personal access tokens: fine-grained personal access tokens and personal access tokens (classic). They recommend using fine-grained tokens whenever possible. 
 
 In the first step, we will create a personal Access Token on GitHub. Follow these steps to create one for your GitHub account:
 
 * Click on your **GitHub profile icon** on the top right corner and click on **Settings**
 * Choose **Developer Settings** on the menu on the left
-* Click **Personal access tokens** and **Generate new token**]* Add a specific note that will help you identify the scope of the access token
+* Click **fine-grained access tokens** and **Generate new token** Add a specific note that will help you identify the scope of the access token
 * **Choose the Expiration period** from the drop down menu and select the scopes you want to grant the corresponding access to the generated access token. Make sure to select the minimum required scopes. For this workshop, `public_repo` should be enough.
 * Click on **Generate Token**
 

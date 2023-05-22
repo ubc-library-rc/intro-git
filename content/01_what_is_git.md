@@ -8,7 +8,7 @@ nav_order: 5
 
 ## Important terminal commands
 
-We need to know a little about the terminal to be able to use the features of Git. You should know the following commands:
+Linux terminal, aka. command-line, console, or shell, is a text interface used to control a Linux computer. We need to know a few very useful commands in the terminal to use the features of Git as a command-line tool. Several graphical interfaces are available for Git as well, such as [GitHub Desktop](https://desktop.github.com/). For this workshop, you need the following commands:
 
 Input
 {: .label .label-green}
@@ -24,7 +24,7 @@ Input
 $ mkdir <new-directory>
 ~~~
 
-This command creates one or multiple directories at once. You should have the privilege to make a new folder in the parent directory. 
+This command creates one or multiple directories at once. You must have  permission to make a new folder in the parent directory. 
 
 Input
 {: .label .label-green}
@@ -85,3 +85,5 @@ Git is developed in 2005 by [Linus Torvalds](https://github.com/torvalds), the f
 [**_GitHub_**](https://github.com/) is a popular website for hosting and sharing Git repositories. GitHub provides an online infrastructure that makes it easier for teams to collaborate with Git.  Team members make contributions to the repository on local copies of the files, then "push" their changes back to GitHub so everyone else can see them.  
 
 The GitHub interface makes it easy to view files in the repository and what changes have been made. GitHub also makes it easier for groups to publish their work (each GitHub repository can have its own project website, blog, and wiki using [GitHub Pages](https://pages.github.com/).)
+
+[GitHub.ubc.ca](https://github.ubc.ca) is an instance of GitHub Enterprise supported by UBC for Educational use only. You can use UBC GitHub to collaborate on course materials with the support of a faculty member.
