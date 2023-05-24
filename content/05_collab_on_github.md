@@ -123,8 +123,69 @@ Note: it is a good idea to make frequents commits to keep a history of changes i
 
 ## Exercise
 
-In this exercise, you are going to use Git and Github to fix mistakes in a repository. You can download the `sandbox` repository here: [address](address)
+In this exercise, you are going to use Git and Github to fix mistakes in a repository. Please begin with viewing, forking, or cloning the [`sandbox` repository](https://github.com/shf/sandbox).
 
 This repository supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
 
-There are some mistakes in the repository, such as files with wrong extensions, and some minor mistakes, such as mistakes in spelling of words. You are asked to add one more piece of news or fix the repository either directly on Github or by pulling the local repository, fixing the problems, and pushing it to the remote repository. 
+There are several major mistakes in the repository, such as files with wrong extensions or in the wrong place, and a few minor mistakes, such as misspelling of words. You are asked to add one more piece of news or fix the repository either directly on Github or by forking/cloning a local repository, fixing the problems, and pushing it to the remote repository. 
+
+## Another Exercise: 
+
+For the next step, get into pairs.  One person will be the "Owner" and the other
+will be the "Collaborator". The goal is for the Collaborator to add changes into
+the Owner's repository. If there is time we will switch roles at the end so everyone can play Owner and Collaborator.
+
+First the Owner needs to give the Collaborator access to their repository.
+Navigate to your repository On GitHub, click the settings button on the right,
+then select Manage access. Click the green <em>Invite a collaborator</em> button and enter your partner's GitHub username in the search bar.
+
+![Adding Collaborators on GitHub](figures/github-add-collaborators.png)
+
+To accept access to the Owner's repo the Collaborator
+needs to go to [https://github.com/notifications](https://github.com/notifications).
+
+Next, the Collaborator needs to download a copy of the Owner's repository to their computer. This is called "cloning" a repository. To clone the Owner's "hello-world" repository onto
+their `Desktop` the Collaborator would enter this command:
+
+Input
+{: .label .label-green}
+~~~
+$ git clone https://github.com/owner's-github-username/hello-world.git ~/Desktop/owner-hello-world
+~~~
+
+This creates a local copy of the owner's hello-world repository in a folder named <em>owner-hello-world</em>.  The collaborator can now make changes in their clone of the Owner's repository using the commands introduced earlier.
+
+- use `cd` to navigate to the cloned repository
+- use `touch` to create a new file in the repository
+- add a few lines to the file using a text editor
+- use `git add` to stage the file
+- use `git commit -m "Commit note"` to commit the changes
+
+Then push the Collaborator's change(s) to the *Owner's* repository on GitHub:
+
+Input
+{: .label .label-green}
+~~~
+$ git push origin main
+~~~
+
+Note that this time we didn't have to create a remote called `origin`: Git uses this
+name by default when we clone a repository.  (This is why `origin` was a
+sensible choice for a nickname earlier when we were setting up remotes by hand.)
+
+Take another look to the Owner's repository on the GitHub website (you might need
+to refresh your browser). You should be able to see the new commit made by the
+Collaborator.
+
+To download the Collaborator's changes from GitHub, the Owner now enters this command on their own computer:
+
+Input
+{: .label .label-green}
+~~~
+$ git pull origin main
+~~~
+
+Now the three repositories - Owner's local, Collaborator's local, and Owner's on
+GitHub - are back in sync.
+
+___Switch Owner and Collaborator roles if time permits and you'd like more practice___

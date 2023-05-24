@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Git basics
-nav_order: 7
+nav_order: 6
 ---
 
 # Git basics
@@ -422,7 +422,7 @@ You want to go back to the previous version in a number of scnearios:
 $ git checkout <filename>
 ~~~
 
-* **2. sUndoing Your Last Commit (That Has Not Been Pushed)**: If you made a mistake on your last commit and have not pushed it yet, you can undo it by moving the HEAD of your repository. For this purpose, run the following commands in the repository directory.
+* **2. Undoing Your Last Commit (That Has Not Been Pushed)**: If you made a mistake on your last commit and have not pushed it yet, you can undo it by moving the HEAD of your repository. For this purpose, run the following commands in the repository directory.
 
 ~~~
 $ git reset --soft HEAD~

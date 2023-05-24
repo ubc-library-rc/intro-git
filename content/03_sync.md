@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Syncing with GitHub
-nav_order: 8
+nav_order: 7
 ---
 
 # Syncing with GitHub
@@ -248,7 +248,7 @@ $ git remote set-url origin https://<github-token>@github.com/<username>/<reposi
   
 ## Pushing the local repository
     
-Now, we have successfully established a connection between the two repositories. To synchronize the content of the remote and local repositories, we will have to "push" our local changes to the GitHub repository.
+Now, we have successfully established a connection between the two repositories. To synchronize (merge) the content of the remote and local repositories, we will have to "push" our local changes to the GitHub repository.
 
 Input
 {: .label .label-green }
@@ -287,7 +287,7 @@ nothing to commit, working tree clean
 
 This output lets us know where we are working (the main branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
 
-If you add a readme file or license file to your GitHub repository, the commit on GitHub is ahead of your latest commit on the local main branch and you need to pull the latest changes to sync the two repositories:
+As mentioned earlier, synchronizing the local repository with its correponding remote repository involves merging the branches, specifically the main branches here. If the local branch is ahead of the remote one, the merge command should proceed without conflicts. However, If you have added a readme file or license file to your GitHub repository, the commit on GitHub will be ahead of your latest commit on the local main branch. In this case, you will need to pull the latest changes to synchronize the two repositories:
 
 
 ## Pulling changes
@@ -326,3 +326,22 @@ Fast-forward
 The output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm this by entering the `ls` command.
 
 This section introduces some basic git commands but there are many others that may be useful in more complex and collaborative projects. For a more detailed introduction see the online Software Carpentry course [Version control with Git](https://swcarpentry.github.io/git-novice/).
+
+To update the local repository but not merging any changes, you have two options. `git remote update` can update all of your branches set to track remote ones, while `git fetch` can update only the branch you are on. 
+
+Input
+{: .label .label-green }
+~~~
+$ git fetch
+$ git remote update
+~~~
+
+if you need to sync the local main branch with the remote repository and there are no conflicting changes, you can use "git rebase" instead of merging. This means you can reapply your local commits on top of the latest commit from the remote repository. Rebasing can provide a cleaner commit history since it avoids creating merge commits. You can also use rebase to roll back to an earlier commit. However, this command should be used with caution when working on shared branches, as it modifies the commit history and can cause conflicts if multiple people are working on the same branch.
+
+Input
+{: .label .label-green }
+~~~
+$ git rebase <commit or branch>
+~~~
+
+The command `git rebase -f` is a force option used with the `git rebase` command in Git. It allows you to forcefully overwrite the existing commit history and replay your commits on top of another branch or commit. It is used when you want to discard or replace the existing commits in your branch, e.g., a merge conflict prevents `push` or `pull` actions.
