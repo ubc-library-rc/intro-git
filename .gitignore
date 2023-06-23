@@ -1,3 +1,5 @@
 Gemfile.lock
 .jekyll-cache/
 _site/
+.devcontainer
+*.DS_Store

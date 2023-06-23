@@ -28,11 +28,7 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 $ chsh -s /bin/bash
 ~~~
 
-- **Windows**. The easiest pathway on Windows is to turn on "Windows Subsystem for Linux" following. Windows Subsystem for Linux (WSL), is a compatibility layer to run Linux binary files natively on Windows 10. Please follow this guide to activate WSL on your system.
-
-To install WSL on your Windows Machine, use the [Simplified install](https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders).
-
-If you want to take a more manual route on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
+- **Windows**. For the easiest pathway on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
 
 1. Download the Git for Windows [installer](https://git-for-windows.github.io).
 2. Run the installer and follow the steps below:
@@ -53,6 +49,10 @@ If you want to take a more manual route on Windows, follow these instructions to
      4. Quit the Command Prompt by typing `exit` then pressing "Enter"
 
 This will provide you with both Git and Bash in the Git Bash program.
+
+Another option on Windows is activating **Windows Subsystem for Linux** (WSL). WSL is a compatibility layer to run Linux binary files natively on Windows 10. Please follow this guide to activate WSL on your system.
+
+To install WSL on your Windows Machine, use the [Simplified install](https://docs.microsoft.com/en-us/windows/wsl/install-win10#simplified-installation-for-windows-insiders).
 
  **3. Configure Git user name and email**  
 Open Bash (_Terminal_ in Mac, _Git Bash_ in Windows) and enter the following commands to configure Git. (Note that `$` represents the command prompt; the commands themselves start with the word `git`.)

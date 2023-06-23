@@ -37,6 +37,23 @@ At the end of this workshop, attendees will be able to:
 
 _Actual schedule may vary depending on group needs._
 
-
 Please create a GitHub account and install Bash and Git before the workshop. See [Setup](https://ubc-library-rc.github.io/intro-git/) for instructions.
 {: .prereq}
+
+## Slides
+
+Find the workshops slide below or <a href="content/git_concepts.html" target="_blank">open it in a new tab</a>:
+
+<div style="overflow: hidden;
+  padding-top: 56.25%;
+  position: relative">
+  <iframe src="content/git_concepts.html" title="demo embedded slide deck" scrolling="no" frameborder="0"
+    style="border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;">
+   <p>Your browser does not support iframes.</p>
+ </iframe>
+</div>
