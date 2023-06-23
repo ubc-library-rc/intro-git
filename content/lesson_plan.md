@@ -42,12 +42,12 @@ Please create a GitHub account and install Bash and Git before the workshop. See
 
 ## Slides
 
-Find the workshops slide below or <a href="content/git_concepts.html" target="_blank">open it in a new tab</a>:
+Find the workshops slide below or <a href="git_concepts.html" target="_blank">open it in a new tab</a>:
 
 <div style="overflow: hidden;
   padding-top: 56.25%;
   position: relative">
-  <iframe src="content/git_concepts.html" title="demo embedded slide deck" scrolling="no" frameborder="0"
+  <iframe src="git_concepts.html" title="demo embedded slide deck" scrolling="no" frameborder="0"
     style="border: 0;
    height: 100%;
    left: 0;
