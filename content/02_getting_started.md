@@ -408,7 +408,7 @@ In some rare cases, for example when you checkout a specific commit or tag or re
 
 ## Why staging is useful
 
-The index or staging are is a place to hold the current changes that will be committed when `git commit` is executed. It allows you to only commit parts of the working area into the respository. 
+The index or staging is a place to hold the current changes that will be committed when `git commit` is executed. It allows you to only commit parts of the working area into the repository. 
 
 For example, when you are working on a big feature with a few different subtasks, you can modify the files as you plan, then group the changes and add them separately to the staging area, and finally commit them with appropriate messages focused on the respective change. It also makes reviewing changes more straight-forward.
 
