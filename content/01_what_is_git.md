@@ -70,6 +70,7 @@ Input
 ~~~
 $ cd
 ~~~
+{: .shell-input}
 
 To navigate through files and directories within a system, use the `cd` command followed by either the full path or the directory name. Running this command without a flag or option will take you to the home folder. Use `cd ..` to move to the parent directory (one directory up) and `cd -` to the previous directory.
 
@@ -78,6 +79,7 @@ Input
 ~~~
 $ mkdir <new-directory>
 ~~~
+{: .shell-input}
 
 This command creates one or multiple directories at once. You must have  permission to make a new folder in the parent directory. 
 
@@ -86,6 +88,7 @@ Input
 ~~~
 $ ls
 ~~~
+{: .shell-input}
 
 This command lists files and directories within a system and running it  without a flag or parameter will show the current working directory's content. With `ls -a`, hidden files will also be shown. The files created by Git in your Git repository are hidden and stored in `.git` directory.
 
@@ -94,6 +97,7 @@ Input
 ~~~
 $ touch <new-file-name>
 ~~~
+{: .shell-input}
 
 The `touch` command creates an empty file in the current directory. In this workshop, we use this command to make multiple empty files. You can use other methods to make empty files or copy files from other directories to populate your git folder.
 
@@ -102,5 +106,6 @@ Input
 ~~~
 $ cat <file-name>
 ~~~
+{: .shell-input}
 
 `cat` reads files and writes them on the screen. The name comes from its function to catenate files.

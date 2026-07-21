@@ -50,6 +50,7 @@ Input
 ```sh
 $ git clone https://github.com/YOUR_GITHUB_USERNAME/REPOSITORY_NAME.git
 ```
+{: .shell-input}
 
 Output
 {: .label .label-yellow}
@@ -123,11 +124,11 @@ Note: it is a good idea to make frequents commits to keep a history of changes i
 
 ## Exercise
 
-In this exercise, you are going to use Git and Github to fix mistakes in a repository. Please begin with viewing, forking, or cloning the [`sandbox` repository](https://github.com/shf/sandbox).
+In this exercise, you are going to use Git and GitHub to fix mistakes in a repository. Please begin with viewing, forking, or cloning the [`sandbox` repository](https://github.com/shf/sandbox).
 
-This repository supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
+This repository is supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
 
-There are several major mistakes in the repository, such as files with wrong extensions or in the wrong place, and a few minor mistakes, such as misspelling of words. You are asked to add one more piece of news or fix the repository either directly on Github or by forking/cloning a local repository, fixing the problems, and pushing it to the remote repository. 
+There are several major mistakes in the repository, such as files with wrong extensions or in the wrong place, and a few minor mistakes, such as misspelled words. You are asked to add one more piece of news or fix the repository either directly on GitHub or by forking/cloning a local repository, fixing the problems, and pushing it to the remote repository. 
 
 ## Another Exercise: 
 
@@ -136,7 +137,7 @@ will be the "Collaborator". The goal is for the Collaborator to add changes into
 the Owner's repository. If there is time we will switch roles at the end so everyone can play Owner and Collaborator.
 
 First the Owner needs to give the Collaborator access to their repository.
-Navigate to your repository On GitHub, click the settings button on the right,
+Navigate to your repository on GitHub, click the settings button on the right,
 then select Manage access. Click the green <em>Invite a collaborator</em> button and enter your partner's GitHub username in the search bar.
 
 ![Adding Collaborators on GitHub](figures/github-add-collaborators.png)
@@ -152,6 +153,7 @@ Input
 ~~~
 $ git clone https://github.com/owner's-github-username/hello-world.git ~/Desktop/owner-hello-world
 ~~~
+{: .shell-input}
 
 This creates a local copy of the owner's hello-world repository in a folder named <em>owner-hello-world</em>.  The collaborator can now make changes in their clone of the Owner's repository using the commands introduced earlier.
 
@@ -168,12 +170,13 @@ Input
 ~~~
 $ git push origin main
 ~~~
+{: .shell-input}
 
 Note that this time we didn't have to create a remote called `origin`: Git uses this
 name by default when we clone a repository.  (This is why `origin` was a
 sensible choice for a nickname earlier when we were setting up remotes by hand.)
 
-Take another look to the Owner's repository on the GitHub website (you might need
+Take another look at the Owner's repository on the GitHub website (you might need
 to refresh your browser). You should be able to see the new commit made by the
 Collaborator.
 
@@ -184,6 +187,7 @@ Input
 ~~~
 $ git pull origin main
 ~~~
+{: .shell-input}
 
 Now the three repositories - Owner's local, Collaborator's local, and Owner's on
 GitHub - are back in sync.

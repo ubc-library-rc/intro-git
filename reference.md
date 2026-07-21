@@ -71,7 +71,7 @@ nav_order: 9
 ## Getting Started With Git
 
 * An author at Webtuu.com provided both a [clear introduction to git for absolute beginners](https://webtuu.com/blog/04/a-laymans-introduction-to-git) and a follow-up [git basics and branching](https://webtuu.com/blog/04/git-basics-branching-merging-push-to-github) blog post
-* This recent [Git guide for beginners](https://d3vnull.com/git-for-beginners/) covers the basics and includes tips for both Github and Gitlab
+* This recent [Git guide for beginners](https://d3vnull.com/git-for-beginners/) covers the basics and includes tips for both GitHub and GitLab
 * For more in-depth coverage, Scott Chacon and Ben Straub's "Pro Git" book is [available as an online resource here](https://git-scm.com/book/en/v2) 
 
 ## Hands-on Learning and Guides

@@ -16,9 +16,9 @@ If you would like to participate in open-source projects on GitHub, October is t
 
 GitHub also has many great features that support project development and management. Here, you can find a list of those features and some notes on collaborating with other team members on GitHub.
 
-* **GitHub issues** let you track your work on GitHub. When you mention an issue in another issue or pull-request, the issue's timeline tracks the related work. You can link issues to pull requests.
+* **GitHub issues** let you track your work on GitHub. When you mention an issue in another issue or pull request, the issue's timeline tracks the related work. You can link issues to pull requests.
 
-* **Gist code** is a simple way to share code snippets with others. It is used when you need to share a sample piece of code or technique with your co-workers or friends. To learn more GitHub Gists and how to create them, check out [GitHub Tutorial on Creating Gists](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)
+* **Gist code** is a simple way to share code snippets with others. It is used when you need to share a sample piece of code or technique with your co-workers or friends. To learn more about GitHub Gists and how to create them, check out [GitHub Tutorial on Creating Gists](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists)
 
 * **Project management with GitHub** is possible is GitHub offers a card-based project management tool like the one offered by [Trello](https://trello.com/). To begin the setup process, you should click on the **projects** tab in your repository and select **create a project**. GitHub offers templates to organize tasks within the project workflow. You can also set automatic triggers and link them to Github pull requests.
 

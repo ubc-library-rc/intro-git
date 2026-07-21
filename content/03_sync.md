@@ -31,7 +31,7 @@ Log into your GitHub account and create a new repository by clicking the **+** i
 
 Though not mandatory, choosing a license is an important part of openly sharing your creative work online. For help selecting an appropriate license see [https://choosealicense.com/](https://choosealicense.com/).
 
-After creating the "hello-world" repository, GitHub will display the repository main web-page on your browser.  This page contains information required to link your GitHub repository, `remote`, to the repository you created with Git on your own computer.
+After creating the "hello-world" repository, GitHub will display the repository's main webpage in your browser.  This page contains the information required to link your GitHub repository, `remote`, to the repository you created with Git on your own computer.
   
 ## Linking your local repository to the GitHub repository (using SSH or HTTPS)
   
@@ -56,7 +56,7 @@ $ git remote add origin [git@github.com:yourname/hello-world.git]
 {: .no_toc}
   
   
-SSH is a security protocol widely used by many applications. You can use the following commands to connect your newly created repository or your existing repository to Github. 
+SSH is a security protocol widely used by many applications. You can use the following commands to connect your newly created repository or your existing repository to GitHub. 
 
 We will use SSH as our authentication method. SSH stands for Secure SHell protocol.  SSH is a cryptographic network protocol that allows secure communication between computers using an otherwise insecure network.
 
@@ -183,7 +183,7 @@ Hi YourName! You've successfully authenticated, but GitHub does not provide shel
 
 ### Option 2. Connecting with HTTPS & GitHub Access Tokens
 
-You can also use **HTTPS** protocol to connect your local repository to GitHub. Take a look at the following figure and find the commands you need to use to sync your local repository with Github. We will explain these commands in the rest of this section.
+You can also use **HTTPS** protocol to connect your local repository to GitHub. Take a look at the following figure and find the commands you need to use to sync your local repository with GitHub. We will explain these commands in the rest of this section.
 
 ![The repository HTTPS on GitHub](figures/github-instructions-https.png)
 
@@ -198,6 +198,7 @@ Input
 ~~~
 $ git remote add origin https://github.com/<your_github_username>/<github-repository-name>.git 
 ~~~
+{: .shell-input}
 {: .language-bash }
 
 This links your local Git repository to a _remote_ one. The link indicates the location of the remote repository, which is nicknamed _origin_ in this example.  The nickname can be anything but Git convention is to refer to the remote repository as **origin**.  
@@ -209,6 +210,7 @@ Input
 ~~~
 $ git remote -v
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow }
@@ -225,7 +227,7 @@ The `git push` command can "push" our local content and tracking information to 
 #### Step 3: Configure Access Token on GitHub
 {: .no_toc}
 
-You can use token-based authentication in place of a password when performing Git operations. Github currently supports two types of personal access tokens: fine-grained personal access tokens and personal access tokens (classic). They recommend using fine-grained tokens whenever possible. 
+You can use token-based authentication in place of a password when performing Git operations. GitHub currently supports two types of personal access tokens: fine-grained personal access tokens and personal access tokens (classic). They recommend using fine-grained tokens whenever possible. 
 
 In the first step, we will create a personal Access Token on GitHub. Follow these steps to create one for your GitHub account:
 
@@ -244,8 +246,8 @@ Input
 ~~~
 $ git remote set-url origin https://<github-token>@github.com/<username>/<repository-name>.git
 ~~~
+{: .shell-input}
 
-  
 ## Pushing the local repository
     
 Now, we have successfully established a connection between the two repositories. To synchronize (merge) the content of the remote and local repositories, we will have to "push" our local changes to the GitHub repository.
@@ -255,6 +257,7 @@ Input
 ~~~
 $ git push -u origin main
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow }
@@ -276,6 +279,7 @@ Input
 ~~~
 $ git status
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow }
@@ -287,25 +291,26 @@ nothing to commit, working tree clean
 
 This output lets us know where we are working (the main branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
 
-As mentioned earlier, synchronizing the local repository with its correponding remote repository involves merging the branches, specifically the main branches here. If the local branch is ahead of the remote one, the merge command should proceed without conflicts. However, If you have added a readme file or license file to your GitHub repository, the commit on GitHub will be ahead of your latest commit on the local main branch. In this case, you will need to pull the latest changes to synchronize the two repositories:
+As mentioned earlier, synchronizing the local repository with its corresponding remote repository involves merging the branches, specifically the main branches here. If the local branch is ahead of the remote one, the merge command should proceed without conflicts. However, if you have added a README file or license file to your GitHub repository, the commit on GitHub will be ahead of your latest commit on the local main branch. In this case, you will need to pull the latest changes to synchronize the two repositories:
 
 
 ## Pulling changes
   
-When working with others or on multiple computers we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then "pulling" that change back to our computer.
+When working with others or on multiple computers, we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then "pulling" that change back to our computer.
 
-Near the bottom of the "hello-world" repository on GitHub, there is a button to "Add a README" file to your repository. Click the button, enter some text, then scroll to the bottom and click "Commit new file" (The default commit message will be "Create README.md", which is fine for our purposes).
+Near the bottom of the "hello-world" repository on GitHub, there is a button to "Add a README" file to your repository. Click the button, enter some text, then scroll to the bottom and click "Commit new file" (the default commit message will be "Create README.md", which is fine for our purposes).
 
-It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory GitHub will automatically display it like a cover page for your repository.
+It is good practice to add a README file briefly describing what the project is about. If the README is in the root directory, GitHub will automatically display it like a cover page for your repository.
 {: .info}
 
-After adding a README on GitHub your local repository is out-of-sync with the remote repository.  Let's fix that by pulling the remote changes into the local repository with `git pull`.
+After adding a README on GitHub, your local repository is out of sync with the remote repository.  Let's fix that by pulling the remote changes into the local repository with `git pull`.
 
 Input
 {: .label .label-green }
 ~~~
 $ git pull
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow }
@@ -335,6 +340,7 @@ Input
 $ git fetch
 $ git remote update
 ~~~
+{: .shell-input}
 
 if you need to sync the local main branch with the remote repository and there are no conflicting changes, you can use "git rebase" instead of merging. This means you can reapply your local commits on top of the latest commit from the remote repository. Rebasing can provide a cleaner commit history since it avoids creating merge commits. You can also use rebase to roll back to an earlier commit. However, this command should be used with caution when working on shared branches, as it modifies the commit history and can cause conflicts if multiple people are working on the same branch.
 
@@ -343,5 +349,6 @@ Input
 ~~~
 $ git rebase <commit or branch>
 ~~~
+{: .shell-input}
 
 The command `git rebase -f` is a force option used with the `git rebase` command in Git. It allows you to forcefully overwrite the existing commit history and replay your commits on top of another branch or commit. It is used when you want to discard or replace the existing commits in your branch, e.g., a merge conflict prevents `push` or `pull` actions.

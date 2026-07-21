@@ -50,6 +50,7 @@ Input
 $ mkdir hello-world
 $ cd hello-world
 ~~~
+{: .shell-input}
 
 If you're not sure you're in the right place use the command `pwd` (print working directory) to display the complete path of your current directory.
 
@@ -60,6 +61,8 @@ Input
 ~~~
 $ git init
 ~~~
+{: .shell-input}
+
 Output
 {: .label .label-yellow}
 ~~~
@@ -79,6 +82,7 @@ Input
 ~~~
 $ git status
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow}
@@ -109,7 +113,7 @@ Input
 ~~~
 $ touch index.md
 ~~~
-
+{: .shell-input}
 
 The `.md` extension is for text files written using Markdown, a lightweight markup language with plain text formatting syntax. For more on Markdown see the [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) guide.
 
@@ -120,6 +124,7 @@ Input
 ~~~
 $ git status
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow}
@@ -141,6 +146,7 @@ Input
 ~~~
 $ git add index.md
 ~~~
+{: .shell-input}
 
 This adds the file to the **staging area**, telling Git that `index.md` is a file that should be tracked. To see the effects of this change on the status of our repository, we run `git status` again.
 
@@ -149,6 +155,7 @@ Input
 ~~~
 $ git status
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow}
@@ -174,6 +181,7 @@ Input
 ~~~
 $ git status
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow}
@@ -203,6 +211,7 @@ Input
 ~~~
 $ git add index.md
 ~~~
+{: .shell-input}
 
 Now we are ready to  **commit** our first changes. Commit is similar to **saving** a file, but in addition to saving the _contents_ of a file, `git commit` stores information about the file's history, including what changes were made, when, and by whom.
 
@@ -211,6 +220,7 @@ Input
 ~~~
 $ git commit -m 'Add index.md'
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow}
@@ -235,6 +245,7 @@ Input
 ~~~
 $ git checkout index.md
 ~~~
+{: .shell-input}
 
 ## Another look at the git workflow
 {: .no_toc}
@@ -260,6 +271,7 @@ Input
 ~~~
 $ git branch
 ~~~
+{: .shell-input}
 
 We want to make a new branch called `new-feature` and add your name to the bottom of `index.md` and a new file `about-me.md`
 
@@ -268,14 +280,16 @@ Input
 ~~~
 $ git branch new-feature
 ~~~
+{: .shell-input}
 
-Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to switch between branches. The default branch in Git is `master` or `main`. This branch is not different than any other branch in a Git repository. To move to the newly created branch, `new-feature`, we ask git to "checkout" this branch:
+Now, if you run `git branch` again, you should see two branches with only one of them active. Git uses the keyword `checkout` to switch between branches. The default branch in Git is `master` or `main`. This branch is no different than any other branch in a Git repository. To move to the newly created branch, `new-feature`, we ask git to "checkout" this branch:
 
 Input
 {: .label .label-green}
 ~~~
 $ git checkout new-feature
 ~~~
+{: .shell-input}
 
 You can run `git status` to check the current/active branch. Some shell themes provide graphical hints to inform you of the current branch at all times. 
 
@@ -288,6 +302,7 @@ Input
 $ git checkout master
 $ git merge new-feature
 ~~~
+{: .shell-input}
 
 The output shows the updated files after the merge. When you merge a branch, it does not get removed from the Git tree. To delete a Git branch after merging it with another branch:
 
@@ -296,6 +311,7 @@ Input
 ~~~
 $ git branch -d new-feature
 ~~~
+{: .shell-input}
 
 ## .gitignore file
   
@@ -310,6 +326,7 @@ Input
 *.env
 _site\
 ~~~
+{: .shell-input}
 
 Note: Git is not good in managing binary files. If you are doing frequent updates to your binary files, you might need to solve merging conflicts frequently and `git diff` does not return useful information.
 
@@ -322,6 +339,7 @@ Input
 ~~~
 $ git diff
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow }
@@ -350,6 +368,7 @@ Input
 ~~~
 $ cat .git/HEAD
 ~~~
+{: .shell-input}
 
 With the following command, you can compare the current state of your files with your latest commit and review the changes applied after your latest commit:
 
@@ -358,6 +377,7 @@ Input
 ~~~
 $ git diff HEAD
 ~~~
+{: .shell-input}
 
 If you are going to commit the staged files and like to review the changes in the staged files, you can use the following `diff` command:
 
@@ -366,6 +386,7 @@ Input
 ~~~
 $ git diff --staged
 ~~~
+{: .shell-input}
 
 We can now add and commit the updated version of "index.md":
 
@@ -375,6 +396,7 @@ Input
 $ git add index.md
 $ git commit -m 'Add note about the weather'
 ~~~
+{: .shell-input}
 
 The `git log` command provides another way to view past activity in our git repository.
 
@@ -383,6 +405,7 @@ Input
 ~~~
 $ git log
 ~~~
+{: .shell-input}
 
 Output
 {: .label .label-yellow }
@@ -441,5 +464,6 @@ Input
 ~~~
 git tag -a v1.0 -m 'This is the first version of my project'
 ~~~
+{: .shell-input}
 
 Tags and branches are fundamentally different. A branch always points to the top of the development line and only changes when a new commit is pushed. A tag will not change by making a new commit and will always stay on that version of the code.
