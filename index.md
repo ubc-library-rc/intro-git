@@ -27,6 +27,7 @@ If you do not have access to a laptop or have difficulty meeting these prerequis
 ~~~
 $ chsh -s /bin/bash
 ~~~
+{: .shell-input}
 
 - **Windows**. For the easiest pathway on Windows, follow these instructions to download the Bash Shell and Git at the same time (a [Video Tutorial](https://www.youtube.com/watch?v=339AEqk9c-8) is also available).
 
@@ -61,6 +62,7 @@ Open Bash (_Terminal_ in Mac, _Git Bash_ in Windows) and enter the following com
 $ git config --global user.name "Your Name"
 $ git config --global user.email "your@email"
 ~~~
+{: .shell-input}
 
 This is only required once. Your user name and email will be recorded with each change you make to documents tracked with Git. **The email address should be the same one you used when setting up your GitHub account.** You can find all the other existing configurations of git on your local machine by running `git config --list`
 
@@ -70,3 +72,4 @@ Git sometimes opens a text editor automatically so you can complete a task. The 
 ~~~
 $ git config --global core.editor "notepad"
 ~~~
+{: .shell-input}

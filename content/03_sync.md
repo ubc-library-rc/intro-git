@@ -50,7 +50,7 @@ Move back to your shell application and enter the first command:
 ~~~
 $ git remote add origin [git@github.com:yourname/hello-world.git] 
 ~~~
-
+{: .shell-input}
 
 #### SSH Background and Setup
 {: .no_toc}
@@ -80,6 +80,7 @@ In our command we use the `~` as the shorthand for "my home directory."
 ~~~
 ls -al ~/.ssh
 ~~~
+{: .shell-input}
 {: .language-bash}
 
 
@@ -99,6 +100,7 @@ If you do not have SSH set up, let's set it up now. Use this command to create k
 ~~~
 $ ssh-keygen -t rsa -C "yourname@domain.name"
 ~~~
+{: .shell-input}
 {: .language-bash}
 
 ~~~
@@ -154,6 +156,7 @@ First, we need to copy the public key.  Be sure to include the `.pub` at the end
 ~~~
 cat ~/.ssh/id_rsa.pub
 ~~~
+{: .shell-input}
 {: .language-bash}
 
 ~~~

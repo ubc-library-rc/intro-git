@@ -326,7 +326,6 @@ Input
 *.env
 _site\
 ~~~
-{: .shell-input}
 
 Note: Git is not good in managing binary files. If you are doing frequent updates to your binary files, you might need to solve merging conflicts frequently and `git diff` does not return useful information.
 
@@ -444,12 +443,14 @@ You want to go back to the previous version in a number of scnearios:
 ~~~
 $ git checkout <filename>
 ~~~
+{: .shell-input}
 
 * **2. Undoing Your Last Commit (That Has Not Been Pushed)**: If you made a mistake on your last commit and have not pushed it yet, you can undo it by moving the HEAD of your repository. For this purpose, run the following commands in the repository directory.
 
 ~~~
 $ git reset --soft HEAD~
 ~~~
+{: .shell-input}
 
 Now, your latest commit is undone. The changes remain in place and the files go back to being staged so you can make additional changes or add any missing files and make a new commit.
 
