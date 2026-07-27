@@ -238,6 +238,9 @@ In the first step, we will create a personal Access Token on GitHub. Follow thes
 * Choose **Developer Settings** on the menu on the left
 * Click **fine-grained access tokens** and **Generate new token** Add a specific note that will help you identify the scope of the access token
 * **Choose the Expiration period** from the drop down menu and select the scopes you want to grant the corresponding access to the generated access token. Make sure to select the minimum required scopes. For this workshop, `public_repo` should be enough.
+* Under **Repository Access**, choose **Only select repositories**, then select `<your-user-name>/hello-word`.
+* Under **Permissions**, within the **Repositories** box, click **+ Add permissions** and check "Contents".
+* For the newly added **Contents** item, change the option to "Access: Read and Write" instad of the default value that only gives read permission.
 * Click on **Generate Token**
 
 Now, a new page is opened in which you can see your personal access token and copy it.
