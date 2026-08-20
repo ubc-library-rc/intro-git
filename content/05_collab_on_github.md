@@ -47,21 +47,21 @@ GitHub is great for storing and sharing files but it's not a good platform for e
 
 Input
 {: .label .label-green}
-```sh
+~~~
 $ git clone https://github.com/YOUR_GITHUB_USERNAME/REPOSITORY_NAME.git
-```
+~~~
 {: .shell-input}
 
 Output
 {: .label .label-yellow}
-```sh
+~~~
 Cloning into 'practice'...
 remote: Enumerating objects: 6, done.
 remote: Counting objects: 100% (6/6), done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (6/6), done.
-```
+~~~
 Git will create a new directory named after the source repository. The directory is automatically tracked by git and it can be synchronized with its counterpart in your GitHub account. 
 
  ![](figures/git-collaboration_2.png)

@@ -78,11 +78,9 @@ We will run the list command (`ls`) to check what key pairs already exist on you
 In our command we use the `~` as the shorthand for "my home directory."
 
 ~~~
-ls -al ~/.ssh
+$ ls -al ~/.ssh
 ~~~
 {: .shell-input}
-{: .language-bash}
-
 
 If you have not set up SSH, your output might look like this:
 
@@ -101,7 +99,6 @@ If you do not have SSH set up, let's set it up now. Use this command to create k
 $ ssh-keygen -t rsa -C "yourname@domain.name"
 ~~~
 {: .shell-input}
-{: .language-bash}
 
 ~~~
 Generating public/private ed25519 key pair.
@@ -154,10 +151,9 @@ Now we need to give our public key over to GitHub.
 First, we need to copy the public key.  Be sure to include the `.pub` at the end, otherwise you’re looking at the private key.
 
 ~~~
-cat ~/.ssh/id_rsa.pub
+$ cat ~/.ssh/id_rsa.pub
 ~~~
 {: .shell-input}
-{: .language-bash}
 
 ~~~
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmRA3d51X0uu9wXek559gfn6UFNF69yZjChyBIU2qKI yourname@domain.name
@@ -175,7 +171,7 @@ Now that we’ve set that up, let’s check our authentication from the command 
 ~~~
 $ ssh -T git@github.com
 ~~~
-{: .language-bash}
+{: .shell-input}
 
 ~~~
 Hi YourName! You've successfully authenticated, but GitHub does not provide shell access.
@@ -202,7 +198,6 @@ Input
 $ git remote add origin https://github.com/<your_github_username>/<github-repository-name>.git 
 ~~~
 {: .shell-input}
-{: .language-bash }
 
 This links your local Git repository to a _remote_ one. The link indicates the location of the remote repository, which is nicknamed _origin_ in this example.  The nickname can be anything but Git convention is to refer to the remote repository as **origin**.  
 
@@ -299,7 +294,6 @@ This output lets us know where we are working (the main branch). We can also see
 
 As mentioned earlier, synchronizing the local repository with its corresponding remote repository involves merging the branches, specifically the main branches here. If the local branch is ahead of the remote one, the merge command should proceed without conflicts. However, if you have added a README file or license file to your GitHub repository, the commit on GitHub will be ahead of your latest commit on the local main branch. In this case, you will need to pull the latest changes to synchronize the two repositories:
 
-
 ## Pulling changes
   
 When working with others or on multiple computers, we need a way to pull all the remote changes back into our local repository. We can see how this works by adding a file to our GitHub repository, then "pulling" that change back to our computer.
@@ -338,23 +332,98 @@ The output shows that we have fast-forwarded our local repository to include the
 
 This section introduces some basic git commands but there are many others that may be useful in more complex and collaborative projects. For a more detailed introduction see the online Software Carpentry course [Version control with Git](https://swcarpentry.github.io/git-novice/).
 
-To update the local repository but not merging any changes, you have two options. `git remote update` can update all of your branches set to track remote ones, while `git fetch` can update only the branch you are on. 
+## Updating remote-tracking references without changing local files
+
+It is possible to capture locally what has changed in the remote repository without changing your files.  The metadata you are updating is called *remote-tracking references*.  One way of updating this data is to run `git fetch`, which updates the remote-tracking references for the current branch.
 
 Input
 {: .label .label-green }
 ~~~
 $ git fetch
-$ git remote update
 ~~~
 {: .shell-input}
 
-if you need to sync the local main branch with the remote repository and there are no conflicting changes, you can use "git rebase" instead of merging. This means you can reapply your local commits on top of the latest commit from the remote repository. Rebasing can provide a cleaner commit history since it avoids creating merge commits. You can also use rebase to roll back to an earlier commit. However, this command should be used with caution when working on shared branches, as it modifies the commit history and can cause conflicts if multiple people are working on the same branch.
+You can update the remote-tracking references for all remote repositories by adding the --all option.
 
 Input
 {: .label .label-green }
 ~~~
-$ git rebase <commit or branch>
+$ git fetch --all
 ~~~
 {: .shell-input}
 
-The command `git rebase -f` is a force option used with the `git rebase` command in Git. It allows you to forcefully overwrite the existing commit history and replay your commits on top of another branch or commit. It is used when you want to discard or replace the existing commits in your branch, e.g., a merge conflict prevents `push` or `pull` actions.
+In fact, `git pull` by default runs `git fetch` followed by `git merge`.
+
+*Note: You may occasionally see the legacy command `git remote update` used in older tutorials; it essentially achieves the same result as `git fetch --all`.*
+
+Updating your remote-tracking references allows you to compare your files with the latest changes from the remote repository using `git diff`; see [Reviewing local changes](02_getting_started.html#reviewing-local-changes).
+
+## When to use the `--rebase` option with `git pull`
+
+As noted in the previous section, `git pull` implicitly uses a merging action to combine the latest remote commits with your work. If both you and a collaborator have made separate commits, this default process automatically creates a "merge commit" to consolidate your timelines. It results in a knot in the timeline. This is illustrated in the graphic below.
+
+![Merge commit](https://git-scm.com/book/en/v2/images/basic-rebase-2.png)
+_Image source: [git-scm.com](https://git-scm.com), Pro Git book._
+
+If you want to keep your project history in a perfectly straight line, you can explicitly override this default behavior by adding the `--rebase` option to your pull command.
+
+This transforms a potential knot in the timeline...
+
+![Loop in history](https://git-scm.com/book/en/v2/images/basic-rebase-3.png)
+_Image source: [git-scm.com](https://git-scm.com), Pro Git book._
+
+... into a single line.
+
+![](https://git-scm.com/book/en/v2/images/basic-rebase-4.png)
+_Image source: [git-scm.com](https://git-scm.com), Pro Git book._
+
+Assuming there are no conflicts, `git pull --rebase` securely downloads the remote updates, temporarily lifts your unpushed local commits, and reapplies your work right on top of the latest remote commit. This provides a cleaner commit history because it avoids creating merge commits entirely.
+
+Input
+{: .label .label-green }
+~~~
+$ git pull --rebase
+~~~
+{: .shell-input}
+
+Alternatively, you can achieve this exact same result explicitly by running `git fetch` followed by `git rebase` against the remote branch. The command below assumes you are on the main branch.
+
+Input
+{: .label .label-green }
+~~~
+$ git fetch
+$ git rebase origin/main
+~~~
+{: .shell-input}
+
+Rebasing is useful for other purposes. For example, you can use rebase to roll back to an earlier commit. However, this command should be used with caution when working on shared branches, as it modifies the commit history and can cause conflicts if multiple people are working on the same branch. Running `git pull --rebase` is entirely safe because it only rewrites your **private, unpushed local commits** to line them up with GitHub. 
+
+### Handling Unexpected Conflicts
+While the diagrams above show the ideal path where no changes overlap, a conflict can still happen if you and a collaborator edit the exact same line of code within a file. (Git automatically combines changes if they are on different lines).
+
+If a conflict occurs while a rebase is running, Git will pause mid-way to let you fix the overlapping lines. Once you manually choose which code to keep in your text editor, you run `git add <file>` and type the following command to keep replaying your remaining commits:
+
+Input
+{: .label .label-green }
+~~~
+$ git rebase --continue
+~~~
+{: .shell-input}
+
+If the conflict resolution process ever feels too messy or overwhelming, you can completely cancel it and safely return your repository to exactly how it was before you typed the command by running the abort option:
+
+Input
+{: .label .label-green }
+~~~
+$ git rebase --abort
+~~~
+{: .shell-input}
+
+The command `git rebase -f` is a force option used with the `git rebase` command in Git. It allows you to forcefully overwrite the existing commit history and replay your commits on top of another branch or commit. It is used when you want to discard or replace the existing commits in your branch, e.g., a merge conflict prevents `push` or `pull` actions. While commands like `git reset` are typically used to discard or replace local commits, `git rebase -f` can be used to forcefully recreate your local history.
+
+Input
+{: .label .label-green }
+~~~
+$ git rebase -f origin/main
+~~~
+{: .shell-input}
