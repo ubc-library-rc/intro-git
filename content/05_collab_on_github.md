@@ -17,11 +17,15 @@ nav_exclude: false
 # Collaborating on GitHub
 {: .no_toc}
 
-The GitHub platform facilitates collaboration by managing access and tracking activity on multi-author projects. A common workflow for teamwork is to use the _fork_, _clone_, and _pull request_ features of Git and GitHub. Consider this example: 
+The GitHub platform facilitates collaboration by managing access and tracking activity on multi-author projects. A common workflow for teamwork is to use the _fork_, _clone_, and _pull request_ features of Git and GitHub. Consider this example:
 
-> _A team of 10 people is writing a textbook. Everyone will contribute content and the files will be stored in the main branch of the project repository. To avoid unintended conflicts each team member will work in their own copy of the repository, periodically merging their work back into the main project repository._ 
+> _A team of 10 people is writing a textbook. Everyone will contribute content and the files will be stored in the main branch of the project repository. To avoid unintended conflicts each team member will work in their own copy of the repository, periodically merging their work back into the main project repository._
 
  ![](figures/git-collaboration_1.png)
+
+Throughout this section of the workshop, you will practice this team workflow with GitHub's public [`octocat/Spoon-Knife`](https://github.com/octocat/Spoon-Knife) demonstration repository.
+
+![The octocat/Spoon-Knife repository on GitHub](figures/spoon-knife-overview.png)
 
 Here are some of the Git commands and GitHub features you will encounter in this workflow.
 
@@ -30,45 +34,47 @@ Here are some of the Git commands and GitHub features you will encounter in this
 - **Pull request**. A GitHub feature that allows the owner of the main project repository to "pull" in changes made in forks of the repository. When it's time to merge your own work with the main project repository, submit a "pull request" from your fork.
 
 ### Creating a fork
-In this scenario team members never edit the main project repository: each person's work is done in a _fork_, a copy of the main repository that exists in their own GitHub account. 
+In this scenario, team members never edit the main project repository directly. Instead, each person works in a _fork_, a copy of the main repository in their own GitHub account.
 
-To create a fork sign in to GitHub, navigate to the main project repository, then click the _Fork_ button in the top right corner. 
-![Fork button in GitHub](figures/fork.png)
+GitHub provides [`octocat/Spoon-Knife`](https://github.com/octocat/Spoon-Knife) specifically for practicing how to fork and contribute to a repository. Your instructor will first demonstrate how to fork this repository, creating a workshop repository at `https://github.com/INSTRUCTOR-USERNAME/Spoon-Knife`.
 
+After the instructor's fork has been created, open it using the address provided by your instructor and click _Fork_ in the top-right corner. On the next page, keep the repository name `Spoon-Knife` and click _Create fork_.
 
-## Clone the fork to your own computer
-GitHub is great for storing and sharing files but it's not a good platform for editing. The recommended practice is to _clone_ your repository, which creates a local copy on your own computer where you can edit the files with your preferred text editor. 
+![The Fork button in the instructor's Spoon-Knife fork](figures/fork.png)
 
-*1*{: .circle .circle-blue} In GitHub, find the repository to clone and click the _Code_ button. Copy the URL to use in the command below.  
+After GitHub creates the fork, its address will be `https://github.com/YOUR-USERNAME/Spoon-Knife`, with your GitHub username in place of `YOUR-USERNAME`.
 
-*2*{: .circle .circle-blue} Open a terminal and navigate to the directory where you would like to copy the repository files.
+## Clone your fork to your computer
+The next step is to _clone_ your fork, creating a local copy that you can edit with your preferred text editor. *GitHub is great for storing and sharing files but it's not a good platform for editing.* 
 
-*3*{: .circle .circle-blue} In the terminal use the command below to clone, replacing the URL with the one copied in step 1 above.
+*1*{: .circle .circle-blue} Open your fork of Spoon-Knife on GitHub, click _Code_, select _SSH_, and copy its SSH URL.
+
+*2*{: .circle .circle-blue} Open a terminal and navigate to the directory where you want to store the local copy.
+
+*3*{: .circle .circle-blue} Run the following command, replacing `YOUR-USERNAME` with your GitHub username.
 
 Input
 {: .label .label-green}
 ~~~
-$ git clone https://github.com/YOUR_GITHUB_USERNAME/REPOSITORY_NAME.git
+$ git clone git@github.com:YOUR-USERNAME/Spoon-Knife.git
 ~~~
 {: .shell-input}
 
 Output
 {: .label .label-yellow}
 ~~~
-Cloning into 'practice'...
-remote: Enumerating objects: 6, done.
-remote: Counting objects: 100% (6/6), done.
-remote: Compressing objects: 100% (4/4), done.
-remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
-Receiving objects: 100% (6/6), done.
+Cloning into 'Spoon-Knife'...
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 1), reused 10 (delta 1)
+Receiving objects: 100% (10/10), done.
 ~~~
-Git will create a new directory named after the source repository. The directory is automatically tracked by git and it can be synchronized with its counterpart in your GitHub account. 
+Git creates a directory named `Spoon-Knife`, after the source repository.  The directory is automatically tracked by git and it can be synchronized with its counterpart in your GitHub account. 
 
  ![](figures/git-collaboration_2.png)
 
 ## Synchronizing forks and clones
-As you edit the files on your local computer use the `git add` and `git commit` commands to take snapshots of your work. In a team environment it will be important to periodically synchronize the forks and clones so everyone's work is represented in the main project repository.
-
+As team members edit files in their local Spoon-Knife clones, they use `git add` and `git commit` to take snapshots of their work. In a team environment, it is important to periodically synchronize the forks and clones so everyone's work is represented in the main project repository.
 
 ### Pushing local changes to your fork
 It is good practice to regularly synchronize your local copy of the repository (the _clone_) with the repository in your own GitHub account (the _fork_).
@@ -79,91 +85,85 @@ Only local changes that have been _committed_ will be pushed back up to the fork
 {: .note}
 
 
-### Contributing to the main project directory
-Once your work is in your _fork_ in GitHub you can contribute it to the main project repository by using a _Pull request_. This alerts the owner of the project repository and invites them to "pull" your contributions into the project repository, merging them with changes from other team members. 
 
-*1*{: .circle .circle-blue} To create a _Pull request_ navigate to your fork in GitHub and click the _Pull requests_ link.
 
-![pull request button](figures/pull-request.png)
 
-*2*{: .circle .circle-blue} In the next step click _Create pull request_
+### Contributing to the main project repository
+Once your work is in your _fork_ on GitHub, you can contribute it to the instructor's `INSTRUCTOR-USERNAME/Spoon-Knife` repository by using a _pull request_. This alerts the instructor and invites them to "pull" your contribution into the main project repository, merging it with changes from other team members.
 
-![pull request button](figures/compare.png)
+*1*{: .circle .circle-blue} To create a _pull request_, navigate to your Spoon-Knife fork on GitHub and click the _Pull requests_ link.
+
+![The Pull requests tab in a Spoon-Knife fork](figures/pull-request.png)
+
+*2*{: .circle .circle-blue} Click _New pull request_, then click _Create pull request_.
+
+![Comparing a personal Spoon-Knife fork with the instructor's fork](figures/compare.png)
 
 *3*{: .circle .circle-blue} You will be prompted to provide a title and optional comment that helps the team understand your contribution to the main project repository.
 
-![pull request button](figures/pull-request-comment.png)
+![Entering a title and comment for a Spoon-Knife pull request](figures/pull-request-comment.png)
 
-*4*{: .circle .circle-blue} The final step is to click _Create pull request_ to save your contribution. The project repository owner then has the opportunity to review your contributions before merging them into the main project.
-
+*4*{: .circle .circle-blue} Click _Create pull request_ to submit your contribution. The instructor then has the opportunity to review your changes before merging them with the work of other team members. Before creating the pull request, confirm that the base repository is `INSTRUCTOR-USERNAME/Spoon-Knife`.
 
 ### Keeping your fork current
-A _fork_ is a copy of a directory at a moment in time. As other team members make contributions to the project repository your own fork may no longer reflect the current state of the project. When a fork is "behind" the project repository a note will appear in GitHub above the list of files. To incorporate changes from the main project into your local copy click the _Fetch upstream_ link.
+A _fork_ is a copy of a repository at a moment in time. As other team members contribute to the instructor's Spoon-Knife fork, your own Spoon-Knife fork may no longer reflect the current state of the main project. When your fork is behind, open it on GitHub, click _Sync fork_, and then click _Update branch_ to incorporate the latest changes from the team.
 
-![pull request button](figures/fetch-upstream.png)
+![The Sync fork button in a Spoon-Knife fork](figures/fetch-upstream.png)
 
 ### Keeping your local copy current
-_Fetch upstream_ will update your _fork_ with other team members' changes. To bring those same changes back down to the _clone_ on your local machine use the `git pull` command.
+_Sync fork_ will update the Spoon-Knife fork in your GitHub account. To bring those same changes down to the _clone_ on your local machine, use the `git pull` command.
 
-*1*{: .circle .circle-blue} Open a terminal and navigate to the cloned repository in your local file system 
+*1*{: .circle .circle-blue} Open a terminal and navigate to the cloned `Spoon-Knife` repository in your local file system.
 
-*2*{: .circle .circle-blue} Use the command `git pull` to incorporate content from the fork on GitHub 
+*2*{: .circle .circle-blue} Use `git pull origin main` to incorporate content from your Spoon-Knife fork on GitHub.
 
 ### A Basic Collaborative Workflow
 
-When collaborating it's important to work from an updated version of the repository so you should `git pull` before making
-any changes. A basic workflow for collaboration might look like this:
+When collaborating, it is important to work from an updated version of the repository, so you should `git pull` before making any changes. A basic workflow for collaboration might look like this:
 
-* update your local repo with `git pull origin main`,
+* update your local repository with `git pull origin main`,
 * make your changes and stage them with `git add`,
 * commit your changes with `git commit -m`, and
-* upload the changes to GitHub with `git push origin main`
+* upload the changes to your Spoon-Knife fork with `git push origin main`.
 
-Note: it is a good idea to make frequents commits to keep a history of changes in the git repository and prevent conflicts with other collaborators of the project
-
+Note: it is a good idea to make frequent commits to keep a history of changes in the Git repository and prevent conflicts with other collaborators on the project.
 
 ## Exercise
 
-In this exercise, you are going to use Git and GitHub to fix mistakes in a repository. Please begin with viewing, forking, or cloning the [`sandbox` repository](https://github.com/shf/sandbox).
+In this exercise, you are going to use Git and GitHub to make a small change to the instructor's Spoon-Knife fork. Your instructor will provide a repository address in the form `https://github.com/INSTRUCTOR-USERNAME/Spoon-Knife`. Open that repository, fork it to your GitHub account, and then clone your fork to your computer.
 
-This repository is supposed to have two folders. In the folder `text`, we would like to keep pieces of news as text files. In the second folder, `figures`, we would like to keep on figure for each file. The whole repository is a simplified version of a database for the news website.
+Open `index.html` in a text editor and make a small change, such as adding a sentence. Use `git add` and `git commit` to record your change, then push it to your Spoon-Knife fork. Finally, follow the steps above to prepare a pull request from your fork to the instructor's Spoon-Knife fork. Confirm that the base repository is `INSTRUCTOR-USERNAME/Spoon-Knife` before creating the pull request.
 
-There are several major mistakes in the repository, such as files with wrong extensions or in the wrong place, and a few minor mistakes, such as misspelled words. You are asked to add one more piece of news or fix the repository either directly on GitHub or by forking/cloning a local repository, fixing the problems, and pushing it to the remote repository. 
+Spoon-Knife is a public practice repository, so any pull request you submit will be visible to everyone. Do not include personal or sensitive information.
+{: .note}
 
-## Another Exercise: 
+## Another Exercise
 
-For the next step, get into pairs.  One person will be the "Owner" and the other
-will be the "Collaborator". The goal is for the Collaborator to add changes into
-the Owner's repository. If there is time we will switch roles at the end so everyone can play Owner and Collaborator.
+For the next step, get into pairs. One person will be the "Owner" and the other will be the "Collaborator." The Owner will use the Spoon-Knife fork in their GitHub account. The goal is for the Collaborator to add changes to the Owner's Spoon-Knife fork. If there is time, switch roles at the end so everyone can play Owner and Collaborator.
 
-First the Owner needs to give the Collaborator access to their repository.
-Navigate to your repository on GitHub, click the settings button on the right,
-then select Manage access. Click the green <em>Invite a collaborator</em> button and enter your partner's GitHub username in the search bar.
+First, the Owner needs to give the Collaborator access to their Spoon-Knife fork. Navigate to the fork on GitHub, click _Settings_, select _Collaborators_, and invite your partner using their GitHub username.
 
-![Adding Collaborators on GitHub](figures/github-add-collaborators.png)
+![Adding collaborators to a repository on GitHub](figures/github-add-collaborators.png)
 
-To accept access to the Owner's repo the Collaborator
-needs to go to [https://github.com/notifications](https://github.com/notifications).
+To accept access to the Owner's fork, the Collaborator needs to go to [https://github.com/notifications](https://github.com/notifications).
 
-Next, the Collaborator needs to download a copy of the Owner's repository to their computer. This is called "cloning" a repository. To clone the Owner's "hello-world" repository onto
-their `Desktop` the Collaborator would enter this command:
+Next, the Collaborator needs to clone the Owner's Spoon-Knife fork onto their computer. To clone it to the `Desktop`, the Collaborator would enter this command, replacing `OWNER-USERNAME` with the Owner's GitHub username:
 
 Input
 {: .label .label-green}
 ~~~
-$ git clone https://github.com/owner's-github-username/hello-world.git ~/Desktop/owner-hello-world
+$ git clone git@github.com:OWNER-USERNAME/Spoon-Knife.git ~/Desktop/owner-Spoon-Knife
 ~~~
 {: .shell-input}
 
-This creates a local copy of the owner's hello-world repository in a folder named <em>owner-hello-world</em>.  The collaborator can now make changes in their clone of the Owner's repository using the commands introduced earlier.
+This creates a local copy of the Owner's Spoon-Knife fork in a folder named <em>owner-Spoon-Knife</em>. The Collaborator can now make changes using the commands introduced earlier.
 
 - use `cd` to navigate to the cloned repository
-- use `touch` to create a new file in the repository
-- add a few lines to the file using a text editor
+- edit `index.html` using a text editor
 - use `git add` to stage the file
 - use `git commit -m "Commit note"` to commit the changes
 
-Then push the Collaborator's change(s) to the *Owner's* repository on GitHub:
+Then push the Collaborator's changes to the _Owner's_ Spoon-Knife fork on GitHub:
 
 Input
 {: .label .label-green}
@@ -172,15 +172,11 @@ $ git push origin main
 ~~~
 {: .shell-input}
 
-Note that this time we didn't have to create a remote called `origin`: Git uses this
-name by default when we clone a repository.  (This is why `origin` was a
-sensible choice for a nickname earlier when we were setting up remotes by hand.)
+This time, you did not have to create a remote called `origin`: Git uses this name by default when you clone a repository.
 
-Take another look at the Owner's repository on the GitHub website (you might need
-to refresh your browser). You should be able to see the new commit made by the
-Collaborator.
+Take another look at the Owner's Spoon-Knife fork on GitHub. You may need to refresh the browser to see the new commit made by the Collaborator.
 
-To download the Collaborator's changes from GitHub, the Owner now enters this command on their own computer:
+To download the Collaborator's changes from GitHub, the Owner now enters this command in their own local Spoon-Knife clone:
 
 Input
 {: .label .label-green}
@@ -189,7 +185,6 @@ $ git pull origin main
 ~~~
 {: .shell-input}
 
-Now the three repositories - Owner's local, Collaborator's local, and Owner's on
-GitHub - are back in sync.
+Now the three repositories—the Owner's local clone, the Collaborator's local clone, and the Owner's Spoon-Knife fork on GitHub—are back in sync.
 
-___Switch Owner and Collaborator roles if time permits and you'd like more practice___
+___Switch Owner and Collaborator roles if time permits and you would like more practice.___
