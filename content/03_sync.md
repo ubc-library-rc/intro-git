@@ -343,7 +343,7 @@ $ git fetch
 ~~~
 {: .shell-input}
 
-You can update the remote-tracking references for all remote repositories by adding the --all option.
+You can update the remote-tracking references for all remote repositories by adding the `--all` option.
 
 Input
 {: .label .label-green }
@@ -360,7 +360,7 @@ Updating your remote-tracking references allows you to compare your files with t
 
 ## When to use the `--rebase` option with `git pull`
 
-As noted in the previous section, `git pull` implicitly uses a merging action to combine the latest remote commits with your work. If both you and a collaborator have made separate commits, this default process automatically creates a "merge commit" to consolidate your timelines. It results in a knot in the timeline. This is illustrated in the graphic below.
+As noted in the previous section, `git pull` implicitly uses a merging action to combine the latest remote commits with your work. If both you and a collaborator have made separate commits, this default process automatically creates a "merge commit" to consolidate your timelines. It results in a "knot" in the timeline. This is illustrated in the graphic below where "experiment" is the other collaborator's commit.
 
 ![Merge commit](https://git-scm.com/book/en/v2/images/basic-rebase-2.png)
 _Image source: [git-scm.com](https://git-scm.com), Pro Git book._
