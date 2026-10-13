@@ -292,7 +292,7 @@ nothing to commit, working tree clean
 
 This output lets us know where we are working (the main branch). We can also see that we have no changes to commit, and you'll find a copy of the "index.md" file in your GitHub "hello-world" repository.
 
-As mentioned earlier, synchronizing the local repository with its corresponding remote repository involves merging the branches, specifically the main branches here. If the local branch is ahead of the remote one, the merge command should proceed without conflicts. However, if you have added a README file or license file to your GitHub repository, the commit on GitHub will be ahead of your latest commit on the local main branch. In this case, you will need to pull the latest changes to synchronize the two repositories:
+If changes are later added directly to the GitHub repository, the remote branch will contain commits that are not yet in the local branch. You can use `git pull` to bring those changes into your local repository.
 
 ## Pulling changes
   
@@ -328,13 +328,13 @@ Fast-forward
  create mode 100644 README.md
 ~~~
 
-The output shows that we have fast-forwarded our local repository to include the file README.md. We could confirm this by entering the `ls` command.
+The output says `Fast-forward`. Because we had not made any new local commits, Git could simply move the local `main` branch forward to the latest remote commit. This keeps the history linear. We could confirm that the new `README.md` file is present by running `ls`.
 
 This section introduces some basic git commands but there are many others that may be useful in more complex and collaborative projects. For a more detailed introduction see the online Software Carpentry course [Version control with Git](https://swcarpentry.github.io/git-novice/).
 
 ## Updating remote-tracking references without changing local files
 
-It is possible to capture locally what has changed in the remote repository without changing your files.  The metadata you are updating is called *remote-tracking references*.  One way of updating this data is to run `git fetch`, which updates the remote-tracking references for the current branch.
+`git fetch` downloads new commits and updates your local record of remote branches, such as `origin/main`. Unlike `git pull`, it does not integrate those commits into your current branch or change your working files.
 
 Input
 {: .label .label-green }
@@ -343,41 +343,35 @@ $ git fetch
 ~~~
 {: .shell-input}
 
-You can update the remote-tracking references for all remote repositories by adding the `--all` option.
+To see changes that are on `origin/main` but not in your current branch, run:
 
 Input
 {: .label .label-green }
 ~~~
-$ git fetch --all
+$ git diff HEAD..origin/main
 ~~~
 {: .shell-input}
 
-In fact, `git pull` by default runs `git fetch` followed by `git merge`.
-
-*Note: You may occasionally see the legacy command `git remote update` used in older tutorials; it essentially achieves the same result as `git fetch --all`.*
-
-Updating your remote-tracking references allows you to compare your files with the latest changes from the remote repository using `git diff`; see [Reviewing local changes](02_getting_started.html#reviewing-local-changes).
+`git pull` combines fetching with a second step that integrates the downloaded commits into your current branch. In the standard setup used in this workshop, Git normally integrates them by merging.
 
 ## When to use the `--rebase` option with `git pull`
 
-As noted in the previous section, `git pull` implicitly uses a merging action to combine the latest remote commits with your work. If both you and a collaborator have made separate commits, this default process automatically creates a "merge commit" to consolidate your timelines. It results in a "knot" in the timeline. This is illustrated in the graphic below where "experiment" is the other collaborator's commit.
+If the local and remote branches both contain new commits, their histories have **diverged**, so Git cannot fast-forward them. A merge can bring the diverging paths together by creating a **merge commit**. Alternatively, if your local commits have not been pushed, you can use `git pull --rebase` to reapply them after the latest remote commit and produce a linear history.
 
-![Merge commit](https://git-scm.com/book/en/v2/images/basic-rebase-2.png)
+The first diagram shows local work and remote work that have diverged:
+
+![Diverging commit histories](https://git-scm.com/book/en/v2/images/basic-rebase-2.png)
 _Image source: [git-scm.com](https://git-scm.com), Pro Git book._
 
-If you want to keep your project history in a perfectly straight line, you can explicitly override this default behavior by adding the `--rebase` option to your pull command.
+Merging preserves both diverging paths and brings them together with a merge commit:
 
-This transforms a potential knot in the timeline...
-
-![Loop in history](https://git-scm.com/book/en/v2/images/basic-rebase-3.png)
+![Diverging histories joined by a merge commit](https://git-scm.com/book/en/v2/images/basic-rebase-3.png)
 _Image source: [git-scm.com](https://git-scm.com), Pro Git book._
 
-... into a single line.
+Rebasing instead reapplies the local commits after the latest remote commit:
 
-![](https://git-scm.com/book/en/v2/images/basic-rebase-4.png)
+![Linear history after rebasing](https://git-scm.com/book/en/v2/images/basic-rebase-4.png)
 _Image source: [git-scm.com](https://git-scm.com), Pro Git book._
-
-Assuming there are no conflicts, `git pull --rebase` securely downloads the remote updates, temporarily lifts your unpushed local commits, and reapplies your work right on top of the latest remote commit. This provides a cleaner commit history because it avoids creating merge commits entirely.
 
 Input
 {: .label .label-green }
@@ -386,31 +380,21 @@ $ git pull --rebase
 ~~~
 {: .shell-input}
 
-Alternatively, you can achieve this exact same result explicitly by running `git fetch` followed by `git rebase` against the remote branch. The command below assumes you are on the main branch.
+Avoid rebasing commits that other people may already be using, because rebase rewrites commit history.
+
+### Handling conflicts
+
+A rebase may stop if Git cannot combine the changes automatically. After resolving each conflict, stage the corrected file and continue the rebase:
 
 Input
 {: .label .label-green }
 ~~~
-$ git fetch
-$ git rebase origin/main
-~~~
-{: .shell-input}
-
-Rebasing is useful for other purposes. For example, you can use rebase to roll back to an earlier commit. However, this command should be used with caution when working on shared branches, as it modifies the commit history and can cause conflicts if multiple people are working on the same branch. Running `git pull --rebase` is entirely safe because it only rewrites your **private, unpushed local commits** to line them up with GitHub. 
-
-### Handling Unexpected Conflicts
-While the diagrams above show the ideal path where no changes overlap, a conflict can still happen if you and a collaborator edit the exact same line of code within a file. (Git automatically combines changes if they are on different lines).
-
-If a conflict occurs while a rebase is running, Git will pause mid-way to let you fix the overlapping lines. Once you manually choose which code to keep in your text editor, you run `git add <file>` and type the following command to keep replaying your remaining commits:
-
-Input
-{: .label .label-green }
-~~~
+$ git add <file>
 $ git rebase --continue
 ~~~
 {: .shell-input}
 
-If the conflict resolution process ever feels too messy or overwhelming, you can completely cancel it and safely return your repository to exactly how it was before you typed the command by running the abort option:
+To cancel the rebase and return to the state from before it began, run:
 
 Input
 {: .label .label-green }
@@ -419,11 +403,4 @@ $ git rebase --abort
 ~~~
 {: .shell-input}
 
-The command `git rebase -f` is a force option used with the `git rebase` command in Git. It allows you to forcefully overwrite the existing commit history and replay your commits on top of another branch or commit. It is used when you want to discard or replace the existing commits in your branch, e.g., a merge conflict prevents `push` or `pull` actions. While commands like `git reset` are typically used to discard or replace local commits, `git rebase -f` can be used to forcefully recreate your local history.
-
-Input
-{: .label .label-green }
-~~~
-$ git rebase -f origin/main
-~~~
-{: .shell-input}
+This lesson introduces some basic Git commands, but many others may be useful in more complex and collaborative projects. For a more detailed introduction, see the Software Carpentry lesson [Version Control with Git](https://swcarpentry.github.io/git-novice/).
